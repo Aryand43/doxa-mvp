@@ -49,3 +49,17 @@ To remove a package:
 ```bash
 poetry remove <package-name>
 ```
+
+## Frontend
+
+The UI lives in `frontend/` (React, TypeScript, Vite). It is separate from the Python backend and has no API integration yet.
+
+### Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open the URL shown in the terminal (typically `http://localhost:5173`).
