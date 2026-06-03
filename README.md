@@ -50,6 +50,39 @@ To remove a package:
 poetry remove <package-name>
 ```
 
+## Backend
+
+The backend is a FastAPI server powered by [LangGraph](https://langchain-ai.github.io/langgraph/) and lives in `backend/`.
+
+### Environment Variables
+
+Copy the example env file and fill in your OpenAI API key:
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and set your key:
+```
+OPENAI_API_KEY=sk-...
+OPENAI_MODEL=gpt-4o          # optional, defaults to gpt-4o
+```
+
+### Running the Backend
+
+```bash
+poetry run uvicorn backend.main:app --reload
+```
+
+The API will be available at `http://localhost:8000`.
+- Health check: `GET /health`
+- Chat: `POST /api/chat` with body `{ "message": "...", "session_id": "..." }`
+
+### API Docs
+
+FastAPI auto-generates interactive docs at:
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+
 ## Frontend
 
 The UI lives in `frontend/` (React, TypeScript, Vite). It is separate from the Python backend and has no API integration yet.
