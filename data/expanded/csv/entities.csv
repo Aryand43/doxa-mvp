@@ -1,0 +1,1001 @@
+entity_id,buyer_company_uuid,entity_name,tenant_code,default_currency,country,industry,active,created_at
+ENT-1000,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 1,TENANT-01,SGD,SG,Construction & Engineering,True,2026-02-24T15:38:25
+ENT-1001,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 1,TENANT-02,SGD,ID,Construction & Engineering,True,2025-02-12T16:05:41
+ENT-1002,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 1,TENANT-03,SGD,SG,Construction & Engineering,True,2025-10-24T08:31:57
+ENT-1003,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 1,TENANT-04,IDR,SG,Construction & Engineering,True,2024-03-18T15:42:46
+ENT-1004,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 1,TENANT-05,SGD,SG,Construction & Engineering,True,2024-11-17T09:49:26
+ENT-1005,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 2,TENANT-01,SGD,SG,Construction & Engineering,True,2024-12-01T11:10:54
+ENT-1006,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 2,TENANT-02,SGD,ID,Construction & Engineering,True,2024-01-28T14:23:48
+ENT-1007,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 2,TENANT-03,SGD,SG,Construction & Engineering,True,2024-10-12T12:26:13
+ENT-1008,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 2,TENANT-04,IDR,SG,Construction & Engineering,True,2026-02-21T13:52:03
+ENT-1009,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 2,TENANT-05,SGD,SG,Construction & Engineering,True,2023-11-05T16:16:37
+ENT-1010,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 3,TENANT-01,SGD,SG,Construction & Engineering,True,2025-12-03T15:41:20
+ENT-1011,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 3,TENANT-02,SGD,ID,Construction & Engineering,True,2026-03-19T17:26:52
+ENT-1012,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 3,TENANT-03,SGD,SG,Construction & Engineering,True,2024-05-20T15:44:11
+ENT-1013,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 3,TENANT-04,IDR,SG,Construction & Engineering,True,2025-04-29T12:29:02
+ENT-1014,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 3,TENANT-05,SGD,SG,Construction & Engineering,True,2024-10-11T09:43:40
+ENT-1015,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 4,TENANT-01,SGD,SG,Construction & Engineering,True,2023-08-26T15:21:57
+ENT-1016,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 4,TENANT-02,SGD,ID,Construction & Engineering,True,2025-03-09T11:53:21
+ENT-1017,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 4,TENANT-03,SGD,SG,Construction & Engineering,True,2026-03-10T12:46:11
+ENT-1018,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 4,TENANT-04,IDR,SG,Construction & Engineering,True,2025-01-11T09:40:28
+ENT-1019,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 4,TENANT-05,SGD,SG,Construction & Engineering,True,2025-06-05T10:33:39
+ENT-1020,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 5,TENANT-01,SGD,SG,Construction & Engineering,True,2023-08-07T12:09:49
+ENT-1021,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 5,TENANT-02,SGD,ID,Construction & Engineering,True,2024-07-12T15:05:18
+ENT-1022,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 5,TENANT-03,SGD,SG,Construction & Engineering,True,2024-02-12T16:25:47
+ENT-1023,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 5,TENANT-04,IDR,SG,Construction & Engineering,True,2023-11-23T11:52:17
+ENT-1024,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 5,TENANT-05,SGD,SG,Construction & Engineering,True,2025-09-12T14:37:08
+ENT-1025,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 6,TENANT-01,SGD,SG,Construction & Engineering,True,2023-12-03T09:47:00
+ENT-1026,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 6,TENANT-02,SGD,ID,Construction & Engineering,True,2024-01-11T15:46:39
+ENT-1027,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 6,TENANT-03,SGD,SG,Construction & Engineering,True,2025-01-01T15:16:46
+ENT-1028,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 6,TENANT-04,IDR,SG,Construction & Engineering,True,2024-10-01T12:29:33
+ENT-1029,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 6,TENANT-05,SGD,SG,Construction & Engineering,True,2026-04-22T09:14:06
+ENT-1030,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 7,TENANT-01,SGD,SG,Construction & Engineering,True,2025-02-05T14:38:27
+ENT-1031,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 7,TENANT-02,SGD,ID,Construction & Engineering,True,2023-11-08T13:04:45
+ENT-1032,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 7,TENANT-03,SGD,SG,Construction & Engineering,True,2024-09-10T14:33:32
+ENT-1033,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 7,TENANT-04,IDR,SG,Construction & Engineering,True,2026-02-22T13:46:17
+ENT-1034,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 7,TENANT-05,SGD,SG,Construction & Engineering,True,2024-08-10T08:20:25
+ENT-1035,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 8,TENANT-01,SGD,SG,Construction & Engineering,True,2023-06-21T10:16:24
+ENT-1036,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 8,TENANT-02,SGD,ID,Construction & Engineering,True,2023-06-11T16:02:13
+ENT-1037,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 8,TENANT-03,SGD,SG,Construction & Engineering,True,2023-12-15T08:50:16
+ENT-1038,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 8,TENANT-04,IDR,SG,Construction & Engineering,True,2023-09-01T10:25:39
+ENT-1039,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 8,TENANT-05,SGD,SG,Construction & Engineering,True,2026-01-14T13:29:46
+ENT-1040,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 9,TENANT-01,SGD,SG,Construction & Engineering,True,2023-06-07T14:24:23
+ENT-1041,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 9,TENANT-02,SGD,ID,Construction & Engineering,True,2025-03-01T16:18:09
+ENT-1042,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 9,TENANT-03,SGD,SG,Construction & Engineering,True,2025-05-31T08:06:05
+ENT-1043,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 9,TENANT-04,IDR,SG,Construction & Engineering,True,2024-02-08T15:41:27
+ENT-1044,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 9,TENANT-05,SGD,SG,Construction & Engineering,True,2024-04-07T09:53:29
+ENT-1045,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 10,TENANT-01,SGD,SG,Construction & Engineering,True,2023-08-09T09:29:41
+ENT-1046,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 10,TENANT-02,SGD,ID,Construction & Engineering,True,2024-12-06T12:09:22
+ENT-1047,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 10,TENANT-03,SGD,SG,Construction & Engineering,True,2025-09-13T11:40:37
+ENT-1048,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 10,TENANT-04,IDR,SG,Construction & Engineering,True,2024-08-06T11:56:05
+ENT-1049,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 10,TENANT-05,SGD,SG,Construction & Engineering,True,2025-05-22T09:19:56
+ENT-1050,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 11,TENANT-01,SGD,SG,Construction & Engineering,True,2025-04-26T17:29:41
+ENT-1051,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 11,TENANT-02,SGD,ID,Construction & Engineering,True,2025-01-17T10:45:57
+ENT-1052,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 11,TENANT-03,SGD,SG,Construction & Engineering,True,2025-08-17T15:15:42
+ENT-1053,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 11,TENANT-04,IDR,SG,Construction & Engineering,True,2024-01-20T12:43:16
+ENT-1054,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 11,TENANT-05,SGD,SG,Construction & Engineering,True,2026-03-07T08:26:53
+ENT-1055,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 12,TENANT-01,SGD,SG,Construction & Engineering,True,2026-01-13T12:41:11
+ENT-1056,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 12,TENANT-02,SGD,ID,Construction & Engineering,True,2024-04-02T11:47:34
+ENT-1057,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 12,TENANT-03,SGD,SG,Construction & Engineering,True,2024-10-11T09:27:50
+ENT-1058,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 12,TENANT-04,IDR,SG,Construction & Engineering,True,2026-05-11T15:29:42
+ENT-1059,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 12,TENANT-05,SGD,SG,Construction & Engineering,True,2024-06-05T12:18:37
+ENT-1060,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 13,TENANT-01,SGD,SG,Construction & Engineering,True,2025-12-30T13:05:38
+ENT-1061,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 13,TENANT-02,SGD,ID,Construction & Engineering,True,2024-07-13T08:44:24
+ENT-1062,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 13,TENANT-03,SGD,SG,Construction & Engineering,True,2024-01-22T08:10:29
+ENT-1063,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 13,TENANT-04,IDR,SG,Construction & Engineering,True,2025-11-07T11:38:08
+ENT-1064,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 13,TENANT-05,SGD,SG,Construction & Engineering,True,2024-05-20T09:10:34
+ENT-1065,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 14,TENANT-01,SGD,SG,Construction & Engineering,True,2024-01-15T09:17:54
+ENT-1066,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 14,TENANT-02,SGD,ID,Construction & Engineering,True,2023-06-14T13:26:20
+ENT-1067,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 14,TENANT-03,SGD,SG,Construction & Engineering,True,2024-07-31T13:17:01
+ENT-1068,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 14,TENANT-04,IDR,SG,Construction & Engineering,True,2025-12-18T17:24:28
+ENT-1069,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 14,TENANT-05,SGD,SG,Construction & Engineering,True,2025-01-06T15:03:04
+ENT-1070,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 15,TENANT-01,SGD,SG,Construction & Engineering,True,2025-08-03T12:39:28
+ENT-1071,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 15,TENANT-02,SGD,ID,Construction & Engineering,True,2025-02-03T17:09:33
+ENT-1072,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 15,TENANT-03,SGD,SG,Construction & Engineering,True,2024-10-16T12:47:15
+ENT-1073,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 15,TENANT-04,IDR,SG,Construction & Engineering,True,2023-07-23T11:32:30
+ENT-1074,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 15,TENANT-05,SGD,SG,Construction & Engineering,True,2023-11-14T12:16:01
+ENT-1075,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 16,TENANT-01,SGD,SG,Construction & Engineering,True,2025-04-29T16:00:52
+ENT-1076,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 16,TENANT-02,SGD,ID,Construction & Engineering,True,2024-10-15T09:17:32
+ENT-1077,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 16,TENANT-03,SGD,SG,Construction & Engineering,True,2025-06-21T09:39:39
+ENT-1078,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 16,TENANT-04,IDR,SG,Construction & Engineering,True,2026-01-22T10:14:38
+ENT-1079,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 16,TENANT-05,SGD,SG,Construction & Engineering,True,2024-03-24T15:55:45
+ENT-1080,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 17,TENANT-01,SGD,SG,Construction & Engineering,True,2025-06-15T09:36:54
+ENT-1081,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 17,TENANT-02,SGD,ID,Construction & Engineering,True,2023-06-30T10:13:02
+ENT-1082,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 17,TENANT-03,SGD,SG,Construction & Engineering,True,2025-12-29T13:32:21
+ENT-1083,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 17,TENANT-04,IDR,SG,Construction & Engineering,True,2025-06-27T16:27:47
+ENT-1084,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 17,TENANT-05,SGD,SG,Construction & Engineering,True,2023-07-13T11:11:56
+ENT-1085,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 18,TENANT-01,SGD,SG,Construction & Engineering,True,2024-07-06T10:36:30
+ENT-1086,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 18,TENANT-02,SGD,ID,Construction & Engineering,True,2023-09-14T10:58:55
+ENT-1087,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 18,TENANT-03,SGD,SG,Construction & Engineering,True,2025-11-16T09:31:02
+ENT-1088,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 18,TENANT-04,IDR,SG,Construction & Engineering,True,2025-07-09T12:57:58
+ENT-1089,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 18,TENANT-05,SGD,SG,Construction & Engineering,True,2025-12-18T16:05:44
+ENT-1090,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 19,TENANT-01,SGD,SG,Construction & Engineering,True,2023-11-19T16:13:52
+ENT-1091,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 19,TENANT-02,SGD,ID,Construction & Engineering,True,2026-01-26T13:27:18
+ENT-1092,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 19,TENANT-03,SGD,SG,Construction & Engineering,True,2026-05-08T15:19:39
+ENT-1093,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 19,TENANT-04,IDR,SG,Construction & Engineering,True,2025-03-09T11:52:05
+ENT-1094,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 19,TENANT-05,SGD,SG,Construction & Engineering,True,2024-03-17T15:22:15
+ENT-1095,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 20,TENANT-01,SGD,SG,Construction & Engineering,True,2026-05-27T17:55:14
+ENT-1096,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 20,TENANT-02,SGD,ID,Construction & Engineering,True,2026-04-28T09:03:49
+ENT-1097,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 20,TENANT-03,SGD,SG,Construction & Engineering,True,2023-09-29T09:44:10
+ENT-1098,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 20,TENANT-04,IDR,SG,Construction & Engineering,True,2025-04-25T13:42:51
+ENT-1099,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 20,TENANT-05,SGD,SG,Construction & Engineering,True,2026-04-13T09:16:18
+ENT-1100,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 21,TENANT-01,SGD,SG,Construction & Engineering,True,2023-06-05T15:18:57
+ENT-1101,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 21,TENANT-02,SGD,ID,Construction & Engineering,True,2024-12-02T13:25:08
+ENT-1102,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 21,TENANT-03,SGD,SG,Construction & Engineering,True,2023-08-13T08:10:13
+ENT-1103,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 21,TENANT-04,IDR,SG,Construction & Engineering,True,2025-07-31T09:01:39
+ENT-1104,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 21,TENANT-05,SGD,SG,Construction & Engineering,True,2023-07-06T09:17:29
+ENT-1105,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 22,TENANT-01,SGD,SG,Construction & Engineering,True,2023-08-21T14:45:34
+ENT-1106,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 22,TENANT-02,SGD,ID,Construction & Engineering,True,2025-03-02T09:50:47
+ENT-1107,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 22,TENANT-03,SGD,SG,Construction & Engineering,True,2026-05-05T15:04:43
+ENT-1108,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 22,TENANT-04,IDR,SG,Construction & Engineering,True,2023-12-10T09:25:07
+ENT-1109,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 22,TENANT-05,SGD,SG,Construction & Engineering,True,2024-09-18T17:04:23
+ENT-1110,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 23,TENANT-01,SGD,SG,Construction & Engineering,True,2023-07-02T11:07:28
+ENT-1111,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 23,TENANT-02,SGD,ID,Construction & Engineering,True,2024-11-22T14:18:56
+ENT-1112,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 23,TENANT-03,SGD,SG,Construction & Engineering,True,2024-11-08T10:56:54
+ENT-1113,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 23,TENANT-04,IDR,SG,Construction & Engineering,True,2024-12-02T08:35:32
+ENT-1114,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 23,TENANT-05,SGD,SG,Construction & Engineering,True,2025-12-21T14:49:06
+ENT-1115,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 24,TENANT-01,SGD,SG,Construction & Engineering,True,2024-03-31T09:44:24
+ENT-1116,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 24,TENANT-02,SGD,ID,Construction & Engineering,True,2026-05-25T17:09:35
+ENT-1117,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 24,TENANT-03,SGD,SG,Construction & Engineering,True,2025-11-15T17:43:47
+ENT-1118,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 24,TENANT-04,IDR,SG,Construction & Engineering,True,2025-02-13T12:37:46
+ENT-1119,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 24,TENANT-05,SGD,SG,Construction & Engineering,True,2023-11-17T08:39:06
+ENT-1120,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 25,TENANT-01,SGD,SG,Construction & Engineering,True,2025-07-21T16:14:47
+ENT-1121,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 25,TENANT-02,SGD,ID,Construction & Engineering,True,2025-01-11T10:19:31
+ENT-1122,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 25,TENANT-03,SGD,SG,Construction & Engineering,True,2024-02-15T14:55:51
+ENT-1123,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 25,TENANT-04,IDR,SG,Construction & Engineering,True,2024-02-28T14:17:24
+ENT-1124,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 25,TENANT-05,SGD,SG,Construction & Engineering,True,2026-01-22T11:54:25
+ENT-1125,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 26,TENANT-01,SGD,SG,Construction & Engineering,True,2026-01-28T14:56:51
+ENT-1126,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 26,TENANT-02,SGD,ID,Construction & Engineering,True,2025-08-05T12:31:14
+ENT-1127,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 26,TENANT-03,SGD,SG,Construction & Engineering,True,2025-08-11T10:58:44
+ENT-1128,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 26,TENANT-04,IDR,SG,Construction & Engineering,True,2023-11-24T16:56:06
+ENT-1129,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 26,TENANT-05,SGD,SG,Construction & Engineering,True,2023-10-10T08:28:35
+ENT-1130,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 27,TENANT-01,SGD,SG,Construction & Engineering,True,2025-05-06T09:11:48
+ENT-1131,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 27,TENANT-02,SGD,ID,Construction & Engineering,True,2025-06-17T11:54:08
+ENT-1132,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 27,TENANT-03,SGD,SG,Construction & Engineering,True,2023-09-03T17:35:09
+ENT-1133,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 27,TENANT-04,IDR,SG,Construction & Engineering,True,2025-12-13T10:34:09
+ENT-1134,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 27,TENANT-05,SGD,SG,Construction & Engineering,True,2025-01-19T09:31:01
+ENT-1135,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 28,TENANT-01,SGD,SG,Construction & Engineering,True,2024-04-16T08:11:10
+ENT-1136,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 28,TENANT-02,SGD,ID,Construction & Engineering,True,2023-12-05T08:25:34
+ENT-1137,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 28,TENANT-03,SGD,SG,Construction & Engineering,True,2024-11-13T14:47:23
+ENT-1138,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 28,TENANT-04,IDR,SG,Construction & Engineering,True,2023-12-08T11:58:29
+ENT-1139,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 28,TENANT-05,SGD,SG,Construction & Engineering,True,2024-03-18T16:46:50
+ENT-1140,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 29,TENANT-01,SGD,SG,Construction & Engineering,True,2024-10-22T08:29:10
+ENT-1141,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 29,TENANT-02,SGD,ID,Construction & Engineering,True,2023-10-02T10:13:14
+ENT-1142,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 29,TENANT-03,SGD,SG,Construction & Engineering,True,2024-06-28T13:55:24
+ENT-1143,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 29,TENANT-04,IDR,SG,Construction & Engineering,True,2025-07-27T08:00:22
+ENT-1144,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 29,TENANT-05,SGD,SG,Construction & Engineering,True,2023-08-23T13:52:05
+ENT-1145,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 30,TENANT-01,SGD,SG,Construction & Engineering,True,2026-02-19T16:06:03
+ENT-1146,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 30,TENANT-02,SGD,ID,Construction & Engineering,True,2025-03-16T17:40:05
+ENT-1147,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 30,TENANT-03,SGD,SG,Construction & Engineering,True,2023-11-28T16:47:53
+ENT-1148,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 30,TENANT-04,IDR,SG,Construction & Engineering,True,2025-09-12T17:18:47
+ENT-1149,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 30,TENANT-05,SGD,SG,Construction & Engineering,True,2024-09-05T15:37:37
+ENT-1150,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 31,TENANT-01,SGD,SG,Construction & Engineering,True,2024-07-27T15:43:07
+ENT-1151,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 31,TENANT-02,SGD,ID,Construction & Engineering,True,2023-12-10T13:19:30
+ENT-1152,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 31,TENANT-03,SGD,SG,Construction & Engineering,True,2023-07-09T16:49:27
+ENT-1153,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 31,TENANT-04,IDR,SG,Construction & Engineering,True,2024-01-25T11:40:37
+ENT-1154,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 31,TENANT-05,SGD,SG,Construction & Engineering,True,2025-09-01T10:03:08
+ENT-1155,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 32,TENANT-01,SGD,SG,Construction & Engineering,True,2025-02-12T12:09:24
+ENT-1156,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 32,TENANT-02,SGD,ID,Construction & Engineering,True,2024-08-09T10:19:21
+ENT-1157,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 32,TENANT-03,SGD,SG,Construction & Engineering,True,2024-11-25T11:43:19
+ENT-1158,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 32,TENANT-04,IDR,SG,Construction & Engineering,True,2025-02-11T11:10:40
+ENT-1159,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 32,TENANT-05,SGD,SG,Construction & Engineering,True,2025-09-17T10:46:55
+ENT-1160,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 33,TENANT-01,SGD,SG,Construction & Engineering,True,2024-05-28T17:50:28
+ENT-1161,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 33,TENANT-02,SGD,ID,Construction & Engineering,True,2024-02-09T11:27:31
+ENT-1162,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 33,TENANT-03,SGD,SG,Construction & Engineering,True,2023-07-16T16:28:38
+ENT-1163,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 33,TENANT-04,IDR,SG,Construction & Engineering,True,2025-10-23T16:32:31
+ENT-1164,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 33,TENANT-05,SGD,SG,Construction & Engineering,True,2024-02-13T14:04:17
+ENT-1165,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 34,TENANT-01,SGD,SG,Construction & Engineering,True,2025-11-20T15:02:11
+ENT-1166,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 34,TENANT-02,SGD,ID,Construction & Engineering,True,2024-08-16T14:29:50
+ENT-1167,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 34,TENANT-03,SGD,SG,Construction & Engineering,True,2023-08-30T09:56:36
+ENT-1168,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 34,TENANT-04,IDR,SG,Construction & Engineering,True,2024-07-05T08:36:42
+ENT-1169,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 34,TENANT-05,SGD,SG,Construction & Engineering,True,2024-09-04T08:30:55
+ENT-1170,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 35,TENANT-01,SGD,SG,Construction & Engineering,True,2024-03-31T09:56:56
+ENT-1171,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 35,TENANT-02,SGD,ID,Construction & Engineering,True,2025-11-28T16:23:35
+ENT-1172,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 35,TENANT-03,SGD,SG,Construction & Engineering,True,2025-01-30T15:58:46
+ENT-1173,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 35,TENANT-04,IDR,SG,Construction & Engineering,True,2023-08-17T17:05:14
+ENT-1174,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 35,TENANT-05,SGD,SG,Construction & Engineering,True,2024-04-02T13:02:05
+ENT-1175,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 36,TENANT-01,SGD,SG,Construction & Engineering,True,2024-11-09T14:09:10
+ENT-1176,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 36,TENANT-02,SGD,ID,Construction & Engineering,True,2026-01-11T13:00:33
+ENT-1177,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 36,TENANT-03,SGD,SG,Construction & Engineering,True,2024-12-27T12:40:30
+ENT-1178,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 36,TENANT-04,IDR,SG,Construction & Engineering,True,2024-03-27T15:54:47
+ENT-1179,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 36,TENANT-05,SGD,SG,Construction & Engineering,True,2024-11-12T12:13:35
+ENT-1180,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 37,TENANT-01,SGD,SG,Construction & Engineering,True,2025-12-31T17:49:07
+ENT-1181,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 37,TENANT-02,SGD,ID,Construction & Engineering,True,2024-01-23T09:42:05
+ENT-1182,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 37,TENANT-03,SGD,SG,Construction & Engineering,True,2024-12-14T14:42:24
+ENT-1183,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 37,TENANT-04,IDR,SG,Construction & Engineering,True,2023-08-27T15:12:39
+ENT-1184,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 37,TENANT-05,SGD,SG,Construction & Engineering,True,2024-03-24T11:43:53
+ENT-1185,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 38,TENANT-01,SGD,SG,Construction & Engineering,True,2023-12-20T15:37:15
+ENT-1186,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 38,TENANT-02,SGD,ID,Construction & Engineering,True,2024-01-13T11:31:18
+ENT-1187,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 38,TENANT-03,SGD,SG,Construction & Engineering,True,2025-06-24T09:56:08
+ENT-1188,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 38,TENANT-04,IDR,SG,Construction & Engineering,True,2026-02-27T17:32:25
+ENT-1189,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 38,TENANT-05,SGD,SG,Construction & Engineering,True,2024-03-16T11:07:43
+ENT-1190,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 39,TENANT-01,SGD,SG,Construction & Engineering,True,2025-11-21T13:55:55
+ENT-1191,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 39,TENANT-02,SGD,ID,Construction & Engineering,True,2025-05-02T15:36:28
+ENT-1192,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 39,TENANT-03,SGD,SG,Construction & Engineering,True,2025-12-30T11:38:58
+ENT-1193,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 39,TENANT-04,IDR,SG,Construction & Engineering,True,2026-05-27T15:49:56
+ENT-1194,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 39,TENANT-05,SGD,SG,Construction & Engineering,True,2025-02-22T09:15:50
+ENT-1195,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 40,TENANT-01,SGD,SG,Construction & Engineering,True,2023-10-14T14:07:07
+ENT-1196,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 40,TENANT-02,SGD,ID,Construction & Engineering,True,2024-12-25T13:01:40
+ENT-1197,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 40,TENANT-03,SGD,SG,Construction & Engineering,True,2024-10-13T08:05:26
+ENT-1198,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 40,TENANT-04,IDR,SG,Construction & Engineering,True,2024-04-01T16:25:17
+ENT-1199,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 40,TENANT-05,SGD,SG,Construction & Engineering,True,2023-07-07T12:18:26
+ENT-1200,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 41,TENANT-01,SGD,SG,Construction & Engineering,True,2026-05-19T11:30:54
+ENT-1201,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 41,TENANT-02,SGD,ID,Construction & Engineering,True,2024-03-15T15:32:06
+ENT-1202,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 41,TENANT-03,SGD,SG,Construction & Engineering,True,2025-03-30T17:02:51
+ENT-1203,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 41,TENANT-04,IDR,SG,Construction & Engineering,True,2024-05-13T10:45:49
+ENT-1204,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 41,TENANT-05,SGD,SG,Construction & Engineering,True,2026-04-15T09:39:58
+ENT-1205,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 42,TENANT-01,SGD,SG,Construction & Engineering,True,2026-05-06T14:08:38
+ENT-1206,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 42,TENANT-02,SGD,ID,Construction & Engineering,True,2024-07-19T08:40:52
+ENT-1207,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 42,TENANT-03,SGD,SG,Construction & Engineering,True,2023-10-30T08:14:14
+ENT-1208,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 42,TENANT-04,IDR,SG,Construction & Engineering,True,2025-01-21T09:50:45
+ENT-1209,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 42,TENANT-05,SGD,SG,Construction & Engineering,True,2023-12-29T09:00:53
+ENT-1210,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 43,TENANT-01,SGD,SG,Construction & Engineering,True,2025-07-20T14:53:02
+ENT-1211,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 43,TENANT-02,SGD,ID,Construction & Engineering,True,2026-05-27T08:09:03
+ENT-1212,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 43,TENANT-03,SGD,SG,Construction & Engineering,True,2023-12-17T14:57:47
+ENT-1213,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 43,TENANT-04,IDR,SG,Construction & Engineering,True,2023-07-13T10:16:50
+ENT-1214,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 43,TENANT-05,SGD,SG,Construction & Engineering,True,2025-09-06T08:39:47
+ENT-1215,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 44,TENANT-01,SGD,SG,Construction & Engineering,True,2023-07-07T17:07:45
+ENT-1216,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 44,TENANT-02,SGD,ID,Construction & Engineering,True,2023-11-18T14:48:49
+ENT-1217,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 44,TENANT-03,SGD,SG,Construction & Engineering,True,2025-01-29T08:26:11
+ENT-1218,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 44,TENANT-04,IDR,SG,Construction & Engineering,True,2026-01-28T09:41:29
+ENT-1219,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 44,TENANT-05,SGD,SG,Construction & Engineering,True,2024-10-18T15:32:37
+ENT-1220,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 45,TENANT-01,SGD,SG,Construction & Engineering,True,2026-02-27T16:26:09
+ENT-1221,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 45,TENANT-02,SGD,ID,Construction & Engineering,True,2023-12-24T15:03:11
+ENT-1222,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 45,TENANT-03,SGD,SG,Construction & Engineering,True,2026-05-15T10:05:41
+ENT-1223,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 45,TENANT-04,IDR,SG,Construction & Engineering,True,2024-11-06T17:44:36
+ENT-1224,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 45,TENANT-05,SGD,SG,Construction & Engineering,True,2024-11-21T08:04:36
+ENT-1225,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 46,TENANT-01,SGD,SG,Construction & Engineering,True,2026-05-28T08:12:52
+ENT-1226,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 46,TENANT-02,SGD,ID,Construction & Engineering,True,2025-01-15T15:24:10
+ENT-1227,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 46,TENANT-03,SGD,SG,Construction & Engineering,True,2025-04-21T08:45:10
+ENT-1228,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 46,TENANT-04,IDR,SG,Construction & Engineering,True,2025-04-15T17:34:27
+ENT-1229,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 46,TENANT-05,SGD,SG,Construction & Engineering,True,2024-10-15T15:15:37
+ENT-1230,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 47,TENANT-01,SGD,SG,Construction & Engineering,True,2023-10-20T13:26:08
+ENT-1231,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 47,TENANT-02,SGD,ID,Construction & Engineering,True,2025-09-03T17:31:17
+ENT-1232,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 47,TENANT-03,SGD,SG,Construction & Engineering,True,2025-02-28T13:31:41
+ENT-1233,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 47,TENANT-04,IDR,SG,Construction & Engineering,True,2025-08-24T14:26:55
+ENT-1234,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 47,TENANT-05,SGD,SG,Construction & Engineering,True,2025-12-11T09:27:29
+ENT-1235,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 48,TENANT-01,SGD,SG,Construction & Engineering,True,2024-05-06T12:53:27
+ENT-1236,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 48,TENANT-02,SGD,ID,Construction & Engineering,True,2026-01-11T09:57:07
+ENT-1237,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 48,TENANT-03,SGD,SG,Construction & Engineering,True,2023-07-30T10:05:17
+ENT-1238,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 48,TENANT-04,IDR,SG,Construction & Engineering,True,2024-07-28T12:46:36
+ENT-1239,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 48,TENANT-05,SGD,SG,Construction & Engineering,True,2025-03-20T14:57:24
+ENT-1240,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 49,TENANT-01,SGD,SG,Construction & Engineering,True,2025-12-15T12:49:12
+ENT-1241,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 49,TENANT-02,SGD,ID,Construction & Engineering,True,2023-07-28T13:35:18
+ENT-1242,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 49,TENANT-03,SGD,SG,Construction & Engineering,True,2023-08-29T08:17:24
+ENT-1243,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 49,TENANT-04,IDR,SG,Construction & Engineering,True,2024-12-26T12:08:13
+ENT-1244,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 49,TENANT-05,SGD,SG,Construction & Engineering,True,2026-02-17T13:20:33
+ENT-1245,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 50,TENANT-01,SGD,SG,Construction & Engineering,True,2024-08-25T15:32:38
+ENT-1246,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 50,TENANT-02,SGD,ID,Construction & Engineering,True,2024-08-28T14:36:18
+ENT-1247,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 50,TENANT-03,SGD,SG,Construction & Engineering,True,2025-09-05T15:20:32
+ENT-1248,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 50,TENANT-04,IDR,SG,Construction & Engineering,True,2025-10-29T12:31:36
+ENT-1249,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 50,TENANT-05,SGD,SG,Construction & Engineering,True,2024-11-02T11:56:30
+ENT-1250,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 51,TENANT-01,SGD,SG,Construction & Engineering,True,2023-12-29T15:32:52
+ENT-1251,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 51,TENANT-02,SGD,ID,Construction & Engineering,True,2026-01-12T17:50:29
+ENT-1252,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 51,TENANT-03,SGD,SG,Construction & Engineering,True,2024-03-20T13:15:47
+ENT-1253,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 51,TENANT-04,IDR,SG,Construction & Engineering,True,2025-09-05T11:30:49
+ENT-1254,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 51,TENANT-05,SGD,SG,Construction & Engineering,True,2025-04-07T12:02:06
+ENT-1255,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 52,TENANT-01,SGD,SG,Construction & Engineering,True,2026-04-01T08:51:49
+ENT-1256,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 52,TENANT-02,SGD,ID,Construction & Engineering,True,2023-12-15T08:04:16
+ENT-1257,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 52,TENANT-03,SGD,SG,Construction & Engineering,True,2024-09-21T11:28:10
+ENT-1258,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 52,TENANT-04,IDR,SG,Construction & Engineering,True,2024-03-23T11:03:43
+ENT-1259,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 52,TENANT-05,SGD,SG,Construction & Engineering,True,2023-09-17T08:25:48
+ENT-1260,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 53,TENANT-01,SGD,SG,Construction & Engineering,True,2024-04-19T16:24:21
+ENT-1261,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 53,TENANT-02,SGD,ID,Construction & Engineering,True,2024-04-16T09:14:35
+ENT-1262,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 53,TENANT-03,SGD,SG,Construction & Engineering,True,2024-05-31T09:29:21
+ENT-1263,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 53,TENANT-04,IDR,SG,Construction & Engineering,True,2024-11-29T17:04:58
+ENT-1264,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 53,TENANT-05,SGD,SG,Construction & Engineering,True,2025-01-25T15:25:18
+ENT-1265,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 54,TENANT-01,SGD,SG,Construction & Engineering,True,2024-02-09T14:08:41
+ENT-1266,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 54,TENANT-02,SGD,ID,Construction & Engineering,True,2024-02-28T11:54:37
+ENT-1267,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 54,TENANT-03,SGD,SG,Construction & Engineering,True,2025-06-01T08:39:12
+ENT-1268,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 54,TENANT-04,IDR,SG,Construction & Engineering,True,2024-02-24T13:27:09
+ENT-1269,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 54,TENANT-05,SGD,SG,Construction & Engineering,True,2024-04-13T09:24:49
+ENT-1270,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 55,TENANT-01,SGD,SG,Construction & Engineering,True,2023-08-29T17:56:32
+ENT-1271,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 55,TENANT-02,SGD,ID,Construction & Engineering,True,2025-10-25T16:47:58
+ENT-1272,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 55,TENANT-03,SGD,SG,Construction & Engineering,True,2024-06-19T09:29:26
+ENT-1273,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 55,TENANT-04,IDR,SG,Construction & Engineering,True,2023-11-21T11:19:04
+ENT-1274,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 55,TENANT-05,SGD,SG,Construction & Engineering,True,2023-11-30T15:02:25
+ENT-1275,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 56,TENANT-01,SGD,SG,Construction & Engineering,True,2024-12-23T12:54:08
+ENT-1276,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 56,TENANT-02,SGD,ID,Construction & Engineering,True,2025-07-01T09:14:53
+ENT-1277,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 56,TENANT-03,SGD,SG,Construction & Engineering,True,2023-08-06T08:37:13
+ENT-1278,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 56,TENANT-04,IDR,SG,Construction & Engineering,True,2025-11-03T10:11:28
+ENT-1279,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 56,TENANT-05,SGD,SG,Construction & Engineering,True,2023-06-07T13:42:29
+ENT-1280,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 57,TENANT-01,SGD,SG,Construction & Engineering,True,2026-05-17T08:15:14
+ENT-1281,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 57,TENANT-02,SGD,ID,Construction & Engineering,True,2023-11-24T16:50:37
+ENT-1282,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 57,TENANT-03,SGD,SG,Construction & Engineering,True,2024-09-30T14:24:39
+ENT-1283,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 57,TENANT-04,IDR,SG,Construction & Engineering,True,2024-01-14T15:36:03
+ENT-1284,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 57,TENANT-05,SGD,SG,Construction & Engineering,True,2024-03-30T11:43:31
+ENT-1285,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 58,TENANT-01,SGD,SG,Construction & Engineering,True,2023-10-11T11:54:49
+ENT-1286,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 58,TENANT-02,SGD,ID,Construction & Engineering,True,2025-06-04T12:31:45
+ENT-1287,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 58,TENANT-03,SGD,SG,Construction & Engineering,True,2024-05-08T16:21:29
+ENT-1288,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 58,TENANT-04,IDR,SG,Construction & Engineering,True,2025-02-15T17:17:34
+ENT-1289,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 58,TENANT-05,SGD,SG,Construction & Engineering,True,2026-01-21T16:22:20
+ENT-1290,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 59,TENANT-01,SGD,SG,Construction & Engineering,True,2024-09-01T12:50:31
+ENT-1291,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 59,TENANT-02,SGD,ID,Construction & Engineering,True,2024-11-12T09:01:23
+ENT-1292,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 59,TENANT-03,SGD,SG,Construction & Engineering,True,2023-06-04T17:37:37
+ENT-1293,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 59,TENANT-04,IDR,SG,Construction & Engineering,True,2025-03-30T09:00:19
+ENT-1294,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 59,TENANT-05,SGD,SG,Construction & Engineering,True,2025-06-20T09:15:01
+ENT-1295,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 60,TENANT-01,SGD,SG,Construction & Engineering,True,2024-08-05T17:40:26
+ENT-1296,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 60,TENANT-02,SGD,ID,Construction & Engineering,True,2025-02-26T11:08:35
+ENT-1297,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 60,TENANT-03,SGD,SG,Construction & Engineering,True,2024-09-19T08:24:16
+ENT-1298,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 60,TENANT-04,IDR,SG,Construction & Engineering,True,2025-11-27T15:31:37
+ENT-1299,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 60,TENANT-05,SGD,SG,Construction & Engineering,True,2024-04-11T17:47:36
+ENT-1300,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 61,TENANT-01,SGD,SG,Construction & Engineering,True,2023-10-13T12:58:44
+ENT-1301,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 61,TENANT-02,SGD,ID,Construction & Engineering,True,2024-06-19T17:30:42
+ENT-1302,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 61,TENANT-03,SGD,SG,Construction & Engineering,True,2025-07-25T17:36:46
+ENT-1303,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 61,TENANT-04,IDR,SG,Construction & Engineering,True,2025-01-13T16:04:06
+ENT-1304,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 61,TENANT-05,SGD,SG,Construction & Engineering,True,2024-11-23T15:47:25
+ENT-1305,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 62,TENANT-01,SGD,SG,Construction & Engineering,True,2024-06-20T13:56:38
+ENT-1306,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 62,TENANT-02,SGD,ID,Construction & Engineering,True,2025-03-02T17:06:58
+ENT-1307,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 62,TENANT-03,SGD,SG,Construction & Engineering,True,2025-12-15T10:48:43
+ENT-1308,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 62,TENANT-04,IDR,SG,Construction & Engineering,True,2023-07-05T15:37:20
+ENT-1309,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 62,TENANT-05,SGD,SG,Construction & Engineering,True,2026-05-27T09:17:02
+ENT-1310,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 63,TENANT-01,SGD,SG,Construction & Engineering,True,2024-11-22T15:56:28
+ENT-1311,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 63,TENANT-02,SGD,ID,Construction & Engineering,True,2023-10-17T17:50:27
+ENT-1312,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 63,TENANT-03,SGD,SG,Construction & Engineering,True,2025-06-10T17:14:24
+ENT-1313,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 63,TENANT-04,IDR,SG,Construction & Engineering,True,2026-03-12T15:38:05
+ENT-1314,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 63,TENANT-05,SGD,SG,Construction & Engineering,True,2025-10-01T13:31:47
+ENT-1315,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 64,TENANT-01,SGD,SG,Construction & Engineering,True,2025-08-14T17:26:48
+ENT-1316,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 64,TENANT-02,SGD,ID,Construction & Engineering,True,2025-09-13T08:03:21
+ENT-1317,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 64,TENANT-03,SGD,SG,Construction & Engineering,True,2023-07-24T08:21:06
+ENT-1318,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 64,TENANT-04,IDR,SG,Construction & Engineering,True,2023-08-16T14:44:42
+ENT-1319,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 64,TENANT-05,SGD,SG,Construction & Engineering,True,2024-06-12T15:00:51
+ENT-1320,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 65,TENANT-01,SGD,SG,Construction & Engineering,True,2024-03-13T15:23:47
+ENT-1321,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 65,TENANT-02,SGD,ID,Construction & Engineering,True,2025-04-09T08:53:13
+ENT-1322,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 65,TENANT-03,SGD,SG,Construction & Engineering,True,2026-02-10T14:13:50
+ENT-1323,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 65,TENANT-04,IDR,SG,Construction & Engineering,True,2025-02-01T08:56:30
+ENT-1324,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 65,TENANT-05,SGD,SG,Construction & Engineering,True,2025-08-18T14:31:01
+ENT-1325,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 66,TENANT-01,SGD,SG,Construction & Engineering,True,2024-02-21T12:41:52
+ENT-1326,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 66,TENANT-02,SGD,ID,Construction & Engineering,True,2024-08-02T14:15:14
+ENT-1327,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 66,TENANT-03,SGD,SG,Construction & Engineering,True,2025-03-04T16:30:20
+ENT-1328,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 66,TENANT-04,IDR,SG,Construction & Engineering,True,2024-01-30T16:53:17
+ENT-1329,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 66,TENANT-05,SGD,SG,Construction & Engineering,True,2024-04-15T13:26:23
+ENT-1330,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 67,TENANT-01,SGD,SG,Construction & Engineering,True,2026-01-27T10:32:52
+ENT-1331,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 67,TENANT-02,SGD,ID,Construction & Engineering,True,2023-10-27T09:40:05
+ENT-1332,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 67,TENANT-03,SGD,SG,Construction & Engineering,True,2024-05-23T11:26:42
+ENT-1333,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 67,TENANT-04,IDR,SG,Construction & Engineering,True,2025-02-21T16:31:58
+ENT-1334,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 67,TENANT-05,SGD,SG,Construction & Engineering,True,2024-07-03T10:45:24
+ENT-1335,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 68,TENANT-01,SGD,SG,Construction & Engineering,True,2024-10-25T09:07:33
+ENT-1336,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 68,TENANT-02,SGD,ID,Construction & Engineering,True,2025-11-09T17:50:41
+ENT-1337,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 68,TENANT-03,SGD,SG,Construction & Engineering,True,2024-03-19T13:03:23
+ENT-1338,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 68,TENANT-04,IDR,SG,Construction & Engineering,True,2024-12-06T17:12:29
+ENT-1339,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 68,TENANT-05,SGD,SG,Construction & Engineering,True,2025-05-21T09:06:21
+ENT-1340,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 69,TENANT-01,SGD,SG,Construction & Engineering,True,2026-03-03T08:20:11
+ENT-1341,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 69,TENANT-02,SGD,ID,Construction & Engineering,True,2024-10-02T08:17:26
+ENT-1342,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 69,TENANT-03,SGD,SG,Construction & Engineering,True,2023-07-13T14:51:20
+ENT-1343,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 69,TENANT-04,IDR,SG,Construction & Engineering,True,2025-01-25T12:52:56
+ENT-1344,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 69,TENANT-05,SGD,SG,Construction & Engineering,True,2023-07-14T15:29:31
+ENT-1345,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 70,TENANT-01,SGD,SG,Construction & Engineering,True,2023-06-24T10:20:52
+ENT-1346,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 70,TENANT-02,SGD,ID,Construction & Engineering,True,2025-04-04T10:33:19
+ENT-1347,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 70,TENANT-03,SGD,SG,Construction & Engineering,True,2023-09-30T17:18:31
+ENT-1348,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 70,TENANT-04,IDR,SG,Construction & Engineering,True,2023-06-20T15:12:34
+ENT-1349,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 70,TENANT-05,SGD,SG,Construction & Engineering,True,2024-07-23T14:01:17
+ENT-1350,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 71,TENANT-01,SGD,SG,Construction & Engineering,True,2023-11-09T10:17:19
+ENT-1351,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 71,TENANT-02,SGD,ID,Construction & Engineering,True,2025-11-19T09:20:51
+ENT-1352,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 71,TENANT-03,SGD,SG,Construction & Engineering,True,2026-05-31T10:03:33
+ENT-1353,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 71,TENANT-04,IDR,SG,Construction & Engineering,True,2025-08-31T15:34:46
+ENT-1354,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 71,TENANT-05,SGD,SG,Construction & Engineering,True,2024-07-06T12:50:28
+ENT-1355,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 72,TENANT-01,SGD,SG,Construction & Engineering,True,2023-07-27T17:34:39
+ENT-1356,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 72,TENANT-02,SGD,ID,Construction & Engineering,True,2025-08-26T16:39:53
+ENT-1357,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 72,TENANT-03,SGD,SG,Construction & Engineering,True,2025-08-13T15:27:10
+ENT-1358,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 72,TENANT-04,IDR,SG,Construction & Engineering,True,2025-11-26T13:18:06
+ENT-1359,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 72,TENANT-05,SGD,SG,Construction & Engineering,True,2025-02-19T14:18:56
+ENT-1360,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 73,TENANT-01,SGD,SG,Construction & Engineering,True,2024-01-30T13:55:25
+ENT-1361,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 73,TENANT-02,SGD,ID,Construction & Engineering,True,2025-12-31T08:55:56
+ENT-1362,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 73,TENANT-03,SGD,SG,Construction & Engineering,True,2024-03-14T09:17:02
+ENT-1363,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 73,TENANT-04,IDR,SG,Construction & Engineering,True,2026-04-06T10:33:03
+ENT-1364,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 73,TENANT-05,SGD,SG,Construction & Engineering,True,2023-06-19T12:15:30
+ENT-1365,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 74,TENANT-01,SGD,SG,Construction & Engineering,True,2024-01-18T11:02:03
+ENT-1366,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 74,TENANT-02,SGD,ID,Construction & Engineering,True,2023-11-12T09:37:22
+ENT-1367,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 74,TENANT-03,SGD,SG,Construction & Engineering,True,2024-02-01T08:52:41
+ENT-1368,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 74,TENANT-04,IDR,SG,Construction & Engineering,True,2025-01-26T10:57:17
+ENT-1369,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 74,TENANT-05,SGD,SG,Construction & Engineering,True,2024-12-11T11:13:24
+ENT-1370,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 75,TENANT-01,SGD,SG,Construction & Engineering,True,2025-12-18T08:17:06
+ENT-1371,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 75,TENANT-02,SGD,ID,Construction & Engineering,True,2025-03-04T16:09:00
+ENT-1372,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 75,TENANT-03,SGD,SG,Construction & Engineering,True,2026-01-31T13:16:28
+ENT-1373,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 75,TENANT-04,IDR,SG,Construction & Engineering,True,2026-04-30T11:24:25
+ENT-1374,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 75,TENANT-05,SGD,SG,Construction & Engineering,True,2024-10-06T15:27:49
+ENT-1375,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 76,TENANT-01,SGD,SG,Construction & Engineering,True,2024-10-29T10:13:19
+ENT-1376,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 76,TENANT-02,SGD,ID,Construction & Engineering,True,2024-08-16T10:53:28
+ENT-1377,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 76,TENANT-03,SGD,SG,Construction & Engineering,True,2023-10-30T14:19:13
+ENT-1378,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 76,TENANT-04,IDR,SG,Construction & Engineering,True,2024-03-09T11:14:54
+ENT-1379,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 76,TENANT-05,SGD,SG,Construction & Engineering,True,2024-12-20T08:29:27
+ENT-1380,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 77,TENANT-01,SGD,SG,Construction & Engineering,True,2023-10-29T15:11:08
+ENT-1381,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 77,TENANT-02,SGD,ID,Construction & Engineering,True,2024-08-10T08:18:08
+ENT-1382,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 77,TENANT-03,SGD,SG,Construction & Engineering,True,2026-05-10T17:05:00
+ENT-1383,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 77,TENANT-04,IDR,SG,Construction & Engineering,True,2023-08-15T09:48:01
+ENT-1384,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 77,TENANT-05,SGD,SG,Construction & Engineering,True,2025-12-15T09:41:36
+ENT-1385,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 78,TENANT-01,SGD,SG,Construction & Engineering,True,2024-12-28T10:05:33
+ENT-1386,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 78,TENANT-02,SGD,ID,Construction & Engineering,True,2025-09-22T13:40:50
+ENT-1387,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 78,TENANT-03,SGD,SG,Construction & Engineering,True,2024-12-08T08:16:50
+ENT-1388,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 78,TENANT-04,IDR,SG,Construction & Engineering,True,2024-10-26T14:27:09
+ENT-1389,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 78,TENANT-05,SGD,SG,Construction & Engineering,True,2023-09-24T15:58:50
+ENT-1390,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 79,TENANT-01,SGD,SG,Construction & Engineering,True,2025-07-18T10:14:54
+ENT-1391,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 79,TENANT-02,SGD,ID,Construction & Engineering,True,2024-09-30T12:57:35
+ENT-1392,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 79,TENANT-03,SGD,SG,Construction & Engineering,True,2023-09-10T17:04:21
+ENT-1393,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 79,TENANT-04,IDR,SG,Construction & Engineering,True,2024-03-20T16:08:18
+ENT-1394,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 79,TENANT-05,SGD,SG,Construction & Engineering,True,2024-10-09T15:06:35
+ENT-1395,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 80,TENANT-01,SGD,SG,Construction & Engineering,True,2025-07-12T10:30:24
+ENT-1396,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 80,TENANT-02,SGD,ID,Construction & Engineering,True,2024-07-05T11:48:04
+ENT-1397,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 80,TENANT-03,SGD,SG,Construction & Engineering,True,2023-11-01T08:43:20
+ENT-1398,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 80,TENANT-04,IDR,SG,Construction & Engineering,True,2025-04-08T08:41:09
+ENT-1399,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 80,TENANT-05,SGD,SG,Construction & Engineering,True,2024-06-10T15:49:41
+ENT-1400,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 81,TENANT-01,SGD,SG,Construction & Engineering,True,2025-07-06T15:48:18
+ENT-1401,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 81,TENANT-02,SGD,ID,Construction & Engineering,True,2026-01-17T16:08:35
+ENT-1402,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 81,TENANT-03,SGD,SG,Construction & Engineering,True,2025-09-16T09:45:08
+ENT-1403,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 81,TENANT-04,IDR,SG,Construction & Engineering,True,2024-05-29T14:03:10
+ENT-1404,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 81,TENANT-05,SGD,SG,Construction & Engineering,True,2024-01-14T13:07:58
+ENT-1405,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 82,TENANT-01,SGD,SG,Construction & Engineering,True,2025-08-15T08:54:00
+ENT-1406,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 82,TENANT-02,SGD,ID,Construction & Engineering,True,2024-10-04T17:34:34
+ENT-1407,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 82,TENANT-03,SGD,SG,Construction & Engineering,True,2025-04-02T09:33:52
+ENT-1408,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 82,TENANT-04,IDR,SG,Construction & Engineering,True,2026-02-22T16:24:31
+ENT-1409,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 82,TENANT-05,SGD,SG,Construction & Engineering,True,2025-12-02T14:10:16
+ENT-1410,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 83,TENANT-01,SGD,SG,Construction & Engineering,True,2024-04-02T08:26:35
+ENT-1411,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 83,TENANT-02,SGD,ID,Construction & Engineering,True,2026-01-08T10:20:39
+ENT-1412,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 83,TENANT-03,SGD,SG,Construction & Engineering,True,2023-06-28T16:11:01
+ENT-1413,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 83,TENANT-04,IDR,SG,Construction & Engineering,True,2026-04-06T13:09:13
+ENT-1414,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 83,TENANT-05,SGD,SG,Construction & Engineering,True,2023-11-17T16:49:14
+ENT-1415,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 84,TENANT-01,SGD,SG,Construction & Engineering,True,2024-07-23T14:10:32
+ENT-1416,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 84,TENANT-02,SGD,ID,Construction & Engineering,True,2024-11-03T11:44:39
+ENT-1417,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 84,TENANT-03,SGD,SG,Construction & Engineering,True,2024-10-26T15:45:33
+ENT-1418,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 84,TENANT-04,IDR,SG,Construction & Engineering,True,2025-08-12T15:42:58
+ENT-1419,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 84,TENANT-05,SGD,SG,Construction & Engineering,True,2025-12-19T12:54:30
+ENT-1420,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 85,TENANT-01,SGD,SG,Construction & Engineering,True,2023-08-04T08:02:46
+ENT-1421,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 85,TENANT-02,SGD,ID,Construction & Engineering,True,2025-05-05T13:25:24
+ENT-1422,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 85,TENANT-03,SGD,SG,Construction & Engineering,True,2023-08-08T08:45:52
+ENT-1423,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 85,TENANT-04,IDR,SG,Construction & Engineering,True,2024-06-12T11:09:40
+ENT-1424,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 85,TENANT-05,SGD,SG,Construction & Engineering,True,2025-01-04T09:21:56
+ENT-1425,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 86,TENANT-01,SGD,SG,Construction & Engineering,True,2025-08-15T09:40:11
+ENT-1426,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 86,TENANT-02,SGD,ID,Construction & Engineering,True,2023-08-29T16:58:53
+ENT-1427,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 86,TENANT-03,SGD,SG,Construction & Engineering,True,2025-09-08T10:20:27
+ENT-1428,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 86,TENANT-04,IDR,SG,Construction & Engineering,True,2023-10-12T15:38:51
+ENT-1429,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 86,TENANT-05,SGD,SG,Construction & Engineering,True,2024-06-24T11:24:30
+ENT-1430,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 87,TENANT-01,SGD,SG,Construction & Engineering,True,2026-02-24T15:38:43
+ENT-1431,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 87,TENANT-02,SGD,ID,Construction & Engineering,True,2024-10-25T15:56:33
+ENT-1432,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 87,TENANT-03,SGD,SG,Construction & Engineering,True,2025-01-31T09:45:53
+ENT-1433,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 87,TENANT-04,IDR,SG,Construction & Engineering,True,2024-04-27T16:50:47
+ENT-1434,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 87,TENANT-05,SGD,SG,Construction & Engineering,True,2024-11-28T08:00:12
+ENT-1435,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 88,TENANT-01,SGD,SG,Construction & Engineering,True,2025-02-15T15:26:01
+ENT-1436,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 88,TENANT-02,SGD,ID,Construction & Engineering,True,2025-10-14T17:58:22
+ENT-1437,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 88,TENANT-03,SGD,SG,Construction & Engineering,True,2024-01-02T15:54:52
+ENT-1438,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 88,TENANT-04,IDR,SG,Construction & Engineering,True,2024-07-13T11:36:18
+ENT-1439,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 88,TENANT-05,SGD,SG,Construction & Engineering,True,2025-05-16T14:33:34
+ENT-1440,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 89,TENANT-01,SGD,SG,Construction & Engineering,True,2025-04-06T12:00:35
+ENT-1441,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 89,TENANT-02,SGD,ID,Construction & Engineering,True,2024-09-09T17:29:27
+ENT-1442,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 89,TENANT-03,SGD,SG,Construction & Engineering,True,2026-03-19T09:19:22
+ENT-1443,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 89,TENANT-04,IDR,SG,Construction & Engineering,True,2025-04-30T11:45:07
+ENT-1444,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 89,TENANT-05,SGD,SG,Construction & Engineering,True,2025-06-03T09:18:40
+ENT-1445,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 90,TENANT-01,SGD,SG,Construction & Engineering,True,2026-04-11T11:01:56
+ENT-1446,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 90,TENANT-02,SGD,ID,Construction & Engineering,True,2024-03-27T10:11:05
+ENT-1447,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 90,TENANT-03,SGD,SG,Construction & Engineering,True,2024-12-31T15:34:51
+ENT-1448,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 90,TENANT-04,IDR,SG,Construction & Engineering,True,2025-05-21T10:28:11
+ENT-1449,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 90,TENANT-05,SGD,SG,Construction & Engineering,True,2023-06-29T09:28:30
+ENT-1450,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 91,TENANT-01,SGD,SG,Construction & Engineering,True,2026-03-31T12:26:15
+ENT-1451,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 91,TENANT-02,SGD,ID,Construction & Engineering,True,2026-01-12T08:00:28
+ENT-1452,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 91,TENANT-03,SGD,SG,Construction & Engineering,True,2026-02-23T17:14:38
+ENT-1453,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 91,TENANT-04,IDR,SG,Construction & Engineering,True,2024-05-25T12:52:06
+ENT-1454,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 91,TENANT-05,SGD,SG,Construction & Engineering,True,2025-09-18T10:07:17
+ENT-1455,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 92,TENANT-01,SGD,SG,Construction & Engineering,True,2025-06-24T15:17:51
+ENT-1456,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 92,TENANT-02,SGD,ID,Construction & Engineering,True,2024-02-06T17:06:58
+ENT-1457,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 92,TENANT-03,SGD,SG,Construction & Engineering,True,2024-07-29T17:20:56
+ENT-1458,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 92,TENANT-04,IDR,SG,Construction & Engineering,True,2024-08-26T08:24:08
+ENT-1459,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 92,TENANT-05,SGD,SG,Construction & Engineering,True,2023-08-06T11:13:32
+ENT-1460,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 93,TENANT-01,SGD,SG,Construction & Engineering,True,2025-02-21T08:48:49
+ENT-1461,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 93,TENANT-02,SGD,ID,Construction & Engineering,True,2024-03-10T14:23:31
+ENT-1462,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 93,TENANT-03,SGD,SG,Construction & Engineering,True,2024-11-08T09:04:14
+ENT-1463,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 93,TENANT-04,IDR,SG,Construction & Engineering,True,2025-01-20T09:06:50
+ENT-1464,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 93,TENANT-05,SGD,SG,Construction & Engineering,True,2025-04-17T13:30:43
+ENT-1465,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 94,TENANT-01,SGD,SG,Construction & Engineering,True,2024-03-13T10:50:21
+ENT-1466,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 94,TENANT-02,SGD,ID,Construction & Engineering,True,2023-11-30T12:06:44
+ENT-1467,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 94,TENANT-03,SGD,SG,Construction & Engineering,True,2026-04-29T15:02:12
+ENT-1468,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 94,TENANT-04,IDR,SG,Construction & Engineering,True,2024-08-10T17:24:07
+ENT-1469,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 94,TENANT-05,SGD,SG,Construction & Engineering,True,2025-09-19T16:42:05
+ENT-1470,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 95,TENANT-01,SGD,SG,Construction & Engineering,True,2025-04-06T10:10:49
+ENT-1471,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 95,TENANT-02,SGD,ID,Construction & Engineering,True,2024-07-25T09:38:24
+ENT-1472,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 95,TENANT-03,SGD,SG,Construction & Engineering,True,2026-03-26T12:10:14
+ENT-1473,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 95,TENANT-04,IDR,SG,Construction & Engineering,True,2023-10-13T15:07:50
+ENT-1474,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 95,TENANT-05,SGD,SG,Construction & Engineering,True,2024-09-11T16:44:20
+ENT-1475,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 96,TENANT-01,SGD,SG,Construction & Engineering,True,2024-10-24T13:42:14
+ENT-1476,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 96,TENANT-02,SGD,ID,Construction & Engineering,True,2025-06-02T10:17:09
+ENT-1477,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 96,TENANT-03,SGD,SG,Construction & Engineering,True,2026-04-22T17:04:52
+ENT-1478,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 96,TENANT-04,IDR,SG,Construction & Engineering,True,2026-05-29T15:19:30
+ENT-1479,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 96,TENANT-05,SGD,SG,Construction & Engineering,True,2025-07-27T12:26:31
+ENT-1480,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 97,TENANT-01,SGD,SG,Construction & Engineering,True,2025-03-28T13:48:25
+ENT-1481,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 97,TENANT-02,SGD,ID,Construction & Engineering,True,2025-05-02T09:21:07
+ENT-1482,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 97,TENANT-03,SGD,SG,Construction & Engineering,True,2025-11-14T17:05:28
+ENT-1483,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 97,TENANT-04,IDR,SG,Construction & Engineering,True,2023-12-01T17:08:09
+ENT-1484,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 97,TENANT-05,SGD,SG,Construction & Engineering,True,2025-04-20T13:56:12
+ENT-1485,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 98,TENANT-01,SGD,SG,Construction & Engineering,True,2025-12-03T10:51:01
+ENT-1486,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 98,TENANT-02,SGD,ID,Construction & Engineering,True,2025-04-11T09:09:54
+ENT-1487,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 98,TENANT-03,SGD,SG,Construction & Engineering,True,2026-05-31T11:54:35
+ENT-1488,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 98,TENANT-04,IDR,SG,Construction & Engineering,True,2026-03-15T12:57:23
+ENT-1489,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 98,TENANT-05,SGD,SG,Construction & Engineering,True,2024-10-31T13:38:11
+ENT-1490,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 99,TENANT-01,SGD,SG,Construction & Engineering,True,2023-11-25T17:08:48
+ENT-1491,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 99,TENANT-02,SGD,ID,Construction & Engineering,True,2023-12-20T15:21:27
+ENT-1492,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 99,TENANT-03,SGD,SG,Construction & Engineering,True,2023-11-26T09:48:54
+ENT-1493,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 99,TENANT-04,IDR,SG,Construction & Engineering,True,2024-05-16T11:32:02
+ENT-1494,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 99,TENANT-05,SGD,SG,Construction & Engineering,True,2023-08-16T11:03:46
+ENT-1495,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 100,TENANT-01,SGD,SG,Construction & Engineering,True,2024-06-11T14:03:44
+ENT-1496,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 100,TENANT-02,SGD,ID,Construction & Engineering,True,2024-07-04T15:48:12
+ENT-1497,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 100,TENANT-03,SGD,SG,Construction & Engineering,True,2025-10-14T17:31:25
+ENT-1498,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 100,TENANT-04,IDR,SG,Construction & Engineering,True,2025-07-22T14:44:00
+ENT-1499,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 100,TENANT-05,SGD,SG,Construction & Engineering,True,2024-10-04T17:16:16
+ENT-1500,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 101,TENANT-01,SGD,SG,Construction & Engineering,True,2023-10-14T08:23:27
+ENT-1501,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 101,TENANT-02,SGD,ID,Construction & Engineering,True,2024-01-10T09:25:08
+ENT-1502,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 101,TENANT-03,SGD,SG,Construction & Engineering,True,2024-01-21T14:29:23
+ENT-1503,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 101,TENANT-04,IDR,SG,Construction & Engineering,True,2025-12-16T17:38:18
+ENT-1504,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 101,TENANT-05,SGD,SG,Construction & Engineering,True,2025-03-05T15:42:27
+ENT-1505,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 102,TENANT-01,SGD,SG,Construction & Engineering,True,2025-07-05T14:38:35
+ENT-1506,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 102,TENANT-02,SGD,ID,Construction & Engineering,True,2026-03-14T12:36:56
+ENT-1507,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 102,TENANT-03,SGD,SG,Construction & Engineering,True,2024-11-03T11:32:10
+ENT-1508,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 102,TENANT-04,IDR,SG,Construction & Engineering,True,2026-02-22T14:58:49
+ENT-1509,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 102,TENANT-05,SGD,SG,Construction & Engineering,True,2024-08-31T08:58:26
+ENT-1510,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 103,TENANT-01,SGD,SG,Construction & Engineering,True,2025-07-19T16:44:44
+ENT-1511,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 103,TENANT-02,SGD,ID,Construction & Engineering,True,2025-08-01T17:26:31
+ENT-1512,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 103,TENANT-03,SGD,SG,Construction & Engineering,True,2024-03-01T14:10:17
+ENT-1513,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 103,TENANT-04,IDR,SG,Construction & Engineering,True,2025-05-02T17:42:21
+ENT-1514,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 103,TENANT-05,SGD,SG,Construction & Engineering,True,2024-03-19T15:23:23
+ENT-1515,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 104,TENANT-01,SGD,SG,Construction & Engineering,True,2023-09-26T13:08:42
+ENT-1516,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 104,TENANT-02,SGD,ID,Construction & Engineering,True,2024-08-25T13:42:53
+ENT-1517,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 104,TENANT-03,SGD,SG,Construction & Engineering,True,2025-06-05T12:11:38
+ENT-1518,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 104,TENANT-04,IDR,SG,Construction & Engineering,True,2025-03-18T11:41:24
+ENT-1519,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 104,TENANT-05,SGD,SG,Construction & Engineering,True,2025-01-09T12:15:07
+ENT-1520,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 105,TENANT-01,SGD,SG,Construction & Engineering,True,2023-12-09T08:19:39
+ENT-1521,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 105,TENANT-02,SGD,ID,Construction & Engineering,True,2026-01-09T14:43:39
+ENT-1522,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 105,TENANT-03,SGD,SG,Construction & Engineering,True,2025-07-02T08:52:19
+ENT-1523,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 105,TENANT-04,IDR,SG,Construction & Engineering,True,2024-01-02T09:09:45
+ENT-1524,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 105,TENANT-05,SGD,SG,Construction & Engineering,True,2023-08-07T16:44:14
+ENT-1525,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 106,TENANT-01,SGD,SG,Construction & Engineering,True,2023-09-06T14:10:07
+ENT-1526,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 106,TENANT-02,SGD,ID,Construction & Engineering,True,2023-10-22T10:45:08
+ENT-1527,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 106,TENANT-03,SGD,SG,Construction & Engineering,True,2025-07-29T10:16:39
+ENT-1528,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 106,TENANT-04,IDR,SG,Construction & Engineering,True,2023-09-04T17:43:11
+ENT-1529,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 106,TENANT-05,SGD,SG,Construction & Engineering,True,2023-07-16T13:32:41
+ENT-1530,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 107,TENANT-01,SGD,SG,Construction & Engineering,True,2024-02-10T17:34:35
+ENT-1531,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 107,TENANT-02,SGD,ID,Construction & Engineering,True,2024-03-07T10:18:36
+ENT-1532,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 107,TENANT-03,SGD,SG,Construction & Engineering,True,2026-03-23T11:42:57
+ENT-1533,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 107,TENANT-04,IDR,SG,Construction & Engineering,True,2024-11-10T11:25:40
+ENT-1534,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 107,TENANT-05,SGD,SG,Construction & Engineering,True,2024-10-13T08:31:23
+ENT-1535,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 108,TENANT-01,SGD,SG,Construction & Engineering,True,2024-04-25T16:56:36
+ENT-1536,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 108,TENANT-02,SGD,ID,Construction & Engineering,True,2025-04-30T12:10:55
+ENT-1537,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 108,TENANT-03,SGD,SG,Construction & Engineering,True,2023-11-17T16:19:19
+ENT-1538,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 108,TENANT-04,IDR,SG,Construction & Engineering,True,2023-11-07T13:41:28
+ENT-1539,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 108,TENANT-05,SGD,SG,Construction & Engineering,True,2025-02-02T14:47:19
+ENT-1540,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 109,TENANT-01,SGD,SG,Construction & Engineering,True,2023-12-28T10:23:53
+ENT-1541,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 109,TENANT-02,SGD,ID,Construction & Engineering,True,2023-07-22T17:18:49
+ENT-1542,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 109,TENANT-03,SGD,SG,Construction & Engineering,True,2023-08-11T17:01:43
+ENT-1543,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 109,TENANT-04,IDR,SG,Construction & Engineering,True,2023-06-06T15:13:44
+ENT-1544,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 109,TENANT-05,SGD,SG,Construction & Engineering,True,2026-02-06T12:36:26
+ENT-1545,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 110,TENANT-01,SGD,SG,Construction & Engineering,True,2024-04-26T10:35:38
+ENT-1546,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 110,TENANT-02,SGD,ID,Construction & Engineering,True,2024-07-07T10:18:15
+ENT-1547,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 110,TENANT-03,SGD,SG,Construction & Engineering,True,2025-01-12T13:21:24
+ENT-1548,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 110,TENANT-04,IDR,SG,Construction & Engineering,True,2025-07-23T10:38:48
+ENT-1549,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 110,TENANT-05,SGD,SG,Construction & Engineering,True,2025-07-18T16:33:09
+ENT-1550,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 111,TENANT-01,SGD,SG,Construction & Engineering,True,2025-04-27T08:02:19
+ENT-1551,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 111,TENANT-02,SGD,ID,Construction & Engineering,True,2025-01-20T15:07:49
+ENT-1552,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 111,TENANT-03,SGD,SG,Construction & Engineering,True,2025-09-18T09:41:45
+ENT-1553,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 111,TENANT-04,IDR,SG,Construction & Engineering,True,2024-08-08T09:06:23
+ENT-1554,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 111,TENANT-05,SGD,SG,Construction & Engineering,True,2025-01-24T17:16:11
+ENT-1555,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 112,TENANT-01,SGD,SG,Construction & Engineering,True,2023-08-01T09:01:24
+ENT-1556,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 112,TENANT-02,SGD,ID,Construction & Engineering,True,2025-03-19T14:51:55
+ENT-1557,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 112,TENANT-03,SGD,SG,Construction & Engineering,True,2025-07-19T17:37:04
+ENT-1558,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 112,TENANT-04,IDR,SG,Construction & Engineering,True,2023-08-09T09:34:46
+ENT-1559,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 112,TENANT-05,SGD,SG,Construction & Engineering,True,2025-09-01T10:28:52
+ENT-1560,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 113,TENANT-01,SGD,SG,Construction & Engineering,True,2025-09-30T14:26:06
+ENT-1561,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 113,TENANT-02,SGD,ID,Construction & Engineering,True,2024-04-14T16:33:10
+ENT-1562,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 113,TENANT-03,SGD,SG,Construction & Engineering,True,2025-12-13T12:29:32
+ENT-1563,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 113,TENANT-04,IDR,SG,Construction & Engineering,True,2025-09-08T13:17:40
+ENT-1564,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 113,TENANT-05,SGD,SG,Construction & Engineering,True,2024-01-11T14:00:58
+ENT-1565,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 114,TENANT-01,SGD,SG,Construction & Engineering,True,2026-05-06T17:01:30
+ENT-1566,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 114,TENANT-02,SGD,ID,Construction & Engineering,True,2026-02-05T08:40:42
+ENT-1567,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 114,TENANT-03,SGD,SG,Construction & Engineering,True,2026-01-23T17:18:18
+ENT-1568,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 114,TENANT-04,IDR,SG,Construction & Engineering,True,2025-07-11T12:10:25
+ENT-1569,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 114,TENANT-05,SGD,SG,Construction & Engineering,True,2025-10-15T08:21:39
+ENT-1570,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 115,TENANT-01,SGD,SG,Construction & Engineering,True,2024-02-17T11:19:46
+ENT-1571,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 115,TENANT-02,SGD,ID,Construction & Engineering,True,2024-05-17T16:53:48
+ENT-1572,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 115,TENANT-03,SGD,SG,Construction & Engineering,True,2023-08-11T12:23:18
+ENT-1573,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 115,TENANT-04,IDR,SG,Construction & Engineering,True,2025-09-17T15:42:47
+ENT-1574,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 115,TENANT-05,SGD,SG,Construction & Engineering,True,2025-11-30T12:13:52
+ENT-1575,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 116,TENANT-01,SGD,SG,Construction & Engineering,True,2025-08-13T09:33:51
+ENT-1576,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 116,TENANT-02,SGD,ID,Construction & Engineering,True,2023-09-03T08:19:09
+ENT-1577,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 116,TENANT-03,SGD,SG,Construction & Engineering,True,2025-06-29T13:16:03
+ENT-1578,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 116,TENANT-04,IDR,SG,Construction & Engineering,True,2024-11-20T08:13:00
+ENT-1579,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 116,TENANT-05,SGD,SG,Construction & Engineering,True,2026-02-26T12:50:45
+ENT-1580,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 117,TENANT-01,SGD,SG,Construction & Engineering,True,2026-02-13T08:19:38
+ENT-1581,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 117,TENANT-02,SGD,ID,Construction & Engineering,True,2024-03-06T16:20:09
+ENT-1582,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 117,TENANT-03,SGD,SG,Construction & Engineering,True,2026-05-04T09:03:50
+ENT-1583,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 117,TENANT-04,IDR,SG,Construction & Engineering,True,2025-08-12T16:32:31
+ENT-1584,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 117,TENANT-05,SGD,SG,Construction & Engineering,True,2025-01-20T16:02:05
+ENT-1585,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 118,TENANT-01,SGD,SG,Construction & Engineering,True,2025-02-23T11:32:43
+ENT-1586,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 118,TENANT-02,SGD,ID,Construction & Engineering,True,2024-08-27T10:19:44
+ENT-1587,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 118,TENANT-03,SGD,SG,Construction & Engineering,True,2025-10-24T13:31:44
+ENT-1588,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 118,TENANT-04,IDR,SG,Construction & Engineering,True,2024-04-10T12:18:21
+ENT-1589,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 118,TENANT-05,SGD,SG,Construction & Engineering,True,2025-03-08T10:36:12
+ENT-1590,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 119,TENANT-01,SGD,SG,Construction & Engineering,True,2024-06-21T15:56:07
+ENT-1591,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 119,TENANT-02,SGD,ID,Construction & Engineering,True,2024-02-21T08:19:10
+ENT-1592,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 119,TENANT-03,SGD,SG,Construction & Engineering,True,2025-12-06T09:02:48
+ENT-1593,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 119,TENANT-04,IDR,SG,Construction & Engineering,True,2026-03-27T11:41:58
+ENT-1594,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 119,TENANT-05,SGD,SG,Construction & Engineering,True,2023-11-10T09:58:38
+ENT-1595,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 120,TENANT-01,SGD,SG,Construction & Engineering,True,2025-11-17T12:54:23
+ENT-1596,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 120,TENANT-02,SGD,ID,Construction & Engineering,True,2025-11-12T16:56:57
+ENT-1597,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 120,TENANT-03,SGD,SG,Construction & Engineering,True,2023-07-21T16:26:11
+ENT-1598,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 120,TENANT-04,IDR,SG,Construction & Engineering,True,2024-07-26T10:27:38
+ENT-1599,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 120,TENANT-05,SGD,SG,Construction & Engineering,True,2023-07-31T10:14:43
+ENT-1600,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 121,TENANT-01,SGD,SG,Construction & Engineering,True,2026-05-25T13:44:32
+ENT-1601,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 121,TENANT-02,SGD,ID,Construction & Engineering,True,2025-04-07T16:21:41
+ENT-1602,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 121,TENANT-03,SGD,SG,Construction & Engineering,True,2025-01-09T08:31:02
+ENT-1603,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 121,TENANT-04,IDR,SG,Construction & Engineering,True,2023-08-17T14:21:28
+ENT-1604,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 121,TENANT-05,SGD,SG,Construction & Engineering,True,2024-07-23T10:17:24
+ENT-1605,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 122,TENANT-01,SGD,SG,Construction & Engineering,True,2025-08-22T15:06:48
+ENT-1606,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 122,TENANT-02,SGD,ID,Construction & Engineering,True,2025-05-16T13:09:22
+ENT-1607,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 122,TENANT-03,SGD,SG,Construction & Engineering,True,2024-02-26T10:07:30
+ENT-1608,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 122,TENANT-04,IDR,SG,Construction & Engineering,True,2025-12-06T11:26:33
+ENT-1609,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 122,TENANT-05,SGD,SG,Construction & Engineering,True,2024-07-01T14:49:03
+ENT-1610,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 123,TENANT-01,SGD,SG,Construction & Engineering,True,2025-05-01T08:00:12
+ENT-1611,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 123,TENANT-02,SGD,ID,Construction & Engineering,True,2024-08-16T16:45:38
+ENT-1612,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 123,TENANT-03,SGD,SG,Construction & Engineering,True,2024-01-31T09:49:52
+ENT-1613,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 123,TENANT-04,IDR,SG,Construction & Engineering,True,2026-02-17T12:48:28
+ENT-1614,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 123,TENANT-05,SGD,SG,Construction & Engineering,True,2023-11-24T17:28:03
+ENT-1615,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 124,TENANT-01,SGD,SG,Construction & Engineering,True,2025-05-25T10:27:34
+ENT-1616,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 124,TENANT-02,SGD,ID,Construction & Engineering,True,2025-01-10T09:17:40
+ENT-1617,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 124,TENANT-03,SGD,SG,Construction & Engineering,True,2026-05-03T10:52:05
+ENT-1618,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 124,TENANT-04,IDR,SG,Construction & Engineering,True,2025-03-04T10:06:24
+ENT-1619,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 124,TENANT-05,SGD,SG,Construction & Engineering,True,2024-11-08T09:04:07
+ENT-1620,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 125,TENANT-01,SGD,SG,Construction & Engineering,True,2024-06-18T16:10:18
+ENT-1621,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 125,TENANT-02,SGD,ID,Construction & Engineering,True,2025-05-21T11:14:03
+ENT-1622,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 125,TENANT-03,SGD,SG,Construction & Engineering,True,2024-11-03T11:20:15
+ENT-1623,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 125,TENANT-04,IDR,SG,Construction & Engineering,True,2023-08-19T14:24:12
+ENT-1624,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 125,TENANT-05,SGD,SG,Construction & Engineering,True,2024-01-06T16:01:54
+ENT-1625,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 126,TENANT-01,SGD,SG,Construction & Engineering,True,2024-04-27T08:44:06
+ENT-1626,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 126,TENANT-02,SGD,ID,Construction & Engineering,True,2026-04-07T09:27:36
+ENT-1627,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 126,TENANT-03,SGD,SG,Construction & Engineering,True,2025-03-12T09:11:50
+ENT-1628,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 126,TENANT-04,IDR,SG,Construction & Engineering,True,2023-07-13T15:06:48
+ENT-1629,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 126,TENANT-05,SGD,SG,Construction & Engineering,True,2024-05-05T13:08:58
+ENT-1630,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 127,TENANT-01,SGD,SG,Construction & Engineering,True,2025-02-02T08:12:23
+ENT-1631,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 127,TENANT-02,SGD,ID,Construction & Engineering,True,2026-03-25T11:27:55
+ENT-1632,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 127,TENANT-03,SGD,SG,Construction & Engineering,True,2026-02-27T13:54:47
+ENT-1633,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 127,TENANT-04,IDR,SG,Construction & Engineering,True,2023-08-24T09:47:57
+ENT-1634,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 127,TENANT-05,SGD,SG,Construction & Engineering,True,2025-06-09T12:31:29
+ENT-1635,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 128,TENANT-01,SGD,SG,Construction & Engineering,True,2025-07-19T17:56:22
+ENT-1636,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 128,TENANT-02,SGD,ID,Construction & Engineering,True,2024-01-02T11:46:34
+ENT-1637,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 128,TENANT-03,SGD,SG,Construction & Engineering,True,2025-01-03T09:38:18
+ENT-1638,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 128,TENANT-04,IDR,SG,Construction & Engineering,True,2025-10-07T09:57:06
+ENT-1639,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 128,TENANT-05,SGD,SG,Construction & Engineering,True,2024-01-09T16:01:34
+ENT-1640,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 129,TENANT-01,SGD,SG,Construction & Engineering,True,2024-09-07T11:39:24
+ENT-1641,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 129,TENANT-02,SGD,ID,Construction & Engineering,True,2025-02-05T12:47:37
+ENT-1642,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 129,TENANT-03,SGD,SG,Construction & Engineering,True,2025-04-12T17:47:55
+ENT-1643,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 129,TENANT-04,IDR,SG,Construction & Engineering,True,2024-03-24T11:45:19
+ENT-1644,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 129,TENANT-05,SGD,SG,Construction & Engineering,True,2025-08-09T12:57:33
+ENT-1645,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 130,TENANT-01,SGD,SG,Construction & Engineering,True,2025-04-07T12:17:38
+ENT-1646,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 130,TENANT-02,SGD,ID,Construction & Engineering,True,2025-05-14T13:21:18
+ENT-1647,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 130,TENANT-03,SGD,SG,Construction & Engineering,True,2023-07-05T11:04:22
+ENT-1648,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 130,TENANT-04,IDR,SG,Construction & Engineering,True,2024-10-27T08:18:09
+ENT-1649,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 130,TENANT-05,SGD,SG,Construction & Engineering,True,2024-11-30T15:57:22
+ENT-1650,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 131,TENANT-01,SGD,SG,Construction & Engineering,True,2023-10-30T10:46:33
+ENT-1651,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 131,TENANT-02,SGD,ID,Construction & Engineering,True,2024-02-22T15:31:15
+ENT-1652,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 131,TENANT-03,SGD,SG,Construction & Engineering,True,2024-11-02T16:57:54
+ENT-1653,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 131,TENANT-04,IDR,SG,Construction & Engineering,True,2025-11-15T13:06:39
+ENT-1654,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 131,TENANT-05,SGD,SG,Construction & Engineering,True,2023-06-11T08:38:55
+ENT-1655,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 132,TENANT-01,SGD,SG,Construction & Engineering,True,2023-11-17T11:06:54
+ENT-1656,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 132,TENANT-02,SGD,ID,Construction & Engineering,True,2023-08-28T13:57:00
+ENT-1657,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 132,TENANT-03,SGD,SG,Construction & Engineering,True,2024-07-26T08:55:40
+ENT-1658,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 132,TENANT-04,IDR,SG,Construction & Engineering,True,2023-09-05T13:04:01
+ENT-1659,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 132,TENANT-05,SGD,SG,Construction & Engineering,True,2025-05-30T15:08:50
+ENT-1660,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 133,TENANT-01,SGD,SG,Construction & Engineering,True,2025-09-12T12:11:27
+ENT-1661,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 133,TENANT-02,SGD,ID,Construction & Engineering,True,2025-01-22T08:33:46
+ENT-1662,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 133,TENANT-03,SGD,SG,Construction & Engineering,True,2023-08-11T11:51:51
+ENT-1663,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 133,TENANT-04,IDR,SG,Construction & Engineering,True,2023-06-15T11:50:33
+ENT-1664,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 133,TENANT-05,SGD,SG,Construction & Engineering,True,2026-03-30T10:39:09
+ENT-1665,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 134,TENANT-01,SGD,SG,Construction & Engineering,True,2025-02-10T15:08:29
+ENT-1666,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 134,TENANT-02,SGD,ID,Construction & Engineering,True,2025-10-09T13:14:56
+ENT-1667,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 134,TENANT-03,SGD,SG,Construction & Engineering,True,2026-03-10T17:46:50
+ENT-1668,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 134,TENANT-04,IDR,SG,Construction & Engineering,True,2023-11-12T09:54:35
+ENT-1669,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 134,TENANT-05,SGD,SG,Construction & Engineering,True,2023-07-14T16:34:22
+ENT-1670,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 135,TENANT-01,SGD,SG,Construction & Engineering,True,2026-01-24T09:22:47
+ENT-1671,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 135,TENANT-02,SGD,ID,Construction & Engineering,True,2024-11-25T12:14:33
+ENT-1672,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 135,TENANT-03,SGD,SG,Construction & Engineering,True,2024-07-03T17:43:35
+ENT-1673,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 135,TENANT-04,IDR,SG,Construction & Engineering,True,2023-09-09T12:55:21
+ENT-1674,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 135,TENANT-05,SGD,SG,Construction & Engineering,True,2026-01-13T12:07:06
+ENT-1675,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 136,TENANT-01,SGD,SG,Construction & Engineering,True,2023-10-11T15:13:49
+ENT-1676,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 136,TENANT-02,SGD,ID,Construction & Engineering,True,2026-03-18T10:41:17
+ENT-1677,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 136,TENANT-03,SGD,SG,Construction & Engineering,True,2024-03-24T16:03:01
+ENT-1678,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 136,TENANT-04,IDR,SG,Construction & Engineering,True,2023-08-07T13:29:27
+ENT-1679,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 136,TENANT-05,SGD,SG,Construction & Engineering,True,2025-02-12T14:34:09
+ENT-1680,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 137,TENANT-01,SGD,SG,Construction & Engineering,True,2024-07-15T14:06:22
+ENT-1681,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 137,TENANT-02,SGD,ID,Construction & Engineering,True,2024-01-18T14:08:02
+ENT-1682,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 137,TENANT-03,SGD,SG,Construction & Engineering,True,2024-09-03T12:56:30
+ENT-1683,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 137,TENANT-04,IDR,SG,Construction & Engineering,True,2023-08-17T10:26:08
+ENT-1684,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 137,TENANT-05,SGD,SG,Construction & Engineering,True,2024-09-11T09:29:20
+ENT-1685,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 138,TENANT-01,SGD,SG,Construction & Engineering,True,2025-11-10T08:30:55
+ENT-1686,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 138,TENANT-02,SGD,ID,Construction & Engineering,True,2025-10-27T12:13:47
+ENT-1687,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 138,TENANT-03,SGD,SG,Construction & Engineering,True,2025-03-04T17:14:04
+ENT-1688,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 138,TENANT-04,IDR,SG,Construction & Engineering,True,2024-09-02T14:58:51
+ENT-1689,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 138,TENANT-05,SGD,SG,Construction & Engineering,True,2023-10-07T14:21:25
+ENT-1690,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 139,TENANT-01,SGD,SG,Construction & Engineering,True,2026-01-06T12:21:02
+ENT-1691,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 139,TENANT-02,SGD,ID,Construction & Engineering,True,2025-10-21T13:21:58
+ENT-1692,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 139,TENANT-03,SGD,SG,Construction & Engineering,True,2024-12-25T17:38:02
+ENT-1693,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 139,TENANT-04,IDR,SG,Construction & Engineering,True,2025-10-22T15:32:17
+ENT-1694,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 139,TENANT-05,SGD,SG,Construction & Engineering,True,2024-11-07T17:22:02
+ENT-1695,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 140,TENANT-01,SGD,SG,Construction & Engineering,True,2025-06-26T17:44:49
+ENT-1696,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 140,TENANT-02,SGD,ID,Construction & Engineering,True,2023-09-07T09:16:03
+ENT-1697,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 140,TENANT-03,SGD,SG,Construction & Engineering,True,2026-05-27T16:55:09
+ENT-1698,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 140,TENANT-04,IDR,SG,Construction & Engineering,True,2024-04-02T13:04:54
+ENT-1699,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 140,TENANT-05,SGD,SG,Construction & Engineering,True,2023-10-21T13:41:23
+ENT-1700,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 141,TENANT-01,SGD,SG,Construction & Engineering,True,2024-01-15T12:58:03
+ENT-1701,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 141,TENANT-02,SGD,ID,Construction & Engineering,True,2025-11-25T17:17:18
+ENT-1702,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 141,TENANT-03,SGD,SG,Construction & Engineering,True,2024-01-17T09:30:16
+ENT-1703,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 141,TENANT-04,IDR,SG,Construction & Engineering,True,2025-10-28T17:11:05
+ENT-1704,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 141,TENANT-05,SGD,SG,Construction & Engineering,True,2024-05-25T16:07:41
+ENT-1705,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 142,TENANT-01,SGD,SG,Construction & Engineering,True,2024-10-17T16:07:57
+ENT-1706,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 142,TENANT-02,SGD,ID,Construction & Engineering,True,2024-07-24T16:21:55
+ENT-1707,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 142,TENANT-03,SGD,SG,Construction & Engineering,True,2024-07-16T09:54:46
+ENT-1708,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 142,TENANT-04,IDR,SG,Construction & Engineering,True,2025-07-08T13:22:32
+ENT-1709,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 142,TENANT-05,SGD,SG,Construction & Engineering,True,2023-07-10T16:12:57
+ENT-1710,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 143,TENANT-01,SGD,SG,Construction & Engineering,True,2025-02-07T15:45:28
+ENT-1711,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 143,TENANT-02,SGD,ID,Construction & Engineering,True,2025-01-17T12:50:22
+ENT-1712,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 143,TENANT-03,SGD,SG,Construction & Engineering,True,2025-07-30T11:11:23
+ENT-1713,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 143,TENANT-04,IDR,SG,Construction & Engineering,True,2026-01-28T08:42:04
+ENT-1714,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 143,TENANT-05,SGD,SG,Construction & Engineering,True,2024-09-17T15:42:26
+ENT-1715,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 144,TENANT-01,SGD,SG,Construction & Engineering,True,2025-11-01T17:49:36
+ENT-1716,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 144,TENANT-02,SGD,ID,Construction & Engineering,True,2026-02-26T08:18:09
+ENT-1717,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 144,TENANT-03,SGD,SG,Construction & Engineering,True,2023-11-02T10:16:57
+ENT-1718,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 144,TENANT-04,IDR,SG,Construction & Engineering,True,2023-12-19T10:22:30
+ENT-1719,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 144,TENANT-05,SGD,SG,Construction & Engineering,True,2024-06-04T17:51:57
+ENT-1720,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 145,TENANT-01,SGD,SG,Construction & Engineering,True,2026-04-18T10:33:02
+ENT-1721,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 145,TENANT-02,SGD,ID,Construction & Engineering,True,2025-05-08T09:55:03
+ENT-1722,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 145,TENANT-03,SGD,SG,Construction & Engineering,True,2025-12-21T09:08:33
+ENT-1723,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 145,TENANT-04,IDR,SG,Construction & Engineering,True,2025-04-29T17:15:31
+ENT-1724,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 145,TENANT-05,SGD,SG,Construction & Engineering,True,2024-06-09T14:46:11
+ENT-1725,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 146,TENANT-01,SGD,SG,Construction & Engineering,True,2024-11-23T16:50:36
+ENT-1726,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 146,TENANT-02,SGD,ID,Construction & Engineering,True,2024-06-18T16:36:55
+ENT-1727,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 146,TENANT-03,SGD,SG,Construction & Engineering,True,2026-01-13T11:06:05
+ENT-1728,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 146,TENANT-04,IDR,SG,Construction & Engineering,True,2025-01-01T10:24:25
+ENT-1729,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 146,TENANT-05,SGD,SG,Construction & Engineering,True,2024-07-22T17:50:22
+ENT-1730,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 147,TENANT-01,SGD,SG,Construction & Engineering,True,2025-06-10T15:07:31
+ENT-1731,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 147,TENANT-02,SGD,ID,Construction & Engineering,True,2025-02-23T09:36:18
+ENT-1732,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 147,TENANT-03,SGD,SG,Construction & Engineering,True,2025-11-10T14:10:39
+ENT-1733,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 147,TENANT-04,IDR,SG,Construction & Engineering,True,2025-12-06T12:47:13
+ENT-1734,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 147,TENANT-05,SGD,SG,Construction & Engineering,True,2024-02-12T15:53:09
+ENT-1735,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 148,TENANT-01,SGD,SG,Construction & Engineering,True,2024-04-09T17:45:11
+ENT-1736,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 148,TENANT-02,SGD,ID,Construction & Engineering,True,2023-12-14T09:34:29
+ENT-1737,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 148,TENANT-03,SGD,SG,Construction & Engineering,True,2024-10-28T13:01:29
+ENT-1738,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 148,TENANT-04,IDR,SG,Construction & Engineering,True,2023-08-11T12:16:58
+ENT-1739,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 148,TENANT-05,SGD,SG,Construction & Engineering,True,2026-02-13T12:30:28
+ENT-1740,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 149,TENANT-01,SGD,SG,Construction & Engineering,True,2023-08-27T12:57:03
+ENT-1741,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 149,TENANT-02,SGD,ID,Construction & Engineering,True,2024-03-20T13:14:13
+ENT-1742,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 149,TENANT-03,SGD,SG,Construction & Engineering,True,2024-04-04T14:36:02
+ENT-1743,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 149,TENANT-04,IDR,SG,Construction & Engineering,True,2024-08-16T17:01:27
+ENT-1744,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 149,TENANT-05,SGD,SG,Construction & Engineering,True,2024-12-07T16:16:28
+ENT-1745,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 150,TENANT-01,SGD,SG,Construction & Engineering,True,2024-04-07T08:47:48
+ENT-1746,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 150,TENANT-02,SGD,ID,Construction & Engineering,True,2024-04-04T14:44:46
+ENT-1747,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 150,TENANT-03,SGD,SG,Construction & Engineering,True,2023-09-16T12:26:37
+ENT-1748,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 150,TENANT-04,IDR,SG,Construction & Engineering,True,2025-11-02T16:45:37
+ENT-1749,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 150,TENANT-05,SGD,SG,Construction & Engineering,True,2025-07-06T11:25:39
+ENT-1750,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 151,TENANT-01,SGD,SG,Construction & Engineering,True,2024-02-01T14:54:56
+ENT-1751,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 151,TENANT-02,SGD,ID,Construction & Engineering,True,2024-04-21T11:35:25
+ENT-1752,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 151,TENANT-03,SGD,SG,Construction & Engineering,True,2024-07-13T16:21:29
+ENT-1753,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 151,TENANT-04,IDR,SG,Construction & Engineering,True,2026-04-13T15:28:27
+ENT-1754,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 151,TENANT-05,SGD,SG,Construction & Engineering,True,2024-10-26T10:35:43
+ENT-1755,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 152,TENANT-01,SGD,SG,Construction & Engineering,True,2025-05-15T09:22:11
+ENT-1756,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 152,TENANT-02,SGD,ID,Construction & Engineering,True,2025-04-18T14:06:44
+ENT-1757,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 152,TENANT-03,SGD,SG,Construction & Engineering,True,2025-09-29T16:43:16
+ENT-1758,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 152,TENANT-04,IDR,SG,Construction & Engineering,True,2024-09-23T09:05:56
+ENT-1759,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 152,TENANT-05,SGD,SG,Construction & Engineering,True,2024-01-05T09:16:11
+ENT-1760,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 153,TENANT-01,SGD,SG,Construction & Engineering,True,2025-03-26T10:19:31
+ENT-1761,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 153,TENANT-02,SGD,ID,Construction & Engineering,True,2025-11-06T16:42:44
+ENT-1762,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 153,TENANT-03,SGD,SG,Construction & Engineering,True,2025-11-28T15:49:10
+ENT-1763,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 153,TENANT-04,IDR,SG,Construction & Engineering,True,2024-03-01T11:46:28
+ENT-1764,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 153,TENANT-05,SGD,SG,Construction & Engineering,True,2024-01-05T09:22:16
+ENT-1765,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 154,TENANT-01,SGD,SG,Construction & Engineering,True,2025-09-03T11:22:07
+ENT-1766,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 154,TENANT-02,SGD,ID,Construction & Engineering,True,2024-04-18T13:48:41
+ENT-1767,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 154,TENANT-03,SGD,SG,Construction & Engineering,True,2025-12-20T08:24:28
+ENT-1768,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 154,TENANT-04,IDR,SG,Construction & Engineering,True,2025-09-11T15:34:44
+ENT-1769,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 154,TENANT-05,SGD,SG,Construction & Engineering,True,2026-02-02T16:12:26
+ENT-1770,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 155,TENANT-01,SGD,SG,Construction & Engineering,True,2025-02-05T16:16:14
+ENT-1771,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 155,TENANT-02,SGD,ID,Construction & Engineering,True,2025-05-26T11:10:10
+ENT-1772,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 155,TENANT-03,SGD,SG,Construction & Engineering,True,2025-09-21T12:20:23
+ENT-1773,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 155,TENANT-04,IDR,SG,Construction & Engineering,True,2024-04-05T10:53:44
+ENT-1774,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 155,TENANT-05,SGD,SG,Construction & Engineering,True,2025-11-22T11:10:16
+ENT-1775,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 156,TENANT-01,SGD,SG,Construction & Engineering,True,2025-04-27T09:00:25
+ENT-1776,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 156,TENANT-02,SGD,ID,Construction & Engineering,True,2024-04-25T11:50:21
+ENT-1777,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 156,TENANT-03,SGD,SG,Construction & Engineering,True,2023-09-19T10:31:45
+ENT-1778,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 156,TENANT-04,IDR,SG,Construction & Engineering,True,2026-03-29T17:21:29
+ENT-1779,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 156,TENANT-05,SGD,SG,Construction & Engineering,True,2024-07-13T14:01:51
+ENT-1780,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 157,TENANT-01,SGD,SG,Construction & Engineering,True,2024-07-19T17:27:36
+ENT-1781,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 157,TENANT-02,SGD,ID,Construction & Engineering,True,2025-02-04T16:49:53
+ENT-1782,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 157,TENANT-03,SGD,SG,Construction & Engineering,True,2024-11-26T15:21:27
+ENT-1783,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 157,TENANT-04,IDR,SG,Construction & Engineering,True,2024-02-20T08:41:00
+ENT-1784,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 157,TENANT-05,SGD,SG,Construction & Engineering,True,2024-09-04T12:27:29
+ENT-1785,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 158,TENANT-01,SGD,SG,Construction & Engineering,True,2024-12-10T12:26:33
+ENT-1786,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 158,TENANT-02,SGD,ID,Construction & Engineering,True,2024-02-17T13:37:49
+ENT-1787,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 158,TENANT-03,SGD,SG,Construction & Engineering,True,2023-06-14T09:42:13
+ENT-1788,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 158,TENANT-04,IDR,SG,Construction & Engineering,True,2025-10-29T15:04:50
+ENT-1789,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 158,TENANT-05,SGD,SG,Construction & Engineering,True,2024-02-09T17:39:51
+ENT-1790,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 159,TENANT-01,SGD,SG,Construction & Engineering,True,2026-01-23T16:09:18
+ENT-1791,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 159,TENANT-02,SGD,ID,Construction & Engineering,True,2026-01-12T12:44:15
+ENT-1792,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 159,TENANT-03,SGD,SG,Construction & Engineering,True,2023-12-14T14:37:55
+ENT-1793,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 159,TENANT-04,IDR,SG,Construction & Engineering,True,2025-02-14T11:58:32
+ENT-1794,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 159,TENANT-05,SGD,SG,Construction & Engineering,True,2024-07-29T10:12:10
+ENT-1795,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 160,TENANT-01,SGD,SG,Construction & Engineering,True,2025-09-30T09:44:03
+ENT-1796,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 160,TENANT-02,SGD,ID,Construction & Engineering,True,2024-07-12T17:45:23
+ENT-1797,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 160,TENANT-03,SGD,SG,Construction & Engineering,True,2026-03-28T16:00:40
+ENT-1798,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 160,TENANT-04,IDR,SG,Construction & Engineering,True,2024-05-28T09:43:10
+ENT-1799,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 160,TENANT-05,SGD,SG,Construction & Engineering,True,2025-09-27T16:57:15
+ENT-1800,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 161,TENANT-01,SGD,SG,Construction & Engineering,True,2023-08-28T17:45:08
+ENT-1801,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 161,TENANT-02,SGD,ID,Construction & Engineering,True,2025-07-09T14:58:48
+ENT-1802,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 161,TENANT-03,SGD,SG,Construction & Engineering,True,2025-02-26T10:56:16
+ENT-1803,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 161,TENANT-04,IDR,SG,Construction & Engineering,True,2025-05-23T17:33:15
+ENT-1804,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 161,TENANT-05,SGD,SG,Construction & Engineering,True,2026-05-27T12:58:25
+ENT-1805,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 162,TENANT-01,SGD,SG,Construction & Engineering,True,2024-04-27T10:45:45
+ENT-1806,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 162,TENANT-02,SGD,ID,Construction & Engineering,True,2024-08-04T15:34:22
+ENT-1807,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 162,TENANT-03,SGD,SG,Construction & Engineering,True,2024-03-16T16:49:12
+ENT-1808,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 162,TENANT-04,IDR,SG,Construction & Engineering,True,2024-05-22T08:33:33
+ENT-1809,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 162,TENANT-05,SGD,SG,Construction & Engineering,True,2025-04-29T17:52:02
+ENT-1810,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 163,TENANT-01,SGD,SG,Construction & Engineering,True,2025-10-16T10:52:30
+ENT-1811,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 163,TENANT-02,SGD,ID,Construction & Engineering,True,2024-03-25T16:45:05
+ENT-1812,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 163,TENANT-03,SGD,SG,Construction & Engineering,True,2025-12-30T11:19:44
+ENT-1813,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 163,TENANT-04,IDR,SG,Construction & Engineering,True,2025-12-12T11:13:11
+ENT-1814,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 163,TENANT-05,SGD,SG,Construction & Engineering,True,2025-11-24T09:33:24
+ENT-1815,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 164,TENANT-01,SGD,SG,Construction & Engineering,True,2025-02-10T12:43:50
+ENT-1816,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 164,TENANT-02,SGD,ID,Construction & Engineering,True,2024-11-02T14:43:40
+ENT-1817,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 164,TENANT-03,SGD,SG,Construction & Engineering,True,2026-01-05T17:09:24
+ENT-1818,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 164,TENANT-04,IDR,SG,Construction & Engineering,True,2024-06-17T12:14:54
+ENT-1819,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 164,TENANT-05,SGD,SG,Construction & Engineering,True,2026-03-15T10:58:43
+ENT-1820,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 165,TENANT-01,SGD,SG,Construction & Engineering,True,2026-02-26T15:57:05
+ENT-1821,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 165,TENANT-02,SGD,ID,Construction & Engineering,True,2025-03-05T12:07:11
+ENT-1822,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 165,TENANT-03,SGD,SG,Construction & Engineering,True,2025-11-23T09:23:27
+ENT-1823,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 165,TENANT-04,IDR,SG,Construction & Engineering,True,2025-09-14T10:11:46
+ENT-1824,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 165,TENANT-05,SGD,SG,Construction & Engineering,True,2025-10-13T17:31:47
+ENT-1825,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 166,TENANT-01,SGD,SG,Construction & Engineering,True,2024-07-05T10:35:16
+ENT-1826,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 166,TENANT-02,SGD,ID,Construction & Engineering,True,2026-01-23T10:16:07
+ENT-1827,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 166,TENANT-03,SGD,SG,Construction & Engineering,True,2026-05-07T17:30:23
+ENT-1828,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 166,TENANT-04,IDR,SG,Construction & Engineering,True,2023-08-18T10:23:49
+ENT-1829,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 166,TENANT-05,SGD,SG,Construction & Engineering,True,2024-07-09T11:15:02
+ENT-1830,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 167,TENANT-01,SGD,SG,Construction & Engineering,True,2026-02-28T09:46:37
+ENT-1831,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 167,TENANT-02,SGD,ID,Construction & Engineering,True,2025-02-12T15:09:12
+ENT-1832,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 167,TENANT-03,SGD,SG,Construction & Engineering,True,2025-03-28T17:36:50
+ENT-1833,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 167,TENANT-04,IDR,SG,Construction & Engineering,True,2025-09-03T16:04:13
+ENT-1834,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 167,TENANT-05,SGD,SG,Construction & Engineering,True,2024-11-06T08:50:51
+ENT-1835,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 168,TENANT-01,SGD,SG,Construction & Engineering,True,2024-10-17T11:05:36
+ENT-1836,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 168,TENANT-02,SGD,ID,Construction & Engineering,True,2024-10-21T15:35:07
+ENT-1837,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 168,TENANT-03,SGD,SG,Construction & Engineering,True,2026-01-19T15:09:55
+ENT-1838,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 168,TENANT-04,IDR,SG,Construction & Engineering,True,2026-02-05T15:57:26
+ENT-1839,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 168,TENANT-05,SGD,SG,Construction & Engineering,True,2026-03-31T16:11:31
+ENT-1840,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 169,TENANT-01,SGD,SG,Construction & Engineering,True,2023-06-19T15:02:48
+ENT-1841,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 169,TENANT-02,SGD,ID,Construction & Engineering,True,2025-12-07T15:36:16
+ENT-1842,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 169,TENANT-03,SGD,SG,Construction & Engineering,True,2025-02-23T09:58:14
+ENT-1843,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 169,TENANT-04,IDR,SG,Construction & Engineering,True,2025-06-28T13:39:29
+ENT-1844,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 169,TENANT-05,SGD,SG,Construction & Engineering,True,2024-11-25T13:50:23
+ENT-1845,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 170,TENANT-01,SGD,SG,Construction & Engineering,True,2023-12-03T15:56:53
+ENT-1846,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 170,TENANT-02,SGD,ID,Construction & Engineering,True,2024-01-09T10:45:43
+ENT-1847,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 170,TENANT-03,SGD,SG,Construction & Engineering,True,2025-07-19T14:14:30
+ENT-1848,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 170,TENANT-04,IDR,SG,Construction & Engineering,True,2024-01-11T09:19:46
+ENT-1849,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 170,TENANT-05,SGD,SG,Construction & Engineering,True,2025-01-21T17:00:42
+ENT-1850,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 171,TENANT-01,SGD,SG,Construction & Engineering,True,2023-12-23T17:09:58
+ENT-1851,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 171,TENANT-02,SGD,ID,Construction & Engineering,True,2025-03-29T11:20:37
+ENT-1852,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 171,TENANT-03,SGD,SG,Construction & Engineering,True,2024-06-10T12:04:58
+ENT-1853,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 171,TENANT-04,IDR,SG,Construction & Engineering,True,2025-10-01T08:35:24
+ENT-1854,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 171,TENANT-05,SGD,SG,Construction & Engineering,True,2024-07-27T16:05:16
+ENT-1855,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 172,TENANT-01,SGD,SG,Construction & Engineering,True,2024-11-13T15:35:22
+ENT-1856,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 172,TENANT-02,SGD,ID,Construction & Engineering,True,2024-08-02T17:28:52
+ENT-1857,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 172,TENANT-03,SGD,SG,Construction & Engineering,True,2024-01-29T11:14:45
+ENT-1858,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 172,TENANT-04,IDR,SG,Construction & Engineering,True,2025-10-17T11:13:35
+ENT-1859,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 172,TENANT-05,SGD,SG,Construction & Engineering,True,2025-07-14T14:55:48
+ENT-1860,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 173,TENANT-01,SGD,SG,Construction & Engineering,True,2023-07-29T08:26:12
+ENT-1861,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 173,TENANT-02,SGD,ID,Construction & Engineering,True,2023-08-31T15:18:33
+ENT-1862,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 173,TENANT-03,SGD,SG,Construction & Engineering,True,2024-08-08T12:27:03
+ENT-1863,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 173,TENANT-04,IDR,SG,Construction & Engineering,True,2025-01-22T11:48:51
+ENT-1864,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 173,TENANT-05,SGD,SG,Construction & Engineering,True,2024-03-02T08:49:23
+ENT-1865,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 174,TENANT-01,SGD,SG,Construction & Engineering,True,2025-03-03T17:51:03
+ENT-1866,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 174,TENANT-02,SGD,ID,Construction & Engineering,True,2025-05-03T15:31:15
+ENT-1867,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 174,TENANT-03,SGD,SG,Construction & Engineering,True,2024-11-04T16:13:44
+ENT-1868,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 174,TENANT-04,IDR,SG,Construction & Engineering,True,2024-03-19T16:17:12
+ENT-1869,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 174,TENANT-05,SGD,SG,Construction & Engineering,True,2024-10-10T13:24:45
+ENT-1870,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 175,TENANT-01,SGD,SG,Construction & Engineering,True,2024-01-09T10:46:13
+ENT-1871,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 175,TENANT-02,SGD,ID,Construction & Engineering,True,2025-03-12T08:20:56
+ENT-1872,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 175,TENANT-03,SGD,SG,Construction & Engineering,True,2025-02-02T15:06:37
+ENT-1873,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 175,TENANT-04,IDR,SG,Construction & Engineering,True,2025-04-21T15:54:31
+ENT-1874,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 175,TENANT-05,SGD,SG,Construction & Engineering,True,2026-02-09T12:07:26
+ENT-1875,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 176,TENANT-01,SGD,SG,Construction & Engineering,True,2026-03-27T14:18:11
+ENT-1876,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 176,TENANT-02,SGD,ID,Construction & Engineering,True,2026-05-14T16:49:47
+ENT-1877,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 176,TENANT-03,SGD,SG,Construction & Engineering,True,2026-03-30T11:57:34
+ENT-1878,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 176,TENANT-04,IDR,SG,Construction & Engineering,True,2026-01-12T09:15:57
+ENT-1879,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 176,TENANT-05,SGD,SG,Construction & Engineering,True,2025-11-28T17:40:54
+ENT-1880,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 177,TENANT-01,SGD,SG,Construction & Engineering,True,2023-12-10T11:48:09
+ENT-1881,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 177,TENANT-02,SGD,ID,Construction & Engineering,True,2025-07-18T10:07:05
+ENT-1882,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 177,TENANT-03,SGD,SG,Construction & Engineering,True,2025-11-08T09:22:04
+ENT-1883,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 177,TENANT-04,IDR,SG,Construction & Engineering,True,2026-03-26T17:05:04
+ENT-1884,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 177,TENANT-05,SGD,SG,Construction & Engineering,True,2026-04-30T09:31:48
+ENT-1885,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 178,TENANT-01,SGD,SG,Construction & Engineering,True,2024-03-19T13:05:45
+ENT-1886,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 178,TENANT-02,SGD,ID,Construction & Engineering,True,2026-04-22T14:24:52
+ENT-1887,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 178,TENANT-03,SGD,SG,Construction & Engineering,True,2025-06-30T14:25:30
+ENT-1888,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 178,TENANT-04,IDR,SG,Construction & Engineering,True,2023-08-09T15:24:26
+ENT-1889,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 178,TENANT-05,SGD,SG,Construction & Engineering,True,2024-04-21T11:09:27
+ENT-1890,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 179,TENANT-01,SGD,SG,Construction & Engineering,True,2026-03-19T09:24:46
+ENT-1891,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 179,TENANT-02,SGD,ID,Construction & Engineering,True,2024-01-28T10:24:09
+ENT-1892,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 179,TENANT-03,SGD,SG,Construction & Engineering,True,2024-02-26T10:47:49
+ENT-1893,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 179,TENANT-04,IDR,SG,Construction & Engineering,True,2024-05-08T11:56:40
+ENT-1894,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 179,TENANT-05,SGD,SG,Construction & Engineering,True,2024-06-24T16:52:04
+ENT-1895,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 180,TENANT-01,SGD,SG,Construction & Engineering,True,2023-10-10T15:12:18
+ENT-1896,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 180,TENANT-02,SGD,ID,Construction & Engineering,True,2024-02-28T10:26:40
+ENT-1897,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 180,TENANT-03,SGD,SG,Construction & Engineering,True,2024-06-19T17:06:17
+ENT-1898,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 180,TENANT-04,IDR,SG,Construction & Engineering,True,2023-06-19T13:14:17
+ENT-1899,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 180,TENANT-05,SGD,SG,Construction & Engineering,True,2025-05-26T13:16:36
+ENT-1900,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 181,TENANT-01,SGD,SG,Construction & Engineering,True,2025-01-30T14:09:36
+ENT-1901,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 181,TENANT-02,SGD,ID,Construction & Engineering,True,2023-08-24T09:19:40
+ENT-1902,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 181,TENANT-03,SGD,SG,Construction & Engineering,True,2024-07-25T14:33:40
+ENT-1903,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 181,TENANT-04,IDR,SG,Construction & Engineering,True,2024-08-03T08:44:26
+ENT-1904,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 181,TENANT-05,SGD,SG,Construction & Engineering,True,2026-04-06T12:25:05
+ENT-1905,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 182,TENANT-01,SGD,SG,Construction & Engineering,True,2023-06-07T10:19:26
+ENT-1906,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 182,TENANT-02,SGD,ID,Construction & Engineering,True,2023-12-03T15:45:13
+ENT-1907,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 182,TENANT-03,SGD,SG,Construction & Engineering,True,2023-11-19T16:27:32
+ENT-1908,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 182,TENANT-04,IDR,SG,Construction & Engineering,True,2026-04-22T15:56:27
+ENT-1909,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 182,TENANT-05,SGD,SG,Construction & Engineering,True,2024-10-18T12:04:36
+ENT-1910,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 183,TENANT-01,SGD,SG,Construction & Engineering,True,2024-04-03T17:54:29
+ENT-1911,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 183,TENANT-02,SGD,ID,Construction & Engineering,True,2023-07-17T13:37:35
+ENT-1912,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 183,TENANT-03,SGD,SG,Construction & Engineering,True,2023-06-04T15:07:04
+ENT-1913,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 183,TENANT-04,IDR,SG,Construction & Engineering,True,2025-03-10T13:39:28
+ENT-1914,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 183,TENANT-05,SGD,SG,Construction & Engineering,True,2024-11-15T17:19:29
+ENT-1915,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 184,TENANT-01,SGD,SG,Construction & Engineering,True,2024-09-29T12:57:56
+ENT-1916,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 184,TENANT-02,SGD,ID,Construction & Engineering,True,2024-11-17T12:34:10
+ENT-1917,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 184,TENANT-03,SGD,SG,Construction & Engineering,True,2025-02-20T10:08:05
+ENT-1918,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 184,TENANT-04,IDR,SG,Construction & Engineering,True,2024-08-28T08:38:25
+ENT-1919,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 184,TENANT-05,SGD,SG,Construction & Engineering,True,2025-04-26T15:31:43
+ENT-1920,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 185,TENANT-01,SGD,SG,Construction & Engineering,True,2024-04-16T08:12:33
+ENT-1921,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 185,TENANT-02,SGD,ID,Construction & Engineering,True,2023-06-29T09:06:55
+ENT-1922,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 185,TENANT-03,SGD,SG,Construction & Engineering,True,2023-07-09T09:23:36
+ENT-1923,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 185,TENANT-04,IDR,SG,Construction & Engineering,True,2025-10-31T11:23:37
+ENT-1924,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 185,TENANT-05,SGD,SG,Construction & Engineering,True,2025-06-29T12:17:44
+ENT-1925,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 186,TENANT-01,SGD,SG,Construction & Engineering,True,2025-12-16T10:14:53
+ENT-1926,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 186,TENANT-02,SGD,ID,Construction & Engineering,True,2023-08-02T13:09:44
+ENT-1927,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 186,TENANT-03,SGD,SG,Construction & Engineering,True,2024-12-10T16:21:58
+ENT-1928,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 186,TENANT-04,IDR,SG,Construction & Engineering,True,2023-12-31T10:42:16
+ENT-1929,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 186,TENANT-05,SGD,SG,Construction & Engineering,True,2025-05-14T10:40:15
+ENT-1930,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 187,TENANT-01,SGD,SG,Construction & Engineering,True,2024-07-02T13:44:58
+ENT-1931,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 187,TENANT-02,SGD,ID,Construction & Engineering,True,2026-05-23T17:06:31
+ENT-1932,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 187,TENANT-03,SGD,SG,Construction & Engineering,True,2025-05-24T14:42:50
+ENT-1933,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 187,TENANT-04,IDR,SG,Construction & Engineering,True,2025-03-18T17:19:12
+ENT-1934,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 187,TENANT-05,SGD,SG,Construction & Engineering,True,2025-04-12T13:39:49
+ENT-1935,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 188,TENANT-01,SGD,SG,Construction & Engineering,True,2025-09-28T11:55:25
+ENT-1936,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 188,TENANT-02,SGD,ID,Construction & Engineering,True,2025-09-10T17:26:58
+ENT-1937,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 188,TENANT-03,SGD,SG,Construction & Engineering,True,2023-08-30T17:34:47
+ENT-1938,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 188,TENANT-04,IDR,SG,Construction & Engineering,True,2023-07-16T10:02:18
+ENT-1939,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 188,TENANT-05,SGD,SG,Construction & Engineering,True,2024-07-04T13:04:33
+ENT-1940,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 189,TENANT-01,SGD,SG,Construction & Engineering,True,2025-11-23T13:33:37
+ENT-1941,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 189,TENANT-02,SGD,ID,Construction & Engineering,True,2025-03-07T12:40:44
+ENT-1942,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 189,TENANT-03,SGD,SG,Construction & Engineering,True,2023-12-30T11:25:19
+ENT-1943,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 189,TENANT-04,IDR,SG,Construction & Engineering,True,2024-11-01T09:25:11
+ENT-1944,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 189,TENANT-05,SGD,SG,Construction & Engineering,True,2024-10-27T16:58:26
+ENT-1945,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 190,TENANT-01,SGD,SG,Construction & Engineering,True,2026-04-01T10:06:44
+ENT-1946,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 190,TENANT-02,SGD,ID,Construction & Engineering,True,2023-06-19T13:10:01
+ENT-1947,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 190,TENANT-03,SGD,SG,Construction & Engineering,True,2023-06-29T11:06:10
+ENT-1948,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 190,TENANT-04,IDR,SG,Construction & Engineering,True,2025-08-26T14:52:16
+ENT-1949,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 190,TENANT-05,SGD,SG,Construction & Engineering,True,2024-05-10T08:00:03
+ENT-1950,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 191,TENANT-01,SGD,SG,Construction & Engineering,True,2023-08-26T13:47:01
+ENT-1951,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 191,TENANT-02,SGD,ID,Construction & Engineering,True,2026-05-08T16:06:09
+ENT-1952,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 191,TENANT-03,SGD,SG,Construction & Engineering,True,2024-11-10T14:13:26
+ENT-1953,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 191,TENANT-04,IDR,SG,Construction & Engineering,True,2024-05-24T12:22:04
+ENT-1954,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 191,TENANT-05,SGD,SG,Construction & Engineering,True,2025-01-23T16:36:52
+ENT-1955,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 192,TENANT-01,SGD,SG,Construction & Engineering,True,2026-01-14T08:32:10
+ENT-1956,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 192,TENANT-02,SGD,ID,Construction & Engineering,True,2024-08-20T17:19:32
+ENT-1957,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 192,TENANT-03,SGD,SG,Construction & Engineering,True,2024-05-16T09:52:11
+ENT-1958,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 192,TENANT-04,IDR,SG,Construction & Engineering,True,2023-12-29T14:08:42
+ENT-1959,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 192,TENANT-05,SGD,SG,Construction & Engineering,True,2025-10-29T13:56:56
+ENT-1960,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 193,TENANT-01,SGD,SG,Construction & Engineering,True,2023-10-21T12:33:17
+ENT-1961,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 193,TENANT-02,SGD,ID,Construction & Engineering,True,2023-08-28T12:45:21
+ENT-1962,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 193,TENANT-03,SGD,SG,Construction & Engineering,True,2024-03-13T10:43:02
+ENT-1963,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 193,TENANT-04,IDR,SG,Construction & Engineering,True,2026-02-07T11:28:41
+ENT-1964,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 193,TENANT-05,SGD,SG,Construction & Engineering,True,2025-05-04T08:19:25
+ENT-1965,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 194,TENANT-01,SGD,SG,Construction & Engineering,True,2024-10-14T14:14:36
+ENT-1966,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 194,TENANT-02,SGD,ID,Construction & Engineering,True,2024-07-10T15:30:47
+ENT-1967,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 194,TENANT-03,SGD,SG,Construction & Engineering,True,2025-10-02T15:02:06
+ENT-1968,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 194,TENANT-04,IDR,SG,Construction & Engineering,True,2023-10-29T12:36:35
+ENT-1969,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 194,TENANT-05,SGD,SG,Construction & Engineering,True,2024-05-02T10:10:02
+ENT-1970,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 195,TENANT-01,SGD,SG,Construction & Engineering,True,2023-10-29T10:33:26
+ENT-1971,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 195,TENANT-02,SGD,ID,Construction & Engineering,True,2025-12-06T12:04:10
+ENT-1972,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 195,TENANT-03,SGD,SG,Construction & Engineering,True,2025-12-31T16:33:54
+ENT-1973,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 195,TENANT-04,IDR,SG,Construction & Engineering,True,2025-02-09T10:35:54
+ENT-1974,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 195,TENANT-05,SGD,SG,Construction & Engineering,True,2024-10-26T08:17:54
+ENT-1975,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 196,TENANT-01,SGD,SG,Construction & Engineering,True,2024-11-11T17:30:00
+ENT-1976,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 196,TENANT-02,SGD,ID,Construction & Engineering,True,2023-10-20T15:42:57
+ENT-1977,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 196,TENANT-03,SGD,SG,Construction & Engineering,True,2025-10-30T17:13:57
+ENT-1978,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 196,TENANT-04,IDR,SG,Construction & Engineering,True,2025-11-04T13:46:04
+ENT-1979,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 196,TENANT-05,SGD,SG,Construction & Engineering,True,2026-03-20T16:03:36
+ENT-1980,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 197,TENANT-01,SGD,SG,Construction & Engineering,True,2023-08-09T14:28:24
+ENT-1981,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 197,TENANT-02,SGD,ID,Construction & Engineering,True,2024-07-03T13:29:09
+ENT-1982,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 197,TENANT-03,SGD,SG,Construction & Engineering,True,2024-06-06T15:41:04
+ENT-1983,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 197,TENANT-04,IDR,SG,Construction & Engineering,True,2024-04-23T15:10:50
+ENT-1984,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 197,TENANT-05,SGD,SG,Construction & Engineering,True,2024-11-05T12:42:30
+ENT-1985,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 198,TENANT-01,SGD,SG,Construction & Engineering,True,2024-10-13T11:54:57
+ENT-1986,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 198,TENANT-02,SGD,ID,Construction & Engineering,True,2026-01-10T15:01:21
+ENT-1987,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 198,TENANT-03,SGD,SG,Construction & Engineering,True,2023-07-05T09:22:12
+ENT-1988,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 198,TENANT-04,IDR,SG,Construction & Engineering,True,2024-03-26T12:34:55
+ENT-1989,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 198,TENANT-05,SGD,SG,Construction & Engineering,True,2024-11-08T15:05:12
+ENT-1990,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 199,TENANT-01,SGD,SG,Construction & Engineering,True,2023-07-31T16:38:22
+ENT-1991,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 199,TENANT-02,SGD,ID,Construction & Engineering,True,2025-10-26T16:46:14
+ENT-1992,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 199,TENANT-03,SGD,SG,Construction & Engineering,True,2024-08-25T14:28:54
+ENT-1993,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 199,TENANT-04,IDR,SG,Construction & Engineering,True,2026-01-17T10:05:40
+ENT-1994,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 199,TENANT-05,SGD,SG,Construction & Engineering,True,2024-06-26T17:31:08
+ENT-1995,3d256fa2-64c3-4045-8174-912e3b122b7d,Natsteel Construction Pte Ltd — Unit 200,TENANT-01,SGD,SG,Construction & Engineering,True,2025-01-24T08:39:39
+ENT-1996,4ce30998-f771-4e8e-a3fc-fd6085db0c22,Connex Demo Buyer — Unit 200,TENANT-02,SGD,ID,Construction & Engineering,True,2023-11-05T11:18:04
+ENT-1997,efbe900d-1de8-4932-9630-bd06cf959e52,Trade Code Projects — Unit 200,TENANT-03,SGD,SG,Construction & Engineering,True,2025-03-04T12:44:44
+ENT-1998,15d6314c-4771-4478-bb4d-bb35e736b2e2,Sentek Indonesia — Unit 200,TENANT-04,IDR,SG,Construction & Engineering,True,2025-12-30T10:30:19
+ENT-1999,d2c98240-2807-46d6-8ff4-88dfeae8d3f9,Shipper XYZ Holdings — Unit 200,TENANT-05,SGD,SG,Construction & Engineering,True,2026-05-05T16:43:30

@@ -1,0 +1,12 @@
+"id","purchase_order_number","purchase_order_uuid","item_code","item_name","item_description","item_model","item_size","item_brand","uom_code","po_quantity","qty_converted","qty_received","qty_to_convert","qty_rejected","address_id","po_note","notes_to_buyer","comments_on_delivery","document_guid","document_file_label","gr_qty_received","gr_qty_rejected","delivery_order_id","invoice_qty","invoice_rejected_qty","po_item_id","invoice_pending_approval_qty","price_type","contracted","contract_reference_number","contracted_price","item_uuid","cat_item_id","qty_to_convert_str","over_purchased_qty","di_item_id"
+21,PO00000003,aa4cb241-0d3f-4a09-b85d-b52bf1c6e057,HSEKEEPING2905,Scrubbing Pad,"Size: 150mm L x 100mm W
+Color: Green
+","","","",Pc,0.000000000000,0.000000000000,100.000000000000,100.000000000000,0.000000000000,11,"",,"",,,0.000000000000,0.000000000000,8,100.000000000000,0.000000000000,10,0.000000000000,,false,,0.000000000000,,,"",false,
+22,PO00000003,aa4cb241-0d3f-4a09-b85d-b52bf1c6e057,SANITARY2907,Seal Tape,"Size: 1/2 Inch
+","","","",Roll,0.000000000000,0.000000000000,100.000000000000,100.000000000000,0.000000000000,11,"",,"",,,0.000000000000,0.000000000000,8,100.000000000000,0.000000000000,11,0.000000000000,,false,,0.000000000000,,,"",false,
+23,PO00000003,aa4cb241-0d3f-4a09-b85d-b52bf1c6e057,HSEKEEPING2905,Scrubbing Pad,"Size: 150mm L x 100mm W
+Color: Green
+","","","",Pc,0.000000000000,0.000000000000,50.000000000000,50.000000000000,0.000000000000,11,"",,"",,,0.000000000000,0.000000000000,9,50.000000000000,0.000000000000,10,0.000000000000,,false,,0.000000000000,,,"",false,
+24,PO00000003,aa4cb241-0d3f-4a09-b85d-b52bf1c6e057,SANITARY2907,Seal Tape,"Size: 1/2 Inch
+","","","",Roll,0.000000000000,0.000000000000,50.000000000000,50.000000000000,0.000000000000,11,"",,"",,,0.000000000000,0.000000000000,9,50.000000000000,0.000000000000,11,0.000000000000,,false,,0.000000000000,,,"",false,
+6,PO00000006,"22efdedc-869f-4650-9c49-9b1b451cf4ef","407",Toilet Paper,Model: Jumbo,"","","",Roll,0.000000000000,0.000000000000,100.000000000000,100.000000000000,0.000000000000,14,"",,"",,,0.000000000000,0.000000000000,2,100.000000000000,0.000000000000,19,0.000000000000,,false,,0.000000000000,,,"",false,
