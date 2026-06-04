@@ -7,11 +7,13 @@ Run with:
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from scalar_fastapi import get_scalar_api_reference
 
 from backend.config import BACKEND_CORS_ORIGINS
 from backend.routes.chat import router as chat_router
 from backend.routes.crawler import router as crawler_router
 from backend.routes.reports import router as reports_router
+from backend.routes.data import router as data_router
 
 app = FastAPI(
     title="DOXA MVP API",
@@ -32,9 +34,20 @@ app.add_middleware(
 app.include_router(chat_router)
 app.include_router(reports_router)
 app.include_router(crawler_router)
+app.include_router(data_router)
 
 
 @app.get("/health")
 async def health() -> dict:
     """Simple liveness check."""
     return {"status": "ok"}
+
+
+# ── API Documentation with Scalar ──────────────────────────────────
+@app.get("/scalar", include_in_schema=False)
+async def scalar_html():
+    """Scalar API documentation."""
+    return get_scalar_api_reference(
+        openapi_url="/openapi.json",
+        title="DOXA API Documentation",
+    )
