@@ -107,6 +107,37 @@ body {
 .chat-messages {
   flex: 1;
   min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+  max-height: 320px;
+}
+
+.chat-message {
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  white-space: pre-wrap;
+  max-width: 90%;
+}
+
+.chat-message-user {
+  align-self: flex-end;
+  background: var(--accent);
+  color: #fff;
+}
+
+.chat-message-assistant {
+  align-self: flex-start;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.chat-error {
+  margin: 0;
+  color: #f87171;
+  font-size: 0.8125rem;
 }
 
 .chat-input {
@@ -178,6 +209,33 @@ button:hover {
 .report-status {
   font-size: 0.75rem;
   color: var(--text-muted);
+}
+
+.report-prompt {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.875rem;
+}
+
+.report-prompt:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.report-body {
+  margin: 0;
+  padding: 0.75rem;
+  background: var(--bg);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 0.8125rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-y: auto;
+  max-height: 280px;
 }
 
 .alert-item {
