@@ -14,6 +14,4 @@ from typing_extensions import TypedDict
 class ChatState(TypedDict):
     """Shared state that flows through every node in the chatbot graph."""
 
-    # The full conversation history.  `add_messages` merges new messages
-    # into the existing list (and handles de-duplication by message ID).
     messages: Annotated[list, add_messages]

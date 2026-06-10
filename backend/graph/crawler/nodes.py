@@ -27,7 +27,6 @@ async def analyze_node(state: CrawlerState) -> dict:
 
     response = await llm.ainvoke(messages)
 
-    # Attempt to parse the LLM output as structured JSON.
     try:
         findings = json.loads(response.content)
     except (json.JSONDecodeError, TypeError):

@@ -21,5 +21,5 @@ def get_llm() -> ChatOpenAI:
     """
     return ChatOpenAI(
         model=OPENAI_MODEL,
-        api_key=OPENAI_API_KEY,  # type: ignore[arg-type]
+        api_key=OPENAI_API_KEY,
     )

@@ -14,7 +14,6 @@ from backend.graph.reporter.graph import graph
 router = APIRouter(prefix="/api/reports", tags=["reports"])
 
 
-# ── Request / Response schemas ──────────────────────────────────────
 class ReportRequest(BaseModel):
     prompt: str
     session_id: str = "default"
@@ -24,7 +23,6 @@ class ReportResponse(BaseModel):
     report: str
 
 
-# ── Endpoint ────────────────────────────────────────────────────────
 @router.post("/generate", response_model=ReportResponse)
 async def generate_report(body: ReportRequest) -> ReportResponse:
     """Generate a structured report from a user prompt."""

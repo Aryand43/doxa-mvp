@@ -13,17 +13,14 @@ class Finding(TypedDict):
 
     source: str
     description: str
-    severity: str  # "low" | "medium" | "high"
+    severity: str
 
 
 class CrawlerState(TypedDict):
     """State for the data crawler / anomaly detection graph."""
 
-    # Conversation / instruction messages sent to the LLM.
     messages: Annotated[list, add_messages]
 
-    # The data source or URL to analyze.
     source: str
 
-    # Structured list of anomalies / findings.
     findings: list[Finding]

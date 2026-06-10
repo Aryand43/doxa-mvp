@@ -21,7 +21,6 @@ app = FastAPI(
     description="LangGraph-powered backend for the DOXA MVP",
 )
 
-# ── CORS ────────────────────────────────────────────────────────────
 app.add_middleware(
     CORSMiddleware,
     allow_origins=BACKEND_CORS_ORIGINS,
@@ -30,7 +29,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ── Routes ──────────────────────────────────────────────────────────
 app.include_router(chat_router)
 app.include_router(reports_router)
 app.include_router(crawler_router)
@@ -43,7 +41,6 @@ async def health() -> dict:
     return {"status": "ok"}
 
 
-# ── API Documentation with Scalar ──────────────────────────────────
 @app.get("/scalar", include_in_schema=False)
 async def scalar_html():
     """Scalar API documentation."""

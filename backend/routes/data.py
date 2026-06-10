@@ -12,7 +12,6 @@ from fastapi import APIRouter, HTTPException, Query
 
 router = APIRouter(prefix="/api/data", tags=["data"])
 
-# Data folder path
 DATA_DIR = Path(__file__).parent.parent.parent / "data" / "expanded" / "csv"
 
 
@@ -25,7 +24,6 @@ def load_csv_data(filename: str) -> list[dict[str, Any]]:
     
     try:
         df = pd.read_csv(file_path)
-        # Convert NaN to None for JSON serialization
         df = df.where(pd.notna(df), None)
         return df.to_dict("records")
     except Exception as e:
@@ -58,7 +56,6 @@ async def get_invoices(
     """Retrieve list of invoices with optional filtering and pagination."""
     data = load_csv_data("invoices")
     
-    # Filter by status if provided
     if status:
         data = [item for item in data if item.get("status") == status]
     

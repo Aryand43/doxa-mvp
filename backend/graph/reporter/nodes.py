@@ -16,7 +16,6 @@ async def generate_report_node(state: ReportState) -> dict:
     """Ask the LLM to generate a structured report from the user's prompt."""
     llm = get_llm()
 
-    # Prepend the system instruction to the conversation.
     messages = [("system", _SYSTEM_PROMPT)] + list(state["messages"])
     response = await llm.ainvoke(messages)
 
