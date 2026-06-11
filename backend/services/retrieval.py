@@ -1,96 +1,198 @@
 """
-Evidence retrieval with graceful fallback.
+Shared semantic retrieval.
 
-Preferred path: the existing IRIS vector seam (semantic search over indexed
-invoices). If IRIS or embeddings are unavailable (no OpenAI key, instance down,
-nothing indexed yet), we fall back to a dependency-free local keyword match
-over the invoice rows so the scaffold always returns supporting evidence.
+Used by the assistant, reports, and crawler to ground answers in real records.
+
+Backends:
+  * "local" (default): an in-process TF-IDF vector store built from textual
+    procurement records (invoices, contracts, vendors). Cosine similarity over
+    sparse vectors. No external services, works fully offline.
+  * "iris" (opt-in via RETRIEVAL_BACKEND=iris): uses the InterSystems IRIS
+    vector seam in backend/vector. Falls back to local on any failure.
+
+Either way, ``search`` returns ranked records and ``get_evidence`` returns
+EvidenceItem snippets for the response schema.
 """
 
 from __future__ import annotations
 
 import logging
-import re
+import math
+import os
+from collections import defaultdict
+from dataclasses import dataclass
+from functools import lru_cache
+from typing import Any
 
-from backend.services.data_store import fmt_money, load_df, to_float
+from backend.data_access import loader
 from backend.services.schema import EvidenceItem
+from backend.utils.text import fmt_money, to_float, tokenize
 
 logger = logging.getLogger("doxa.services.retrieval")
 
-_WORD_RE = re.compile(r"[a-z0-9]+")
+
+@dataclass
+class Hit:
+    dataset: str
+    doc_id: str
+    text: str
+    score: float
+    record: dict[str, Any]
 
 
-def _tokens(text: str) -> set[str]:
-    return {t for t in _WORD_RE.findall(text.lower()) if len(t) > 2}
+# --------------------------------------------------------------------------- #
+# Record -> text rendering
+# --------------------------------------------------------------------------- #
+def _invoice_text(r: dict[str, Any]) -> str:
+    parts = [
+        f"Invoice {r.get('invoice_number')} from vendor {r.get('vendor_name')}",
+        f"for {fmt_money(to_float(r.get('amount')), r.get('currency'))}",
+        f"status {r.get('status')} approval {r.get('approval_status')}",
+        f"category {r.get('category')} risk {r.get('risk_flag')}",
+        f"project {r.get('project_code')} entity {r.get('entity_name')}",
+    ]
+    if r.get("anomaly_type"):
+        parts.append(f"anomaly {r.get('anomaly_type')}")
+    return ". ".join(p for p in parts if p)
 
 
-def _invoice_snippet(row) -> str:
+def _contract_text(r: dict[str, Any]) -> str:
     return (
-        f"Invoice {row.get('invoice_number')} — {row.get('vendor_name')} — "
-        f"{fmt_money(to_float(row.get('amount')), row.get('currency'))} — "
-        f"status {row.get('status')}"
-        + (f" — anomaly {row.get('anomaly_type')}" if row.get("anomaly_type") else "")
-    ).strip()
+        f"Contract {r.get('contract_id')} with {r.get('vendor_name')} "
+        f"({r.get('entity_name')}) category {r.get('category')} status {r.get('status')} "
+        f"expires {r.get('end_date')} risk {r.get('risk_flag')}"
+    )
 
 
-def _iris_evidence(query: str, top_k: int) -> list[EvidenceItem]:
-    """Try the IRIS vector seam. Raises on any unavailability (caught by caller)."""
+def _vendor_text(r: dict[str, Any]) -> str:
+    return (
+        f"Vendor {r.get('vendor_name')} category {r.get('category')} risk {r.get('risk_flag')} "
+        f"rejection {r.get('rejection_rate')} on-time {r.get('on_time_delivery_rate')} "
+        f"ytd spend {fmt_money(to_float(r.get('ytd_spend')), r.get('currency'))}"
+    )
+
+
+_RENDERERS = {
+    "invoices": ("invoice_id", _invoice_text),
+    "contracts": ("contract_id", _contract_text),
+    "vendors": ("vendor_id", _vendor_text),
+}
+
+
+# --------------------------------------------------------------------------- #
+# Local TF-IDF vector store
+# --------------------------------------------------------------------------- #
+class _LocalVectorStore:
+    def __init__(self) -> None:
+        self.docs: list[Hit] = []
+        self.vectors: list[dict[str, float]] = []
+        self.inverted: dict[str, list[tuple[int, float]]] = defaultdict(list)
+        self._build()
+
+    def _build(self) -> None:
+        raw_docs: list[tuple[str, str, str, dict]] = []
+        for dataset, (id_field, render) in _RENDERERS.items():
+            if not loader.dataset_available(dataset):
+                continue
+            for record in loader.records(dataset):
+                text = render(record)
+                raw_docs.append((dataset, str(record.get(id_field, "")), text, record))
+
+        token_lists = [tokenize(text) for _, _, text, _ in raw_docs]
+        n = len(raw_docs)
+        df: dict[str, int] = defaultdict(int)
+        for tokens in token_lists:
+            for tok in set(tokens):
+                df[tok] += 1
+        idf = {tok: math.log((n + 1) / (count + 1)) + 1.0 for tok, count in df.items()}
+
+        for idx, ((dataset, doc_id, text, record), tokens) in enumerate(zip(raw_docs, token_lists)):
+            tf: dict[str, int] = defaultdict(int)
+            for tok in tokens:
+                tf[tok] += 1
+            vec = {tok: count * idf.get(tok, 0.0) for tok, count in tf.items()}
+            norm = math.sqrt(sum(w * w for w in vec.values())) or 1.0
+            vec = {tok: w / norm for tok, w in vec.items()}
+
+            self.docs.append(Hit(dataset=dataset, doc_id=doc_id, text=text, score=0.0, record=record))
+            self.vectors.append(vec)
+            for tok, w in vec.items():
+                self.inverted[tok].append((idx, w))
+
+        self.idf = idf
+        logger.info("Local vector store built: %d documents.", n)
+
+    def search(self, query: str, top_k: int, datasets: set[str] | None) -> list[Hit]:
+        tokens = tokenize(query)
+        if not tokens:
+            return []
+        q_tf: dict[str, int] = defaultdict(int)
+        for tok in tokens:
+            q_tf[tok] += 1
+        q_vec = {tok: count * self.idf.get(tok, 0.0) for tok, count in q_tf.items()}
+        norm = math.sqrt(sum(w * w for w in q_vec.values())) or 1.0
+        q_vec = {tok: w / norm for tok, w in q_vec.items()}
+
+        scores: dict[int, float] = defaultdict(float)
+        for tok, qw in q_vec.items():
+            for idx, dw in self.inverted.get(tok, ()):  # cosine: sum of shared weights
+                scores[idx] += qw * dw
+
+        ranked = sorted(scores.items(), key=lambda kv: kv[1], reverse=True)
+        hits: list[Hit] = []
+        for idx, score in ranked:
+            doc = self.docs[idx]
+            if datasets and doc.dataset not in datasets:
+                continue
+            hits.append(Hit(doc.dataset, doc.doc_id, doc.text, round(score, 4), doc.record))
+            if len(hits) >= top_k:
+                break
+        return hits
+
+
+@lru_cache(maxsize=1)
+def _store() -> _LocalVectorStore:
+    return _LocalVectorStore()
+
+
+# --------------------------------------------------------------------------- #
+# Public API
+# --------------------------------------------------------------------------- #
+def retrieval_backend() -> str:
+    return os.getenv("RETRIEVAL_BACKEND", "local").lower()
+
+
+def _iris_hits(query: str, top_k: int) -> list[Hit]:
     from backend.vector import search_procurement_context
 
     matches = search_procurement_context(query, top_k=top_k)
     return [
-        EvidenceItem(
-            source="iris-vector",
-            snippet=m.content,
-            doc_id=m.doc_id,
-            score=round(float(m.score), 4),
-        )
+        Hit(dataset="invoices", doc_id=m.doc_id, text=m.content, score=round(float(m.score), 4), record=m.metadata)
         for m in matches
     ]
 
 
-def _local_evidence(query: str, top_k: int) -> list[EvidenceItem]:
-    """Keyword-overlap match over invoice rows. No external dependencies."""
-    df = load_df("invoices")
-    q_tokens = _tokens(query)
-    if not q_tokens:
-        df_head = df.head(top_k)
-        return [
-            EvidenceItem(source="local-text-match", snippet=_invoice_snippet(r), doc_id=str(r.get("invoice_id")))
-            for _, r in df_head.iterrows()
-        ]
+def search(query: str, top_k: int = 5, datasets: set[str] | None = None) -> list[Hit]:
+    """Return the top-k most relevant records for `query`."""
+    if retrieval_backend() == "iris":
+        try:
+            hits = _iris_hits(query, top_k)
+            if hits:
+                return hits
+        except Exception as exc:  # noqa: BLE001 - IRIS optional → fall back
+            logger.info("IRIS retrieval unavailable (%s); using local store.", exc)
+    return _store().search(query, top_k, datasets)
 
-    scored: list[tuple[float, object]] = []
-    for _, row in df.iterrows():
-        haystack = " ".join(
-            str(row.get(col, ""))
-            for col in ("vendor_name", "status", "approval_status", "category", "anomaly_type", "risk_flag", "entity_name", "project_code")
-        )
-        overlap = len(q_tokens & _tokens(haystack))
-        if overlap:
-            scored.append((overlap, row))
 
-    scored.sort(key=lambda pair: pair[0], reverse=True)
+def get_evidence(query: str, top_k: int = 4, datasets: set[str] | None = None) -> list[EvidenceItem]:
+    """Return supporting evidence snippets for the response schema."""
+    backend = "iris" if retrieval_backend() == "iris" else "local-vector"
     return [
         EvidenceItem(
-            source="local-text-match",
-            snippet=_invoice_snippet(row),
-            doc_id=str(row.get("invoice_id")),
-            score=float(score),
+            source=f"{hit.dataset} ({backend})",
+            snippet=hit.text,
+            doc_id=hit.doc_id,
+            score=hit.score,
         )
-        for score, row in scored[:top_k]
+        for hit in search(query, top_k=top_k, datasets=datasets)
     ]
-
-
-def get_evidence(query: str, top_k: int = 4) -> list[EvidenceItem]:
-    """Return supporting evidence, preferring IRIS and falling back to local match."""
-    try:
-        evidence = _iris_evidence(query, top_k)
-        if evidence:
-            logger.info("Evidence via IRIS vector search (%d items).", len(evidence))
-            return evidence
-        logger.info("IRIS returned no matches; using local fallback.")
-    except Exception as exc:  # noqa: BLE001 - any IRIS/embedding issue → fallback
-        logger.info("IRIS unavailable (%s); using local text-match fallback.", exc)
-
-    return _local_evidence(query, top_k)
