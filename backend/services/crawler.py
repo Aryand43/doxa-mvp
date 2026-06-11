@@ -6,10 +6,7 @@ A real scan over the procurement datasets, not an LLM toy:
   2. run deterministic detection heuristics,
   3. enrich with vector retrieval (related/similar records),
   4. optionally add a plain-language digest via the LLM,
-  5. return a digest + prioritised alert list + scan stats.
-
-Detectors: duplicate invoices, anomalous spend, price-variance outliers,
-vendor risk, and contract expiry.
+  5. return a digest + prioritised alert list + scan stats + processing phases.
 """
 
 from __future__ import annotations
@@ -18,9 +15,9 @@ import logging
 
 from backend.data_access import loader, queries
 from backend.services.retrieval import retrieval_backend, search
-from backend.services.schema import AlertItem, CrawlResponse, ScanStats
+from backend.services.schema import AlertItem, CrawlResponse, ScanPhase, ScanStats
+from backend.utils.llm import compose_crawler_digest, llm_available
 from backend.utils.text import fmt_money, non_empty, to_float
-from backend.utils.llm import maybe_explain
 
 logger = logging.getLogger("doxa.services.crawler")
 
@@ -200,17 +197,74 @@ def _detect_contract_expiry(window_days: int, limit: int = 6) -> list[AlertItem]
     return alerts
 
 
+def _format_digest_context(
+    records_scanned: int,
+    alerts: list[AlertItem],
+    by_severity: dict[str, int],
+    by_type: dict[str, int],
+    window_days: int,
+) -> str:
+    lines = [
+        f"Records scanned: {records_scanned:,}",
+        f"Window: {window_days} days (contracts)",
+        f"Retrieval backend: {retrieval_backend()}",
+        f"Alerts found: {len(alerts)}",
+        f"By severity: {by_severity}",
+        f"By type: {by_type}",
+        "Top alerts:",
+    ]
+    for a in alerts[:8]:
+        lines.append(f"  · [{a.severity.upper()}] {a.type}: {a.title}")
+    return "\n".join(lines)
+
+
 # --------------------------------------------------------------------------- #
 # Scan
 # --------------------------------------------------------------------------- #
-def scan(window_days: int = 60, max_alerts: int = 25, explain: bool = False) -> CrawlResponse:
-    alerts = (
-        _detect_duplicate_invoices()
-        + _detect_anomalous_spend()
-        + _detect_price_variance()
-        + _detect_vendor_risk()
-        + _detect_contract_expiry(window_days)
+def scan(window_days: int = 60, max_alerts: int = 25, explain: bool = True) -> CrawlResponse:
+    phases: list[ScanPhase] = []
+
+    records_scanned = sum(
+        len(loader.load(name)) for name in ("invoices", "contracts", "vendors") if loader.dataset_available(name)
     )
+    phases.append(
+        ScanPhase(
+            id="load",
+            label="Loaded procurement datasets",
+            detail=f"{records_scanned:,} records across invoices, contracts, vendors",
+        )
+    )
+
+    dup = _detect_duplicate_invoices()
+    phases.append(
+        ScanPhase(id="duplicate", label="Duplicate invoice detector", detail=f"{len(dup)} signals")
+    )
+
+    spend = _detect_anomalous_spend()
+    phases.append(
+        ScanPhase(id="anomalous_spend", label="Anomalous spend detector", detail=f"{len(spend)} signals")
+    )
+
+    price = _detect_price_variance()
+    phases.append(
+        ScanPhase(id="price_variance", label="Price variance detector", detail=f"{len(price)} signals")
+    )
+
+    vendor = _detect_vendor_risk()
+    phases.append(
+        ScanPhase(id="vendor_risk", label="Vendor risk detector", detail=f"{len(vendor)} signals")
+    )
+
+    contract = _detect_contract_expiry(window_days)
+    phases.append(
+        ScanPhase(
+            id="contract_expiry",
+            label="Contract expiry detector",
+            detail=f"{len(contract)} signals (≤{window_days}d window)",
+        )
+    )
+
+    alerts = dup + spend + price + vendor + contract
     alerts.sort(key=lambda a: _SEVERITY_RANK.get(a.severity, 3))
     alerts = alerts[:max_alerts]
 
@@ -220,10 +274,6 @@ def scan(window_days: int = 60, max_alerts: int = 25, explain: bool = False) -> 
         by_severity[a.severity] = by_severity.get(a.severity, 0) + 1
         by_type[a.type] = by_type.get(a.type, 0) + 1
 
-    records_scanned = sum(
-        len(loader.load(name)) for name in ("invoices", "contracts", "vendors") if loader.dataset_available(name)
-    )
-
     high = by_severity.get("high", 0)
     digest = (
         f"Scanned {records_scanned:,} records across invoices, contracts, and vendors. "
@@ -231,18 +281,23 @@ def scan(window_days: int = 60, max_alerts: int = 25, explain: bool = False) -> 
         f"Top signals: {', '.join(f'{count} {t.replace('_', ' ')}' for t, count in by_type.items())}."
     )
 
-    if explain:
-        enhanced = maybe_explain(
-            system="You are a procurement risk analyst. Summarise the scan in 2 concise sentences for an executive.",
-            context=digest + " Alerts: " + "; ".join(a.title for a in alerts[:8]),
+    if explain and llm_available():
+        phases.append(ScanPhase(id="compose", label="Composing scan digest", detail="LLM summarising findings"))
+        enhanced = compose_crawler_digest(
+            _format_digest_context(records_scanned, alerts, by_severity, by_type, window_days)
         )
         if enhanced:
             digest = enhanced
+    else:
+        phases.append(
+            ScanPhase(id="compose", label="Composed scan digest", detail="Deterministic summary")
+        )
 
     logger.info("crawler scan: %d records, %d alerts", records_scanned, len(alerts))
     return CrawlResponse(
         digest=digest,
         alerts=alerts,
+        phases=phases,
         scan_stats=ScanStats(
             records_scanned=records_scanned,
             alerts_found=len(alerts),

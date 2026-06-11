@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
 import { fetchReportTypes, generateReport } from "../../app/api";
 import type { AIResponse, ReportType } from "../../app/types";
+import { Panel } from "../../components/Panel";
 import { ResponseCard } from "../../components/ResponseCard";
 import { LoadingState } from "../../components/LoadingState";
 import { EmptyState } from "../../components/EmptyState";
 import { ErrorState } from "../../components/ErrorState";
+import styles from "./ReportsPanel.module.css";
 
 const TARGET_HINTS: Record<string, string> = {
-  spend_analysis: "Project code (optional, e.g. SI-2422)",
+  spend_analysis: "Project code — optional (e.g. SI-2422)",
   vendor_performance: "Vendor name (e.g. GreenBuild)",
-  entity_summary: "Entity name (optional)",
+  entity_summary: "Entity name — optional",
   on_demand: "Describe the report you want",
 };
 
@@ -43,7 +45,7 @@ export function ReportsPanel() {
           : await generateReport(selected, text || undefined);
       setReport(data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to generate report.");
+      setError(err instanceof Error ? err.message : "The report could not be built.");
     } finally {
       setLoading(false);
     }
@@ -52,50 +54,53 @@ export function ReportsPanel() {
   const hint = TARGET_HINTS[selected];
 
   return (
-    <section className="panel">
-      <header className="panel-header">
-        <h2>AI Reports</h2>
-        <p>Grounded reports, generated on demand.</p>
-      </header>
-
-      <div className="chip-row">
-        {types.map((rt) => (
-          <button
-            key={rt.id}
-            type="button"
-            className={`chip ${selected === rt.id ? "chip-active" : ""}`}
-            onClick={() => setSelected(rt.id)}
-            disabled={loading}
-          >
-            {rt.label}
+    <Panel
+      kicker="Generate"
+      title="AI Reports"
+      description="Structured, grounded summaries — built on demand from the same data."
+      controls={
+        <>
+          <div className={styles.segmented} role="group" aria-label="Report type">
+            {types.map((rt) => (
+              <button
+                key={rt.id}
+                type="button"
+                className={`${styles.segment} ${selected === rt.id ? styles.segmentOn : ""}`}
+                aria-pressed={selected === rt.id}
+                onClick={() => setSelected(rt.id)}
+                disabled={loading}
+              >
+                {rt.label}
+              </button>
+            ))}
+          </div>
+          {hint && (
+            <input
+              type="text"
+              placeholder={hint}
+              aria-label="Report target"
+              value={target}
+              onChange={(e) => setTarget(e.target.value)}
+              disabled={loading}
+            />
+          )}
+          <button type="button" onClick={generate} disabled={loading}>
+            {loading ? "Generating…" : "Generate report"}
           </button>
-        ))}
-      </div>
-
-      {hint && (
-        <input
-          type="text"
-          className="text-input"
-          placeholder={hint}
-          aria-label="Report target"
-          value={target}
-          onChange={(e) => setTarget(e.target.value)}
-          disabled={loading}
+        </>
+      }
+    >
+      {loading && <LoadingState label="Building report" />}
+      {error && (
+        <ErrorState title="The report couldn't be built." message={error} onRetry={generate} />
+      )}
+      {report && !loading && <ResponseCard data={report} />}
+      {!report && !loading && !error && (
+        <EmptyState
+          title="Generate a grounded report."
+          message="Choose a report type, add a target if you have one, then generate."
         />
       )}
-
-      <button type="button" onClick={generate} disabled={loading}>
-        {loading ? "Generating…" : "Generate report"}
-      </button>
-
-      <div className="panel-output">
-        {loading && <LoadingState label="Building report…" />}
-        {error && <ErrorState message={error} />}
-        {report && !loading && <ResponseCard data={report} />}
-        {!report && !loading && !error && (
-          <EmptyState message="Pick a report type and generate a structured report." />
-        )}
-      </div>
-    </section>
+    </Panel>
   );
 }

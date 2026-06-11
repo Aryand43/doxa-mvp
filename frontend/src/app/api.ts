@@ -34,8 +34,8 @@ async function get<TRes>(path: string): Promise<TRes> {
   return (await res.json()) as TRes;
 }
 
-export function runQuery(prompt: string): Promise<AIResponse> {
-  return post<AIResponse>("/query", { prompt, session_id: getSessionId() });
+export function runQuery(prompt: string, explain = true): Promise<AIResponse> {
+  return post<AIResponse>("/query", { prompt, session_id: getSessionId(), explain });
 }
 
 export function generateReport(
@@ -51,7 +51,7 @@ export function generateReport(
   });
 }
 
-export function runCrawl(windowDays = 60, explain = false): Promise<CrawlResponse> {
+export function runCrawl(windowDays = 60, explain = true): Promise<CrawlResponse> {
   return post<CrawlResponse>("/crawl", {
     window_days: windowDays,
     explain,

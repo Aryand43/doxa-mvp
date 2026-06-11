@@ -1,8 +1,12 @@
-export function LoadingState({ label = "Working…" }: { label?: string }) {
+import styles from "./states.module.css";
+
+export function LoadingState({ label = "Working" }: { label?: string }) {
   return (
-    <div className="state state-loading">
-      <span className="spinner" aria-hidden />
-      <span>{label}</span>
+    <div className={styles.loading} role="status">
+      <div className={styles.bar} aria-hidden>
+        <span />
+      </div>
+      <span className={styles.loadingLabel}>{label}</span>
     </div>
   );
 }

@@ -53,10 +53,17 @@ export type ScanStats = {
   retrieval_backend: string;
 };
 
+export type ScanPhase = {
+  id: string;
+  label: string;
+  detail: string;
+};
+
 export type CrawlResponse = {
   digest: string;
   alerts: AlertItem[];
   scan_stats: ScanStats;
+  phases: ScanPhase[];
   confidence: number;
 };
 

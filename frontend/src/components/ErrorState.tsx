@@ -1,8 +1,23 @@
-export function ErrorState({ message }: { message: string }) {
+import styles from "./states.module.css";
+
+export function ErrorState({
+  title = "Request failed.",
+  message,
+  onRetry,
+}: {
+  title?: string;
+  message: string;
+  onRetry?: () => void;
+}) {
   return (
-    <div className="state state-error" role="alert">
-      <strong>Something went wrong.</strong>
-      <span>{message}</span>
+    <div className={styles.error} role="alert">
+      <p className={styles.errorTitle}>{title}</p>
+      <p className={styles.errorMsg}>{message}</p>
+      {onRetry && (
+        <button type="button" className="btn-secondary" onClick={onRetry}>
+          Try again
+        </button>
+      )}
     </div>
   );
 }

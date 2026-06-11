@@ -24,6 +24,11 @@ router = APIRouter(prefix="/api/ai", tags=["ai"])
 class QueryRequest(BaseModel):
     prompt: str
     session_id: str = "default"
+    explain: bool = True
+    # Accepted for versatile clients — ignored on /query (use /report or /crawl instead).
+    report_type: str | None = None
+    target: str | None = None
+    window_days: int | None = None
 
 
 class ReportRequest(BaseModel):
@@ -31,19 +36,21 @@ class ReportRequest(BaseModel):
     target: str | None = None
     prompt: str | None = None
     session_id: str = "default"
+    explain: bool = True
 
 
 class CrawlRequest(BaseModel):
     window_days: int = 60
     explain: bool = False
     session_id: str = "default"
+    prompt: str | None = None
 
 
 @router.post("/query", response_model=AIResponse)
 async def query(body: QueryRequest) -> AIResponse:
     if orchestrator.is_report_request(body.prompt):
         return reports.generate_from_prompt(body.prompt)
-    return orchestrator.run_query(body.prompt)
+    return orchestrator.run_query(body.prompt, explain=body.explain)
 
 
 @router.post("/report", response_model=AIResponse)

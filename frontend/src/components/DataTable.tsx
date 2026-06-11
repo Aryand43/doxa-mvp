@@ -1,10 +1,11 @@
 import type { TableData } from "../app/types";
+import styles from "./DataTable.module.css";
 
 export function DataTable({ table }: { table: TableData }) {
   if (!table.columns.length) return null;
   return (
-    <div className="data-table-wrap">
-      <table className="data-table">
+    <div className={styles.wrap}>
+      <table className={styles.table}>
         <thead>
           <tr>
             {table.columns.map((c, i) => (
@@ -16,7 +17,9 @@ export function DataTable({ table }: { table: TableData }) {
           {table.rows.map((row, ri) => (
             <tr key={ri}>
               {row.map((cell, ci) => (
-                <td key={ci}>{cell === null || cell === "" ? "—" : String(cell)}</td>
+                <td key={ci} className={typeof cell === "number" ? styles.num : undefined}>
+                  {cell === null || cell === "" ? "—" : String(cell)}
+                </td>
               ))}
             </tr>
           ))}

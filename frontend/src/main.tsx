@@ -1,7 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./app/App";
-import "./styles/global.css";
+import "./styles/tokens.css";
+import "./styles/base.css";
+
+if (typeof window !== "undefined" && window.localStorage.getItem("doxa-theme") === "dark") {
+  document.documentElement.dataset.theme = "dark";
+}
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

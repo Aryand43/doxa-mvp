@@ -207,6 +207,41 @@ def anomaly_invoices_view(limit: int = 15) -> AIResponse:
     )
 
 
+def overdue_invoices_view(limit: int = 15) -> AIResponse:
+    overdue = queries.overdue_invoices()
+    head = overdue.head(limit)
+    by_vendor = overdue["vendor_name"].value_counts().head(5)
+    return AIResponse(
+        intent="overdue",
+        title="Overdue invoices",
+        narrative=(
+            f"{len(overdue)} invoices are past due. The table lists the earliest cases — "
+            "prioritise by amount and vendor concentration."
+        ),
+        bullets=[
+            f"{len(overdue)} overdue invoices",
+            f"Top vendor: {by_vendor.index[0]} ({int(by_vendor.iloc[0])})" if len(by_vendor) else "No vendor concentration",
+        ],
+        metrics=[
+            Metric(label="Overdue", value=str(len(overdue))),
+            Metric(label="Vendors", value=str(overdue["vendor_name"].nunique())),
+        ],
+        table=_table(
+            head,
+            [
+                ("invoice_number", "Invoice"),
+                ("vendor_name", "Vendor"),
+                ("amount", "Amount"),
+                ("currency", "Ccy"),
+                ("entity_name", "Entity"),
+                ("due_date", "Due"),
+            ],
+        ),
+        data_scope=["invoices"],
+        confidence=0.85,
+    )
+
+
 def cash_flow_view() -> AIResponse:
     buckets = queries.cash_flow_buckets()
     invoices = loader.load("invoices")

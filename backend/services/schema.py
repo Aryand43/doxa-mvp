@@ -76,10 +76,17 @@ class ScanStats(BaseModel):
     retrieval_backend: str = "local"
 
 
+class ScanPhase(BaseModel):
+    id: str
+    label: str
+    detail: str = ""
+
+
 class CrawlResponse(BaseModel):
     """Crawler digest + alerts."""
 
     digest: str = ""
     alerts: list[AlertItem] = Field(default_factory=list)
     scan_stats: ScanStats = Field(default_factory=ScanStats)
+    phases: list[ScanPhase] = Field(default_factory=list)
     confidence: float = 0.7

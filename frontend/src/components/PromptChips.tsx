@@ -1,3 +1,5 @@
+import styles from "./PromptChips.module.css";
+
 export function PromptChips({
   prompts,
   onSelect,
@@ -9,12 +11,12 @@ export function PromptChips({
 }) {
   if (prompts.length === 0) return null;
   return (
-    <div className="chip-row">
+    <div className={styles.row}>
       {prompts.map((p) => (
         <button
           key={p}
           type="button"
-          className="chip"
+          className={styles.chip}
           onClick={() => onSelect(p)}
           disabled={disabled}
         >
