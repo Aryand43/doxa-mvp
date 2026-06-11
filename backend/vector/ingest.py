@@ -15,14 +15,19 @@ to embed.py and storage to iris_client.py.
 from __future__ import annotations
 
 import csv
+import logging
 from pathlib import Path
 
 from backend.vector.embed import embed_texts
 from backend.vector.iris_client import (
     VectorDocument,
-    create_schema,
-    insert_documents,
+    check_connection,
+    count_documents,
+    ensure_table,
+    upsert_documents,
 )
+
+logger = logging.getLogger("doxa.vector.ingest")
 
 SOURCE_TABLE = "invoices"
 INVOICES_CSV = (
@@ -92,31 +97,109 @@ def _read_rows(limit: int | None) -> list[dict[str, str]]:
     return rows[:limit] if limit else rows
 
 
+def _row_doc_id(row: dict[str, str]) -> str:
+    """Stable per-invoice identifier used as the IRIS primary key."""
+    return _clean(row.get("invoice_id")) or _clean(row.get("invoice_number"))
+
+
+def _batch_to_documents(
+    batch: list[dict[str, str]],
+    contents: list[str],
+    embeddings: list[list[float]],
+) -> list[VectorDocument]:
+    documents: list[VectorDocument] = []
+    for row, content, embedding in zip(batch, contents, embeddings):
+        doc_id = _row_doc_id(row)
+        if not doc_id:
+            logger.warning("Skipping invoice row with no invoice_id/invoice_number.")
+            continue
+        documents.append(
+            VectorDocument(
+                doc_id=doc_id,
+                source_table=SOURCE_TABLE,
+                content=content,
+                metadata=row_to_metadata(row),
+                embedding=embedding,
+            )
+        )
+    return documents
+
+
 def build_documents(limit: int | None = None) -> list[VectorDocument]:
     """Read CSV rows, embed their text, and return VectorDocuments."""
     rows = _read_rows(limit)
     documents: list[VectorDocument] = []
-
     for start in range(0, len(rows), _EMBED_BATCH):
         batch = rows[start : start + _EMBED_BATCH]
         contents = [row_to_content(r) for r in batch]
         embeddings = embed_texts(contents)
-        for row, content, embedding in zip(batch, contents, embeddings):
-            doc_id = _clean(row.get("invoice_id")) or _clean(row.get("invoice_number"))
-            documents.append(
-                VectorDocument(
-                    doc_id=doc_id,
-                    source_table=SOURCE_TABLE,
-                    content=content,
-                    metadata=row_to_metadata(row),
-                    embedding=embedding,
-                )
-            )
+        documents.extend(_batch_to_documents(batch, contents, embeddings))
     return documents
 
 
-def ingest(limit: int | None = None, reset: bool = False) -> int:
-    """End-to-end: ensure schema, build embedded docs, insert. Returns count."""
-    documents = build_documents(limit=limit)
-    create_schema(reset=reset)
-    return insert_documents(documents)
+def ingest(
+    limit: int | None = None,
+    reset: bool = False,
+    batch_size: int = _EMBED_BATCH,
+) -> int:
+    """End-to-end indexing of the mock invoices dataset into IRIS.
+
+    Order of operations is deliberate so the pipeline fails fast and cheaply:
+      1. Validate IRIS config + connectivity (before any OpenAI spend).
+      2. Ensure the vector table exists (optionally reset it).
+      3. Read mock invoice rows.
+      4. For each batch: embed, then idempotently upsert (keyed on invoice id).
+      5. Report the final indexed count read back from IRIS.
+
+    Returns the number of documents written this run.
+    """
+    size = max(1, int(batch_size))
+
+    logger.info("Step 1/4: validating IRIS configuration and connectivity...")
+    check_connection()
+
+    logger.info("Step 2/4: ensuring vector table exists...")
+    status = ensure_table(reset=reset)
+    logger.info("Vector table status: %s", status)
+
+    logger.info("Step 3/4: reading mock invoice rows...")
+    rows = _read_rows(limit)
+    logger.info("Read %d invoice rows from %s.", len(rows), INVOICES_CSV.name)
+    if not rows:
+        logger.warning("No invoice rows to index; nothing to do.")
+        return 0
+
+    total_batches = (len(rows) + size - 1) // size
+    logger.info(
+        "Step 4/4: embedding + upserting %d rows in %d batch(es) of up to %d.",
+        len(rows),
+        total_batches,
+        size,
+    )
+
+    written = 0
+    for batch_no, start in enumerate(range(0, len(rows), size), start=1):
+        batch = rows[start : start + size]
+        contents = [row_to_content(r) for r in batch]
+
+        logger.info(
+            "Batch %d/%d: embedding %d rows...", batch_no, total_batches, len(batch)
+        )
+        embeddings = embed_texts(contents)
+
+        documents = _batch_to_documents(batch, contents, embeddings)
+        logger.info(
+            "Batch %d/%d: upserting %d documents into IRIS...",
+            batch_no,
+            total_batches,
+            len(documents),
+        )
+        written += upsert_documents(documents, batch_size=size)
+
+    final_count = count_documents()
+    logger.info(
+        "Indexing complete: wrote %d document(s) this run; table now holds %d row(s).",
+        written,
+        final_count,
+    )
+    return written

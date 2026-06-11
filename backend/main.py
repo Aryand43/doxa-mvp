@@ -14,6 +14,7 @@ from backend.routes.chat import router as chat_router
 from backend.routes.crawler import router as crawler_router
 from backend.routes.reports import router as reports_router
 from backend.routes.data import router as data_router
+from backend.routes.demo import router as demo_router
 
 app = FastAPI(
     title="DOXA MVP API",
@@ -33,6 +34,7 @@ app.include_router(chat_router)
 app.include_router(reports_router)
 app.include_router(crawler_router)
 app.include_router(data_router)
+app.include_router(demo_router)
 
 
 @app.get("/health")

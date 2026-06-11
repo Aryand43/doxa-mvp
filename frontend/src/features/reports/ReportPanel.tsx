@@ -1,23 +1,39 @@
 import { useState } from "react";
 import { Card } from "../../components/Card";
-import { generateReport } from "../../lib/api";
+import { ResponseView } from "../../components/ResponseView";
+import {
+  generateDemoReport,
+  REPORT_TYPES,
+  type DemoResponse,
+} from "../../lib/api";
+
+const TARGET_HINTS: Record<string, string> = {
+  spend_analysis: "Project code (optional, e.g. SI-2422)",
+  vendor_performance: "Vendor name (e.g. GreenBuild)",
+  entity_summary: "Entity name (optional)",
+  on_demand: "Describe the report you want",
+};
 
 export function ReportPanel() {
-  const [prompt, setPrompt] = useState("");
-  const [report, setReport] = useState<string | null>(null);
+  const [selected, setSelected] = useState<string>(REPORT_TYPES[0].id);
+  const [target, setTarget] = useState("");
+  const [report, setReport] = useState<DemoResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   async function handleGenerate() {
-    const text = prompt.trim();
-    if (!text || loading) return;
-
+    if (loading) return;
     setError(null);
+    setReport(null);
     setLoading(true);
 
     try {
-      const result = await generateReport(text);
-      setReport(result.report);
+      const text = target.trim();
+      const data =
+        selected === "on_demand"
+          ? await generateDemoReport(selected, undefined, text || "procurement overview")
+          : await generateDemoReport(selected, text || undefined);
+      setReport(data);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to generate report.");
     } finally {
@@ -25,30 +41,49 @@ export function ReportPanel() {
     }
   }
 
+  const hint = TARGET_HINTS[selected];
+
   return (
     <Card title="AI Reports">
-      <input
-        type="text"
-        className="report-prompt"
-        placeholder="Describe the report to generate…"
-        aria-label="Report prompt"
-        value={prompt}
-        onChange={(e) => setPrompt(e.target.value)}
-        disabled={loading}
-      />
-      <button
-        type="button"
-        className="btn-secondary"
-        onClick={handleGenerate}
-        disabled={loading || prompt.trim() === ""}
-      >
+      <div className="report-types">
+        {REPORT_TYPES.map((rt) => (
+          <button
+            key={rt.id}
+            type="button"
+            className={`chip ${selected === rt.id ? "chip-active" : ""}`}
+            onClick={() => setSelected(rt.id)}
+            disabled={loading}
+          >
+            {rt.label}
+          </button>
+        ))}
+      </div>
+
+      {hint && (
+        <input
+          type="text"
+          className="report-prompt"
+          placeholder={hint}
+          aria-label="Report target"
+          value={target}
+          onChange={(e) => setTarget(e.target.value)}
+          disabled={loading}
+        />
+      )}
+
+      <button type="button" onClick={handleGenerate} disabled={loading}>
         {loading ? "Generating…" : "Generate report"}
       </button>
-      {error && <p className="chat-error">{error}</p>}
-      {report && !loading && <pre className="report-body">{report}</pre>}
-      {!report && !loading && !error && (
-        <p className="placeholder">Generate a report to see it here.</p>
-      )}
+
+      <div className="report-output">
+        {error && <p className="chat-error">{error}</p>}
+        {report && !loading && <ResponseView data={report} />}
+        {!report && !loading && !error && (
+          <p className="placeholder">
+            Pick a report type and generate a structured report card.
+          </p>
+        )}
+      </div>
     </Card>
   );
 }
