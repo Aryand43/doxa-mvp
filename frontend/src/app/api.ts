@@ -1,4 +1,7 @@
 // Single typed API client for Doxa Connex AI. All product data comes from here.
+//
+// Local dev: leave VITE_API_BASE_URL empty — Vite proxies /api and /health to :8000.
+// Production: set VITE_API_BASE_URL to the deployed backend origin (no trailing slash).
 
 import type { AIResponse, CrawlResponse, ReportType } from "./types";
 import { isApiDebugEnabled, recordApiCall, setBackendHealth } from "./apiDebug";

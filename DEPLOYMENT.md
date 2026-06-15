@@ -4,6 +4,31 @@ How to deploy **Doxa Connex AI** on Vercel and debug API traffic in the browser.
 
 ---
 
+## Production architecture (current)
+
+The **backend is deployed on Vercel** as a standalone FastAPI project. The **frontend is deployed separately** — a second Vercel project pointing at `frontend/`.
+
+| Surface | Vercel project | Root directory | URL role |
+|---------|----------------|----------------|----------|
+| **Backend API** | `doxa-api` (or similar) | repo root `.` | `https://<api-host>/` — service index |
+| **Frontend SPA** | `doxa-web` (or similar) | `frontend/` | `https://<web-host>/` — React app |
+
+This is intentional: the backend URL is an API host, not a product landing page. Visiting the backend root returns a small JSON index (not `404`). Human-readable API docs live at `/scalar`.
+
+### Backend URL map
+
+| URL | What you get |
+|-----|--------------|
+| `/` | Service index — `{"service":"Doxa Connex AI API","status":"ok","docs":"/scalar","health":"/health"}` |
+| `/health` | Liveness — `{"status":"ok"}` |
+| `/scalar` | Interactive API reference (Scalar) |
+| `/openapi.json` | OpenAPI spec |
+| `/api/ai/*` | Product endpoints (query, report, crawl, summary, report-types) |
+
+The frontend calls the backend cross-origin via `VITE_API_BASE_URL` (see below). It does **not** rely on same-origin routing in production.
+
+---
+
 ## Recommended structure: two Vercel projects
 
 This monorepo has a Python FastAPI backend at the repo root and a Vite React frontend in `frontend/`. **Two separate Vercel projects** is the cleanest approach:
@@ -74,6 +99,7 @@ That points at `backend/main.py`, which exports `app`.
 
 | Path | Purpose |
 |------|---------|
+| `/` | **Service index** — confirms API is live; links to docs and health |
 | `/health` | Liveness — returns `{"status":"ok"}` |
 | `/scalar` | **API reference** — Scalar docs, endpoint schemas, try-it-out |
 | `/openapi.json` | OpenAPI spec (used by Scalar) |
@@ -228,11 +254,12 @@ VITE_ENABLE_API_DEBUG=false
 
 After deploying both projects:
 
-1. `curl https://<api-host>/health` → `{"status":"ok"}`
-2. Open `https://<api-host>/scalar` → docs load
-3. Open frontend URL → live snapshot loads (hits `/api/ai/summary`)
-4. Open API Inspector → see the summary request logged
-5. Run an assistant query → verify POST `/api/ai/query` in inspector
+1. `curl https://<api-host>/` → service index JSON (not 404)
+2. `curl https://<api-host>/health` → `{"status":"ok"}`
+3. Open `https://<api-host>/scalar` → docs load
+4. Open frontend URL → live snapshot loads (hits `https://<api-host>/api/ai/summary`)
+5. Open API Inspector → see the summary request logged
+6. Run an assistant query → verify POST `/api/ai/query` in inspector
 
 ---
 

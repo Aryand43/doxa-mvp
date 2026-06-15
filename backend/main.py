@@ -31,6 +31,17 @@ app.include_router(health_router)
 app.include_router(ai_router)
 
 
+@app.get("/", include_in_schema=False)
+async def root() -> dict[str, str]:
+    """Service index — confirms the API is live and points operators to key surfaces."""
+    return {
+        "service": "Doxa Connex AI API",
+        "status": "ok",
+        "docs": "/scalar",
+        "health": "/health",
+    }
+
+
 @app.get("/scalar", include_in_schema=False)
 async def scalar_html():
     return get_scalar_api_reference(openapi_url="/openapi.json", title="Doxa Connex AI API")
