@@ -152,6 +152,14 @@ cd frontend && npm run test && npm run build
 evidence, data_scope, confidence`). `/crawl` returns **`CrawlResponse`**
 (`digest, alerts, scan_stats, confidence`).
 
+### Debugging & deployment
+
+- **`/scalar`** — API reference and endpoint mapping (schemas, try-it-out)
+- **`/health`** — backend liveness
+- **API Inspector** — browser transport log in the frontend (dev by default; set `VITE_ENABLE_API_DEBUG=true` in prod)
+
+See **[DEPLOYMENT.md](./DEPLOYMENT.md)** for Vercel setup, env vars, and local vs production flows.
+
 ## Example prompts
 
 - What POs are pending my approval today?

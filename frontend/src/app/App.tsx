@@ -6,6 +6,7 @@ import { MetricStrip } from "../components/MetricStrip";
 import { AssistantPanel } from "../features/assistant/AssistantPanel";
 import { ReportsPanel } from "../features/reports/ReportsPanel";
 import { CrawlerPanel } from "../features/crawler/CrawlerPanel";
+import { ApiInspector } from "./ApiInspector";
 import styles from "./App.module.css";
 
 export default function App() {
@@ -66,6 +67,8 @@ export default function App() {
         <ReportsPanel />
         <CrawlerPanel />
       </main>
+
+      <ApiInspector />
     </div>
   );
 }

@@ -40,7 +40,12 @@ IRIS_PASSWORD: str = os.getenv("IRIS_PASSWORD", "")
 
 IRIS_VECTOR_TABLE: str = os.getenv("IRIS_VECTOR_TABLE", "SQLUser.ProcurementVectors")
 
-BACKEND_CORS_ORIGINS: list[str] = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-]
+_cors_raw = os.getenv("BACKEND_CORS_ORIGINS", "")
+BACKEND_CORS_ORIGINS: list[str] = (
+    [origin.strip() for origin in _cors_raw.split(",") if origin.strip()]
+    if _cors_raw
+    else [
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ]
+)

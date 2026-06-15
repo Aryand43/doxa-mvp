@@ -7,9 +7,12 @@ describe("runQuery (AI query API contract)", () => {
   });
 
   it("POSTs the prompt to /api/ai/query and returns the parsed AIResponse", async () => {
+    const payload = { mode: "assistant", intent: "approvals", title: "Pending" };
     const fetchMock = vi.fn().mockResolvedValue({
       ok: true,
-      json: async () => ({ mode: "assistant", intent: "approvals", title: "Pending" }),
+      status: 200,
+      statusText: "OK",
+      text: async () => JSON.stringify(payload),
     });
     vi.stubGlobal("fetch", fetchMock);
 
