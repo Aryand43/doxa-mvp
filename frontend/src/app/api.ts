@@ -3,7 +3,14 @@
 // Local dev: leave VITE_API_BASE_URL empty — Vite proxies /api and /health to :8000.
 // Production: set VITE_API_BASE_URL to the deployed backend origin (no trailing slash).
 
-import type { AIResponse, CrawlResponse, ReportType } from "./types";
+import type {
+  AIResponse,
+  AuthInfo,
+  CrawlResponse,
+  DevLoginOptions,
+  DevLoginResponse,
+  ReportType,
+} from "./types";
 import { isApiDebugEnabled, recordApiCall, setBackendHealth } from "./apiDebug";
 
 function apiRoot(): string {
@@ -13,6 +20,39 @@ function apiRoot(): string {
 function aiBase(): string {
   const root = apiRoot();
   return root ? `${root}/api/ai` : "/api/ai";
+}
+
+function authBase(): string {
+  const root = apiRoot();
+  return root ? `${root}/api/auth` : "/api/auth";
+}
+
+const AUTH_TOKEN_KEY = "doxa_auth_token";
+
+function authToken(): string {
+  const envToken = (import.meta.env.VITE_AUTH_TOKEN ?? "").trim();
+  if (envToken) return envToken;
+  if (typeof window === "undefined") return "";
+  return (
+    window.localStorage.getItem(AUTH_TOKEN_KEY) ??
+    window.localStorage.getItem("access_token") ??
+    ""
+  ).trim();
+}
+
+export function hasStoredAuthToken(): boolean {
+  return authToken() !== "";
+}
+
+export function storeAuthToken(token: string): void {
+  if (typeof window === "undefined") return;
+  window.localStorage.setItem(AUTH_TOKEN_KEY, token);
+}
+
+export function clearAuthToken(): void {
+  if (typeof window === "undefined") return;
+  window.localStorage.removeItem(AUTH_TOKEN_KEY);
+  window.localStorage.removeItem("access_token");
 }
 
 /** Full URL for the backend liveness probe (used by the API Inspector). */
@@ -58,9 +98,17 @@ async function request<TRes>(
 ): Promise<TRes> {
   const started = performance.now();
   const init: RequestInit = { method };
+  const token = authToken();
+  const headers: Record<string, string> = {};
   if (body !== undefined) {
-    init.headers = { "Content-Type": "application/json" };
+    headers["Content-Type"] = "application/json";
     init.body = JSON.stringify(body);
+  }
+  if (token) {
+    headers.Authorization = `Bearer ${token}`;
+  }
+  if (Object.keys(headers).length) {
+    init.headers = headers;
   }
 
   try {
@@ -82,7 +130,14 @@ async function request<TRes>(
     }
 
     if (!res.ok) {
-      throw new Error(`Request failed (${res.status} ${res.statusText})`);
+      const detail =
+        typeof responseBody === "object" &&
+        responseBody !== null &&
+        "detail" in responseBody &&
+        typeof (responseBody as { detail?: unknown }).detail === "string"
+          ? (responseBody as { detail: string }).detail
+          : `Request failed (${res.status} ${res.statusText})`;
+      throw new Error(detail);
     }
 
     return responseBody as TRes;
@@ -111,6 +166,36 @@ async function post<TRes>(path: string, body: unknown): Promise<TRes> {
 
 async function get<TRes>(path: string): Promise<TRes> {
   return request<TRes>("GET", `${aiBase()}${path}`);
+}
+
+async function authGet<TRes>(path: string): Promise<TRes> {
+  return request<TRes>("GET", `${authBase()}${path}`);
+}
+
+async function authPost<TRes>(path: string, body: unknown): Promise<TRes> {
+  return request<TRes>("POST", `${authBase()}${path}`, body);
+}
+
+export function fetchCurrentUser(): Promise<AuthInfo> {
+  return authGet<AuthInfo>("/me");
+}
+
+export function fetchLoginOptions(): Promise<DevLoginOptions> {
+  return authGet<DevLoginOptions>("/dev-options");
+}
+
+export async function loginWithProfile(params: {
+  userId: string;
+  buyerCompanyUuid: string;
+  profileId: string;
+}): Promise<DevLoginResponse> {
+  const response = await authPost<DevLoginResponse>("/dev-login", {
+    user_id: params.userId,
+    buyer_company_uuid: params.buyerCompanyUuid,
+    profile_id: params.profileId,
+  });
+  storeAuthToken(response.token);
+  return response;
 }
 
 export function runQuery(prompt: string, explain = true): Promise<AIResponse> {

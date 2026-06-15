@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import pandas as pd
 
+from backend.auth import scope_dataframe
 from backend.data_access import loader
 from backend.utils.dates import days_until
 from backend.utils.text import non_empty, to_float
@@ -19,11 +20,15 @@ CASH_BUCKET_ORDER = ["0-30d", "31-60d", "61-90d", "90d+"]
 _RISK_RANK = {"HIGH": 0, "MEDIUM": 1, "LOW": 2}
 
 
+def _scope(df: pd.DataFrame) -> pd.DataFrame:
+    return scope_dataframe(df)
+
+
 # --------------------------------------------------------------------------- #
 # Approvals
 # --------------------------------------------------------------------------- #
 def pending_approvals() -> pd.DataFrame:
-    df = loader.load("approvals")
+    df = _scope(loader.load("approvals"))
     mask = df["approval_status"].isin(PENDING_STATUSES) | df["status"].isin(PENDING_STATUSES)
     return df[mask].sort_values("due_date").copy()
 
@@ -32,27 +37,27 @@ def pending_approvals() -> pd.DataFrame:
 # Invoices
 # --------------------------------------------------------------------------- #
 def overdue_invoices() -> pd.DataFrame:
-    df = loader.load("invoices")
+    df = _scope(loader.load("invoices"))
     return df[df["status"] == "OVERDUE"].copy()
 
 
 def anomalous_invoices() -> pd.DataFrame:
-    df = loader.load("invoices")
+    df = _scope(loader.load("invoices"))
     return df[df["anomaly_type"].apply(non_empty)].copy()
 
 
 def outstanding_invoices() -> pd.DataFrame:
-    df = loader.load("invoices")
+    df = _scope(loader.load("invoices"))
     return df[df["status"] != "PAID"].copy()
 
 
 def invoices_for_vendor(vendor_name: str) -> pd.DataFrame:
-    df = loader.load("invoices")
+    df = _scope(loader.load("invoices"))
     return df[df["vendor_name"] == vendor_name].copy()
 
 
 def invoices_for_entity(entity_name: str) -> pd.DataFrame:
-    df = loader.load("invoices")
+    df = _scope(loader.load("invoices"))
     return df[df["entity_name"] == entity_name].copy()
 
 
@@ -71,7 +76,7 @@ def cash_flow_buckets() -> list[tuple[str, int, float]]:
 # Vendors
 # --------------------------------------------------------------------------- #
 def vendors_ranked_by_risk() -> pd.DataFrame:
-    df = loader.load("vendors").copy()
+    df = _scope(loader.load("vendors"))
     df["_reject"] = df["rejection_rate"].apply(to_float)
     df["_ontime"] = df["on_time_delivery_rate"].apply(to_float)
     df["_rank"] = df["risk_flag"].map(_RISK_RANK).fillna(3)
@@ -79,19 +84,19 @@ def vendors_ranked_by_risk() -> pd.DataFrame:
 
 
 def high_risk_vendors() -> pd.DataFrame:
-    df = loader.load("vendors")
+    df = _scope(loader.load("vendors"))
     return df[df["risk_flag"] == "HIGH"].copy()
 
 
 def top_vendors_by_spend(n: int = 10) -> pd.DataFrame:
-    df = loader.load("vendors").copy()
+    df = _scope(loader.load("vendors"))
     df["_ytd"] = df["ytd_spend"].apply(to_float)
     return df.sort_values("_ytd", ascending=False).head(n)
 
 
 def find_vendor(name: str):
     """Return the first vendor row whose name contains any query token, or None."""
-    df = loader.load("vendors")
+    df = _scope(loader.load("vendors"))
     tokens = [t for t in name.lower().split() if len(t) > 2]
     if not tokens:
         return None
@@ -104,7 +109,7 @@ def find_vendor(name: str):
 # Projects / spend
 # --------------------------------------------------------------------------- #
 def find_projects(query: str | None) -> pd.DataFrame:
-    df = loader.load("projects")
+    df = _scope(loader.load("projects"))
     if not query:
         return df.iloc[0:0]
     skip = {"project", "spend", "committed", "actual", "this", "month", "for", "summarize"}
@@ -117,7 +122,7 @@ def find_projects(query: str | None) -> pd.DataFrame:
 
 
 def portfolio_spend_by_currency(top: int = 8) -> pd.DataFrame:
-    df = loader.load("projects").copy()
+    df = _scope(loader.load("projects"))
     for col in ("budget_amount", "committed_spend", "actual_spend"):
         df[col] = df[col].apply(to_float)
     return (
@@ -132,7 +137,7 @@ def portfolio_spend_by_currency(top: int = 8) -> pd.DataFrame:
 # Contracts
 # --------------------------------------------------------------------------- #
 def expiring_contracts(days: int = 90) -> pd.DataFrame:
-    df = loader.load("contracts").copy()
+    df = _scope(loader.load("contracts"))
     # Prefer the precomputed column; fall back to date math when absent.
     df["_dte"] = df.apply(
         lambda r: int(to_float(r.get("days_to_expiry"), default=10**9))
@@ -145,7 +150,7 @@ def expiring_contracts(days: int = 90) -> pd.DataFrame:
 
 
 def find_entity(name: str | None) -> str | None:
-    entities = loader.load("entities")
+    entities = _scope(loader.load("entities"))
     if name:
         tokens = [t for t in name.lower().split() if len(t) > 2]
         if tokens:
@@ -154,5 +159,5 @@ def find_entity(name: str | None) -> str | None:
             if len(hits):
                 return hits.iloc[0]["entity_name"]
     # Default to the busiest entity by invoice volume.
-    top = loader.load("invoices")["entity_name"].value_counts()
+    top = _scope(loader.load("invoices"))["entity_name"].value_counts()
     return top.index[0] if len(top) else None

@@ -40,6 +40,14 @@ IRIS_PASSWORD: str = os.getenv("IRIS_PASSWORD", "")
 
 IRIS_VECTOR_TABLE: str = os.getenv("IRIS_VECTOR_TABLE", "SQLUser.ProcurementVectors")
 
+AUTH_REQUIRED: bool = os.getenv("AUTH_REQUIRED", "false").lower() in {"1", "true", "yes"}
+AUTH_JWT_SECRET: str = os.getenv("AUTH_JWT_SECRET", "")
+AUTH_JWT_ALGORITHM: str = os.getenv("AUTH_JWT_ALGORITHM", "HS256")
+AUTH_JWT_ISSUER: str = os.getenv("AUTH_JWT_ISSUER", "")
+AUTH_JWT_AUDIENCE: str = os.getenv("AUTH_JWT_AUDIENCE", "")
+AUTH_DEV_LOGIN_ENABLED: bool = os.getenv("AUTH_DEV_LOGIN_ENABLED", "true").lower() in {"1", "true", "yes"}
+AUTH_TOKEN_TTL_SECONDS: int = _safe_int(os.getenv("AUTH_TOKEN_TTL_SECONDS"), 7200)
+
 _cors_raw = os.getenv("BACKEND_CORS_ORIGINS", "")
 BACKEND_CORS_ORIGINS: list[str] = (
     [origin.strip() for origin in _cors_raw.split(",") if origin.strip()]

@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import logging
 
+from backend.auth import scope_dataframe
 from backend.data_access import loader, queries
 from backend.services.retrieval import retrieval_backend, search
 from backend.services.schema import AlertItem, CrawlResponse, ScanPhase, ScanStats
@@ -41,7 +42,7 @@ def _related_ids(query: str, exclude: set[str], k: int = 3) -> list[str]:
 # Detectors
 # --------------------------------------------------------------------------- #
 def _detect_duplicate_invoices(limit: int = 6) -> list[AlertItem]:
-    inv = loader.load("invoices").copy()
+    inv = scope_dataframe(loader.load("invoices"))
     inv["_amt"] = inv["amount"].apply(to_float)
     alerts: list[AlertItem] = []
     grouped = inv[inv["_amt"] > 0].groupby(["vendor_name", inv["_amt"].round(0)])
@@ -75,7 +76,7 @@ def _detect_duplicate_invoices(limit: int = 6) -> list[AlertItem]:
 
 
 def _detect_anomalous_spend(limit: int = 6) -> list[AlertItem]:
-    inv = loader.load("invoices").copy()
+    inv = scope_dataframe(loader.load("invoices"))
     inv["_amt"] = inv["amount"].apply(to_float)
     alerts: list[AlertItem] = []
     for (currency, category), group in inv.groupby(["currency", "category"]):
@@ -110,7 +111,7 @@ def _detect_anomalous_spend(limit: int = 6) -> list[AlertItem]:
 
 
 def _detect_price_variance(limit: int = 5) -> list[AlertItem]:
-    inv = loader.load("invoices").copy()
+    inv = scope_dataframe(loader.load("invoices"))
     inv["_unit"] = inv["unit_price"].apply(to_float)
     priced = inv[inv["_unit"] > 0]
     alerts: list[AlertItem] = []
@@ -225,7 +226,9 @@ def scan(window_days: int = 60, max_alerts: int = 25, explain: bool = True) -> C
     phases: list[ScanPhase] = []
 
     records_scanned = sum(
-        len(loader.load(name)) for name in ("invoices", "contracts", "vendors") if loader.dataset_available(name)
+        len(scope_dataframe(loader.load(name)))
+        for name in ("invoices", "contracts", "vendors")
+        if loader.dataset_available(name)
     )
     phases.append(
         ScanPhase(

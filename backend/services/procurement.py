@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import pandas as pd
 
+from backend.auth import scope_dataframe
 from backend.data_access import loader, queries
 from backend.services.schema import ActionItem, AIResponse, Metric, TableData
 from backend.utils.text import fmt_money, fmt_pct, to_float
@@ -107,7 +108,7 @@ def _portfolio_spend() -> AIResponse:
     for ccy, r in grouped.iterrows():
         util = (r["actual_spend"] / r["budget_amount"]) if r["budget_amount"] else 0.0
         rows.append([ccy, fmt_money(r["budget_amount"]), fmt_money(r["committed_spend"]), fmt_money(r["actual_spend"]), fmt_pct(util)])
-    projects = loader.load("projects")
+    projects = scope_dataframe(loader.load("projects"))
     examples = projects["project_code"].dropna().head(5).tolist()
     return AIResponse(
         intent="spend",
@@ -244,11 +245,11 @@ def overdue_invoices_view(limit: int = 15) -> AIResponse:
 
 def cash_flow_view() -> AIResponse:
     buckets = queries.cash_flow_buckets()
-    invoices = loader.load("invoices")
+    invoices = scope_dataframe(loader.load("invoices"))
     paid = int((invoices["status"] == "PAID").sum())
     outstanding = int((invoices["status"] != "PAID").sum())
     near_term = next((count for bucket, count, _ in buckets if bucket == "0-30d"), 0)
-    payments = loader.load("payments")
+    payments = scope_dataframe(loader.load("payments"))
     return AIResponse(
         intent="cash_flow",
         title="Cash flow summary (invoices & payments)",

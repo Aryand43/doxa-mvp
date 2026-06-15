@@ -12,9 +12,10 @@ Thin routes — all logic lives in services.
 
 from __future__ import annotations
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 from pydantic import BaseModel
 
+from backend.auth import AuthContext, ensure_authority, require_authority
 from backend.services import crawler, orchestrator, procurement, reports
 from backend.services.schema import AIResponse, CrawlResponse
 
@@ -47,29 +48,43 @@ class CrawlRequest(BaseModel):
 
 
 @router.post("/query", response_model=AIResponse)
-async def query(body: QueryRequest) -> AIResponse:
+async def query(
+    body: QueryRequest,
+    user: AuthContext = Depends(require_authority("AI:read")),
+) -> AIResponse:
     if orchestrator.is_report_request(body.prompt):
+        ensure_authority(user, "REPORT:read")
         return reports.generate_from_prompt(body.prompt)
     return orchestrator.run_query(body.prompt, explain=body.explain)
 
 
 @router.post("/report", response_model=AIResponse)
-async def report(body: ReportRequest) -> AIResponse:
+async def report(
+    body: ReportRequest,
+    user: AuthContext = Depends(require_authority("REPORT:read")),
+) -> AIResponse:
     return reports.generate(body.report_type, target=body.target, prompt=body.prompt)
 
 
 @router.get("/report-types")
-async def report_types() -> dict:
+async def report_types(
+    user: AuthContext = Depends(require_authority("REPORT:read")),
+) -> dict:
     return {"report_types": reports.REPORT_TYPES}
 
 
 @router.post("/crawl", response_model=CrawlResponse)
-async def crawl(body: CrawlRequest) -> CrawlResponse:
+async def crawl(
+    body: CrawlRequest,
+    user: AuthContext = Depends(require_authority("CRAWLER:read")),
+) -> CrawlResponse:
     return crawler.scan(window_days=body.window_days, explain=body.explain)
 
 
 @router.get("/summary", response_model=AIResponse)
-async def summary() -> AIResponse:
+async def summary(
+    user: AuthContext = Depends(require_authority("AI:read")),
+) -> AIResponse:
     return AIResponse(
         intent="summary",
         title="Doxa Connex AI — live snapshot",

@@ -4,6 +4,17 @@
   padding: var(--space-6) var(--space-5);
 }
 
+.boot {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: var(--space-3);
+  color: var(--ink-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
 /* ---- Masthead ---- */
 .masthead {
   display: flex;
@@ -60,6 +71,38 @@
 .themeIcon {
   font-size: 1.1rem;
   line-height: 1;
+}
+
+.sessionBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+
+.sessionMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.sessionMeta span {
+  max-width: 360px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0.25rem 0.5rem;
+  color: var(--ink-2);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
 }
 
 /* A small ledger mark: two ruled lines on a pine field. */
@@ -145,6 +188,10 @@
 @media (max-width: 720px) {
   .app {
     padding: var(--space-4) var(--space-3);
+  }
+  .sessionBar {
+    align-items: stretch;
+    flex-direction: column;
   }
   .stations {
     grid-template-columns: 1fr;

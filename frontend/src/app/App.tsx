@@ -1,19 +1,43 @@
 import { useEffect, useState } from "react";
-import { fetchSummary } from "./api";
-import type { AIResponse } from "./types";
+import { clearAuthToken, fetchCurrentUser, fetchSummary, hasStoredAuthToken } from "./api";
+import type { AIResponse, AuthInfo } from "./types";
 import { useTheme } from "./useTheme";
 import { MetricStrip } from "../components/MetricStrip";
 import { AssistantPanel } from "../features/assistant/AssistantPanel";
 import { ReportsPanel } from "../features/reports/ReportsPanel";
 import { CrawlerPanel } from "../features/crawler/CrawlerPanel";
 import { ApiInspector } from "./ApiInspector";
+import { LoginPage } from "./LoginPage";
 import styles from "./App.module.css";
 
 export default function App() {
   const [summary, setSummary] = useState<AIResponse | null>(null);
+  const [user, setUser] = useState<AuthInfo | null>(null);
+  const [authChecked, setAuthChecked] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
+    let active = true;
+    fetchCurrentUser()
+      .then((d) => active && setUser(d))
+      .catch(() => {
+        if (!active) return;
+        if (hasStoredAuthToken()) {
+          clearAuthToken();
+        }
+        setUser(null);
+      })
+      .finally(() => active && setAuthChecked(true));
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!user) {
+      setSummary(null);
+      return;
+    }
     let active = true;
     fetchSummary()
       .then((d) => active && setSummary(d))
@@ -21,7 +45,26 @@ export default function App() {
     return () => {
       active = false;
     };
-  }, []);
+  }, [user]);
+
+  function logout() {
+    clearAuthToken();
+    setUser(null);
+    setSummary(null);
+  }
+
+  if (!authChecked) {
+    return (
+      <div className={styles.boot}>
+        <span className={styles.mark} aria-hidden />
+        <p>Checking access...</p>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <LoginPage onLogin={setUser} />;
+  }
 
   return (
     <div className={styles.app}>
@@ -49,6 +92,17 @@ export default function App() {
               {theme === "dark" ? "☀" : "☾"}
             </span>
             {theme === "dark" ? "Light mode" : "Dark mode"}
+          </button>
+        </div>
+
+        <div className={styles.sessionBar}>
+          <div className={styles.sessionMeta}>
+            <span>{user.user_id}</span>
+            <span>{user.roles.join(", ") || "No role"}</span>
+            <span>{user.companies[0] ?? "No tenant"}</span>
+          </div>
+          <button type="button" className="btn-secondary" onClick={logout}>
+            Sign out
           </button>
         </div>
 

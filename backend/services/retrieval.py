@@ -24,6 +24,7 @@ from dataclasses import dataclass
 from functools import lru_cache
 from typing import Any
 
+from backend.auth import can_access_record
 from backend.data_access import loader
 from backend.services.schema import EvidenceItem
 from backend.utils.text import fmt_money, to_float, tokenize
@@ -144,6 +145,8 @@ class _LocalVectorStore:
             doc = self.docs[idx]
             if datasets and doc.dataset not in datasets:
                 continue
+            if not can_access_record(doc.record):
+                continue
             hits.append(Hit(doc.dataset, doc.doc_id, doc.text, round(score, 4), doc.record))
             if len(hits) >= top_k:
                 break
@@ -169,6 +172,7 @@ def _iris_hits(query: str, top_k: int) -> list[Hit]:
     return [
         Hit(dataset="invoices", doc_id=m.doc_id, text=m.content, score=round(float(m.score), 4), record=m.metadata)
         for m in matches
+        if can_access_record(m.metadata)
     ]
 
 

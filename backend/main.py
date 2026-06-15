@@ -11,6 +11,7 @@ from scalar_fastapi import get_scalar_api_reference
 
 from backend.config import BACKEND_CORS_ORIGINS
 from backend.routes.ai import router as ai_router
+from backend.routes.auth import router as auth_router
 from backend.routes.health import router as health_router
 
 app = FastAPI(
@@ -28,6 +29,7 @@ app.add_middleware(
 )
 
 app.include_router(health_router)
+app.include_router(auth_router)
 app.include_router(ai_router)
 
 

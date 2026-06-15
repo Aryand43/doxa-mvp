@@ -68,3 +68,35 @@ export type CrawlResponse = {
 };
 
 export type ReportType = { id: string; label: string };
+
+export type AuthInfo = {
+  user_id: string;
+  companies: string[];
+  authorities: string[];
+  roles: string[];
+  auth_required: boolean;
+};
+
+export type DevTenant = {
+  buyer_company_uuid: string;
+  entity_name: string;
+  tenant_code: string;
+};
+
+export type DevAccessProfile = {
+  id: string;
+  label: string;
+  authorities: string[];
+  roles: string[];
+};
+
+export type DevLoginOptions = {
+  tenants: DevTenant[];
+  profiles: DevAccessProfile[];
+};
+
+export type DevLoginResponse = {
+  token: string;
+  expires_at: number;
+  user: AuthInfo;
+};
