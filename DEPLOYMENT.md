@@ -24,6 +24,31 @@ A **single Vercel project** is possible but requires custom routing to serve bot
 
 ---
 
+## Vercel Python build (`package-mode`)
+
+### Why Vercel failed
+
+Vercel's Python builder runs `uv sync` against `pyproject.toml`. That performs an **editable install of the project itself**, not just third-party dependencies. With Poetry's `package-mode = false`, `poetry-core` refuses to build a local package and raises:
+
+```
+RuntimeError: Building a package is not possible in non-package mode.
+```
+
+### What we changed
+
+`pyproject.toml` now ships the `backend/` tree as an installable package:
+
+```toml
+[tool.poetry]
+packages = [{ include = "backend" }]
+```
+
+`package-mode = false` was removed (Poetry defaults to package mode). A root `backend/__init__.py` was added so imports like `backend.main:app` resolve after install.
+
+This is the minimal fix — no duplicate `requirements.txt`, no build-system swap. The alternative (`.vercelignore` + `requirements.txt`) would bypass Poetry entirely but also hide `[tool.vercel]` from the builder and duplicate dependency management.
+
+---
+
 ## Backend (FastAPI on Vercel)
 
 ### Entrypoint
@@ -216,6 +241,7 @@ After deploying both projects:
 | Symptom | Fix |
 |---------|-----|
 | Vercel build: “No FastAPI entrypoint found” | Ensure `[tool.vercel] entrypoint = "backend.main:app"` is in `pyproject.toml` |
+| Vercel build: “Building a package is not possible in non-package mode” | Ensure `package-mode = false` is **not** set; `packages = [{ include = "backend" }]` must be present |
 | CORS errors in browser | Set `BACKEND_CORS_ORIGINS` on backend to your frontend URL |
 | Frontend 404 on refresh | Add SPA rewrite in `frontend/vercel.json` |
 | API Inspector empty in prod | Set `VITE_ENABLE_API_DEBUG=true` and redeploy frontend |
