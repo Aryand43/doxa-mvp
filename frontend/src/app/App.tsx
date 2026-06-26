@@ -10,7 +10,16 @@ import { ApiInspector } from "./ApiInspector";
 import { LoginPage } from "./LoginPage";
 import styles from "./App.module.css";
 
+type FeatureTab = "assistant" | "reports" | "crawler";
+
+const FEATURE_TABS: { id: FeatureTab; label: string; hint: string }[] = [
+  { id: "assistant", label: "Assistant", hint: "Ask questions grounded in procurement data" },
+  { id: "reports", label: "Reports", hint: "Structured spend, vendor, and entity reports" },
+  { id: "crawler", label: "Crawler", hint: "Scan datasets for alerts and anomalies" },
+];
+
 export default function App() {
+  const [activeTab, setActiveTab] = useState<FeatureTab>("assistant");
   const [summary, setSummary] = useState<AIResponse | null>(null);
   const [user, setUser] = useState<AuthInfo | null>(null);
   const [authChecked, setAuthChecked] = useState(false);
@@ -116,10 +125,55 @@ export default function App() {
         </div>
       </header>
 
-      <main className={styles.stations}>
-        <AssistantPanel />
-        <ReportsPanel />
-        <CrawlerPanel />
+      <nav className={styles.tabBar} aria-label="Product features">
+        {FEATURE_TABS.map((tab) => {
+          const selected = activeTab === tab.id;
+          return (
+            <button
+              key={tab.id}
+              type="button"
+              role="tab"
+              id={`tab-${tab.id}`}
+              aria-selected={selected}
+              aria-controls={`panel-${tab.id}`}
+              className={selected ? styles.tabActive : styles.tab}
+              onClick={() => setActiveTab(tab.id)}
+            >
+              <span className={styles.tabLabel}>{tab.label}</span>
+              <span className={styles.tabHint}>{tab.hint}</span>
+            </button>
+          );
+        })}
+      </nav>
+
+      <main className={styles.tabContent}>
+        <div
+          role="tabpanel"
+          id="panel-assistant"
+          aria-labelledby="tab-assistant"
+          hidden={activeTab !== "assistant"}
+          className={styles.tabPanel}
+        >
+          <AssistantPanel />
+        </div>
+        <div
+          role="tabpanel"
+          id="panel-reports"
+          aria-labelledby="tab-reports"
+          hidden={activeTab !== "reports"}
+          className={styles.tabPanel}
+        >
+          <ReportsPanel />
+        </div>
+        <div
+          role="tabpanel"
+          id="panel-crawler"
+          aria-labelledby="tab-crawler"
+          hidden={activeTab !== "crawler"}
+          className={styles.tabPanel}
+        >
+          <CrawlerPanel />
+        </div>
       </main>
 
       <ApiInspector />

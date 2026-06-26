@@ -27,7 +27,7 @@ describe("AssistantPanel", () => {
     render(<AssistantPanel />);
 
     await user.type(screen.getByLabelText("Message"), "What is pending approval?");
-    await user.click(screen.getByRole("button", { name: "Ask" }));
+    await user.click(screen.getByRole("button", { name: "Send" }));
 
     expect(screen.getByText("What is pending approval?")).toBeInTheDocument();
     expect(

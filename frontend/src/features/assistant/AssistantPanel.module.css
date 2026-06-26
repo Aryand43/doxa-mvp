@@ -1,19 +1,29 @@
-.bar {
+.thread {
   display: flex;
-  gap: var(--space-2);
-}
-.bar input {
-  flex: 1;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-height: 18rem;
 }
 
-.question {
-  align-self: flex-start;
-  max-width: 100%;
-  padding: var(--space-2) var(--space-3);
-  background: var(--accent-soft);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  color: var(--accent-ink);
+.threadEnd {
+  height: 1px;
+}
+
+.composer {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.composer input {
+  flex: 1;
+  min-height: 2.75rem;
+  padding-inline: var(--space-4);
+  border-radius: var(--radius-pill);
+}
+
+.composer button {
+  flex-shrink: 0;
+  min-width: 5rem;
+  border-radius: var(--radius-pill);
 }

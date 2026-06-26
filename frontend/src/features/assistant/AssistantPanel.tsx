@@ -1,12 +1,15 @@
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { runQuery } from "../../app/api";
 import type { AIResponse } from "../../app/types";
 import { Panel } from "../../components/Panel";
-import { ResponseCard } from "../../components/ResponseCard";
 import { PromptChips } from "../../components/PromptChips";
-import { LoadingState } from "../../components/LoadingState";
 import { EmptyState } from "../../components/EmptyState";
-import { ErrorState } from "../../components/ErrorState";
+import {
+  AssistantMessage,
+  ErrorMessage,
+  TypingIndicator,
+  UserMessage,
+} from "./ChatMessage";
 import styles from "./AssistantPanel.module.css";
 
 const QUICK_PROMPTS = [
@@ -21,25 +24,42 @@ const QUICK_PROMPTS = [
   "What can you help me with?",
 ];
 
+type ChatItem =
+  | { id: string; kind: "user"; text: string }
+  | { id: string; kind: "assistant"; response: AIResponse }
+  | { id: string; kind: "error"; text: string; retryPrompt: string };
+
+function nextId() {
+  return `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
 export function AssistantPanel() {
   const [input, setInput] = useState("");
-  const [question, setQuestion] = useState<string | null>(null);
-  const [response, setResponse] = useState<AIResponse | null>(null);
+  const [messages, setMessages] = useState<ChatItem[]>([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const threadEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    threadEndRef.current?.scrollIntoView?.({ behavior: "smooth", block: "end" });
+  }, [messages, loading]);
 
   async function ask(text: string) {
     const prompt = text.trim();
     if (!prompt || loading) return;
-    setQuestion(prompt);
+
+    setMessages((current) => [...current, { id: nextId(), kind: "user", text: prompt }]);
     setInput("");
-    setError(null);
-    setResponse(null);
     setLoading(true);
+
     try {
-      setResponse(await runQuery(prompt));
+      const response = await runQuery(prompt);
+      setMessages((current) => [...current, { id: nextId(), kind: "assistant", response }]);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "The assistant did not respond.");
+      const message = err instanceof Error ? err.message : "The assistant did not respond.";
+      setMessages((current) => [
+        ...current,
+        { id: nextId(), kind: "error", text: message, retryPrompt: prompt },
+      ]);
     } finally {
       setLoading(false);
     }
@@ -50,6 +70,8 @@ export function AssistantPanel() {
     void ask(input);
   }
 
+  const hasMessages = messages.length > 0 || loading;
+
   return (
     <Panel
       kicker="Ask"
@@ -57,37 +79,48 @@ export function AssistantPanel() {
       description="Ask in plain language — approvals, spend, vendors, invoices, cash flow, contracts, or a general overview."
       controls={<PromptChips prompts={QUICK_PROMPTS} onSelect={(p) => void ask(p)} disabled={loading} />}
       footer={
-        <form className={styles.bar} onSubmit={onSubmit}>
+        <form className={styles.composer} onSubmit={onSubmit}>
           <input
             type="text"
-            placeholder="Ask anything about approvals, spend, vendors, invoices, cash flow, contracts…"
+            placeholder="Message the assistant…"
             aria-label="Message"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             disabled={loading}
           />
           <button type="submit" disabled={loading || input.trim() === ""}>
-            Ask
+            Send
           </button>
         </form>
       }
     >
-      {question && <p className={styles.question}>{question}</p>}
-      {loading && <LoadingState label="Reading the data" />}
-      {error && (
-        <ErrorState
-          title="The assistant couldn't answer."
-          message={error}
-          onRetry={question ? () => void ask(question) : undefined}
-        />
-      )}
-      {response && !loading && <ResponseCard data={response} />}
-      {!question && !loading && !error && (
-        <EmptyState
-          title="Ask a question to get a grounded answer."
-          message="Pick a starting point above, or type your own — every answer is backed by your data."
-        />
-      )}
+      <div className={styles.thread}>
+        {!hasMessages && (
+          <EmptyState
+            title="Start a conversation"
+            message="Pick a prompt above or type a question — every answer is grounded in your procurement data."
+          />
+        )}
+
+        {messages.map((message) => {
+          if (message.kind === "user") {
+            return <UserMessage key={message.id} text={message.text} />;
+          }
+          if (message.kind === "assistant") {
+            return <AssistantMessage key={message.id} data={message.response} />;
+          }
+          return (
+            <ErrorMessage
+              key={message.id}
+              message={message.text}
+              onRetry={() => void ask(message.retryPrompt)}
+            />
+          );
+        })}
+
+        {loading && <TypingIndicator />}
+        <div ref={threadEndRef} className={styles.threadEnd} />
+      </div>
     </Panel>
   );
 }
