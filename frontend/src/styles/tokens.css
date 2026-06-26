@@ -82,8 +82,11 @@
   --shadow-xs: 0 1px 0 rgba(28, 29, 24, 0.04);
   --shadow-sm: 0 1px 2px rgba(28, 29, 24, 0.05), 0 0 0 1px rgba(28, 29, 24, 0.03);
   --shadow: 0 2px 8px rgba(28, 29, 24, 0.06), 0 12px 32px rgba(28, 29, 24, 0.05);
-  --shadow-panel: 0 1px 0 var(--line), 0 8px 24px rgba(28, 29, 24, 0.04);
-  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  --shadow-panel: 0 1px 0 color-mix(in srgb, var(--line) 80%, transparent),
+    0 10px 28px rgba(28, 29, 24, 0.035);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.55);
+
+  --line-faint: color-mix(in srgb, var(--line) 65%, transparent);
 
   /* Motion ------------------------------------------------------------- */
   --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);

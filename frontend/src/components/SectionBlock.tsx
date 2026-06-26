@@ -6,11 +6,13 @@ export function SectionBlock({
   eyebrow,
   title,
   meta,
+  inset = false,
   children,
 }: {
   eyebrow?: string;
   title: string;
   meta?: string;
+  inset?: boolean;
   children: ReactNode;
 }) {
   return (
@@ -22,7 +24,7 @@ export function SectionBlock({
         </div>
         {meta && <span className={styles.meta}>{meta}</span>}
       </header>
-      <div className={styles.body}>{children}</div>
+      <div className={inset ? styles.bodyInset : styles.body}>{children}</div>
     </section>
   );
 }

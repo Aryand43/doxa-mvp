@@ -25,8 +25,8 @@ export function OutputToolbar({
   disabled,
 }: OutputToolbarProps) {
   return (
-    <div className={styles.toolbar} role="toolbar" aria-label="Output controls">
-      <div className={styles.modes} role="group" aria-label="Output mode">
+    <div className={`u-toolbar ${styles.toolbar}`} role="toolbar" aria-label="Output controls">
+      <div className="u-segmented" role="group" aria-label="Output mode">
         {MODES.map((item) => {
           const unavailable =
             (item.id === "table" && !hasTable) || (item.id === "chart" && !hasMetrics);
@@ -34,7 +34,7 @@ export function OutputToolbar({
             <button
               key={item.id}
               type="button"
-              className={`${styles.mode} ${mode === item.id ? styles.modeOn : ""}`}
+              className={`u-segmented-item ${mode === item.id ? "u-segmented-item-active" : ""}`}
               aria-pressed={mode === item.id}
               disabled={disabled || unavailable}
               title={unavailable ? "Not available for this output" : undefined}

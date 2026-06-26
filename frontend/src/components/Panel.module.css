@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   min-height: 460px;
-  background: linear-gradient(180deg, var(--surface-raised) 0%, var(--surface) 100%);
-  border: 1px solid var(--line);
+  background: var(--surface);
+  border: 1px solid var(--line-faint);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-panel);
   overflow: hidden;
@@ -12,8 +12,8 @@
 .header {
   position: relative;
   padding: var(--space-5) var(--space-5) var(--space-4);
-  border-bottom: 1px solid var(--line);
-  background: color-mix(in srgb, var(--surface-2) 45%, var(--surface));
+  border-bottom: 1px solid var(--line-faint);
+  background: var(--surface);
 }
 
 .header::before {
@@ -21,7 +21,11 @@
   position: absolute;
   inset: 0 auto 0 0;
   width: var(--rail-width);
-  background: var(--accent);
+  background: linear-gradient(
+    180deg,
+    var(--accent) 0%,
+    color-mix(in srgb, var(--accent) 55%, var(--rail)) 100%
+  );
 }
 
 .kicker {
@@ -60,9 +64,8 @@
   flex-direction: column;
   gap: var(--space-4);
   padding: var(--space-4) var(--space-5);
-  border-bottom: 1px solid var(--line);
-  background: var(--surface-inset);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  border-bottom: 1px solid var(--line-faint);
+  background: color-mix(in srgb, var(--surface-inset) 45%, var(--surface));
 }
 
 .body {
@@ -70,7 +73,7 @@
   min-height: 0;
   overflow-y: auto;
   max-height: calc(100vh - 20rem);
-  padding: var(--space-5);
+  padding: var(--space-5) var(--space-5) var(--space-6);
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
@@ -78,6 +81,6 @@
 
 .footer {
   padding: var(--space-4) var(--space-5);
-  border-top: 1px solid var(--line);
-  background: var(--surface-inset);
+  border-top: 1px solid var(--line-faint);
+  background: color-mix(in srgb, var(--surface-inset) 40%, var(--surface));
 }

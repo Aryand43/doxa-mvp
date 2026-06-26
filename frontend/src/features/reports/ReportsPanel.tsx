@@ -103,12 +103,12 @@ export function ReportsPanel() {
         <>
           <div className={styles.controlGroup}>
             <span className={styles.controlLabel}>Report type</span>
-            <div className={styles.segmented} role="group" aria-label="Report type">
+            <div className="u-segmented" role="group" aria-label="Report type">
             {types.map((rt) => (
               <button
                 key={rt.id}
                 type="button"
-                className={`${styles.segment} ${selected === rt.id ? styles.segmentOn : ""}`}
+                className={`u-segmented-item ${selected === rt.id ? "u-segmented-item-active" : ""}`}
                 aria-pressed={selected === rt.id}
                 onClick={() => setSelected(rt.id)}
                 disabled={loading}

@@ -107,17 +107,19 @@ export function CrawlerPanel() {
             meta={`${result.scan_stats.alerts_found} alerts`}
           >
             <ScanProcessing phases={result.phases} activeIndex={result.phases.length} complete />
-            <MetricStrip metrics={statsToMetrics(result.scan_stats)} />
+            <MetricStrip metrics={statsToMetrics(result.scan_stats)} variant="dense" />
             <p className={styles.digest}>{result.digest}</p>
           </SectionBlock>
 
           <SectionBlock
             eyebrow="Review"
-            title="Alerts"
+            title="Alert queue"
             meta={`${alerts.length} visible`}
+            inset
           >
             <AlertList
               alerts={alerts}
+              layout="queue"
               reviewable
               dispositions={dispositions}
               onReview={(alertId, disposition) =>

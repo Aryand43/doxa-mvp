@@ -20,6 +20,7 @@ const SEV_BADGE = {
 type AlertListProps = {
   alerts: AlertItem[];
   reviewable?: boolean;
+  layout?: "cards" | "queue";
   dispositions?: Record<string, ReviewDisposition | undefined>;
   onReview?: (alertId: string, disposition: ReviewDisposition) => void;
 };
@@ -27,12 +28,15 @@ type AlertListProps = {
 export function AlertList({
   alerts,
   reviewable = false,
+  layout = "cards",
   dispositions,
   onReview,
 }: AlertListProps) {
   if (alerts.length === 0) return null;
+  const listClass = layout === "queue" ? `${styles.list} ${styles.listQueue}` : styles.list;
+
   return (
-    <ul className={styles.list}>
+    <ul className={listClass}>
       {alerts.map((a) => {
         const sev = severityKey(a.severity);
         const disposition = dispositions?.[a.id];

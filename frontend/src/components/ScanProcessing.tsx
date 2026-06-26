@@ -22,7 +22,7 @@ export function ScanProcessing({
 }) {
   const steps = phases && phases.length > 0 ? phases : FALLBACK_STEPS;
 
-  return (
+  const list = (
     <ol className={styles.list} aria-label="Scan processing steps">
       {steps.map((step, i) => {
         const done = complete || i < activeIndex;
@@ -48,4 +48,15 @@ export function ScanProcessing({
       })}
     </ol>
   );
+
+  if (complete) {
+    return (
+      <details className={styles.compact}>
+        <summary>Pipeline complete · {steps.length} phases</summary>
+        {list}
+      </details>
+    );
+  }
+
+  return list;
 }

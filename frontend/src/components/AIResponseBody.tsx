@@ -19,16 +19,26 @@ export function AIResponseBody({
   outputMode = "summary",
 }: AIResponseBodyProps) {
   const confidencePct = Math.round(data.confidence * 100);
+  const isChat = variant === "chat";
   const showSummary = outputMode === "summary";
   const showTable = outputMode === "table" && data.table;
   const showChart = outputMode === "chart" && data.metrics.length > 0;
+  const irisEvidence = data.evidence.some((item) => item.source.toLowerCase().includes("iris"));
 
   return (
-    <div className={variant === "chat" ? styles.chatBody : styles.cardBody}>
+    <div className={isChat ? styles.chatBody : styles.cardBody}>
       {showSummary && (
         <>
-          {data.metrics.length > 0 && <MetricStrip metrics={data.metrics} />}
-          {data.narrative && <p className={styles.narrative}>{data.narrative}</p>}
+          {isChat && data.narrative && (
+            <p className={styles.narrativeLead}>{data.narrative}</p>
+          )}
+
+          {data.metrics.length > 0 && (
+            <MetricStrip metrics={data.metrics} variant={isChat ? "dense" : "inline"} />
+          )}
+
+          {!isChat && data.narrative && <p className={styles.narrative}>{data.narrative}</p>}
+
           {data.bullets.length > 0 && (
             <ul className={styles.bullets}>
               {data.bullets.map((bullet, index) => (
@@ -36,6 +46,7 @@ export function AIResponseBody({
               ))}
             </ul>
           )}
+
           {data.table && (
             <div className={styles.tableWrap}>
               <DataTable table={data.table} />
@@ -55,18 +66,21 @@ export function AIResponseBody({
       {showSummary && <AlertList alerts={data.alerts} />}
 
       {showSummary && data.evidence.length > 0 && (
-        <details className={styles.evidence}>
+        <details className={styles.evidence} open={isChat ? undefined : false}>
           <summary className={styles.evidenceSummary}>
-            Evidence · {data.evidence.length} records
+            Source evidence · {data.evidence.length}{" "}
+            {irisEvidence ? "· IRIS retrieval" : ""}
           </summary>
           <ul className={styles.evidenceList}>
             {data.evidence.map((item, index) => (
               <li key={index} className={styles.evidenceItem}>
-                <span className={styles.evidenceSource}>{item.source}</span>
-                {item.doc_id && <span className={styles.evidenceId}>{item.doc_id}</span>}
-                {item.score != null && (
-                  <span className={styles.evidenceScore}>score {item.score.toFixed(2)}</span>
-                )}
+                <div className={styles.evidenceMeta}>
+                  <span className={styles.evidenceSource}>{item.source}</span>
+                  {item.doc_id && <span className={styles.evidenceId}>{item.doc_id}</span>}
+                  {item.score != null && (
+                    <span className={styles.evidenceScore}>{item.score.toFixed(2)}</span>
+                  )}
+                </div>
                 <p className={styles.evidenceSnippet}>{item.snippet}</p>
               </li>
             ))}
