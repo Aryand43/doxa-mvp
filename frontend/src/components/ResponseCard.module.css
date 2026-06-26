@@ -9,6 +9,14 @@
   box-shadow: var(--shadow-xs);
 }
 
+.cardCompact {
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 .head {
   display: flex;
   align-items: baseline;

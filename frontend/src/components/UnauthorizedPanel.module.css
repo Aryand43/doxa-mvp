@@ -1,6 +1,6 @@
 .panel {
-  padding: var(--space-6);
-  background: var(--surface-raised);
+  padding: var(--space-6) var(--space-6) var(--space-5);
+  background: linear-gradient(180deg, var(--surface-raised) 0%, var(--surface) 100%);
   border: 1px solid var(--line);
   border-left: var(--rail-width) solid var(--warn);
   border-radius: var(--radius-lg);
@@ -50,4 +50,5 @@
   font-size: var(--text-xs);
   color: var(--ink-3);
   line-height: var(--leading-relaxed);
+  max-width: 62ch;
 }

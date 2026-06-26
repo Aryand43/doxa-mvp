@@ -3,6 +3,7 @@ import { fetchReportTypes, generateReport } from "../../app/api";
 import { isForbiddenError } from "../../app/auth";
 import type { AIResponse, ReportType } from "../../app/types";
 import { downloadCsv, tableToCsv } from "../../lib/exportTable";
+import { SectionBlock } from "../../components/SectionBlock";
 import { Panel } from "../../components/Panel";
 import { ResponseCard } from "../../components/ResponseCard";
 import { OutputToolbar } from "../../components/OutputToolbar";
@@ -100,7 +101,9 @@ export function ReportsPanel() {
       description="Structured, grounded summaries — built on demand from the same data."
       controls={
         <>
-          <div className={styles.segmented} role="group" aria-label="Report type">
+          <div className={styles.controlGroup}>
+            <span className={styles.controlLabel}>Report type</span>
+            <div className={styles.segmented} role="group" aria-label="Report type">
             {types.map((rt) => (
               <button
                 key={rt.id}
@@ -113,16 +116,20 @@ export function ReportsPanel() {
                 {rt.label}
               </button>
             ))}
+            </div>
           </div>
           {hint && (
-            <input
-              type="text"
-              placeholder={hint}
-              aria-label="Report target"
-              value={target}
-              onChange={(e) => setTarget(e.target.value)}
-              disabled={loading}
-            />
+            <label className={styles.field}>
+              <span className={styles.controlLabel}>Target</span>
+              <input
+                type="text"
+                placeholder={hint}
+                aria-label="Report target"
+                value={target}
+                onChange={(e) => setTarget(e.target.value)}
+                disabled={loading}
+              />
+            </label>
           )}
           <button type="button" onClick={() => void generate()} disabled={loading}>
             {loading ? "Generating…" : "Generate report"}
@@ -140,7 +147,7 @@ export function ReportsPanel() {
       )}
 
       {report && !loading && (
-        <>
+        <div className={styles.outputStack}>
           {runs.length > 1 && (
             <div className={styles.history} role="group" aria-label="Report iterations">
               {runs.map((run) => (
@@ -157,23 +164,29 @@ export function ReportsPanel() {
             </div>
           )}
 
-          <OutputToolbar
-            mode={outputMode}
-            onModeChange={setOutputMode}
-            hasTable={Boolean(report.table?.columns.length)}
-            hasMetrics={report.metrics.length > 0}
-            onExport={
-              report.table
-                ? () =>
-                    downloadCsv(
-                      `${report.title.replace(/\s+/g, "-").toLowerCase()}.csv`,
-                      tableToCsv(report.table!),
-                    )
-                : undefined
-            }
-          />
+          <SectionBlock
+            eyebrow="Output"
+            title={report.title}
+            meta={`${Math.round(report.confidence * 100)}% confidence`}
+          >
+            <OutputToolbar
+              mode={outputMode}
+              onModeChange={setOutputMode}
+              hasTable={Boolean(report.table?.columns.length)}
+              hasMetrics={report.metrics.length > 0}
+              onExport={
+                report.table
+                  ? () =>
+                      downloadCsv(
+                        `${report.title.replace(/\s+/g, "-").toLowerCase()}.csv`,
+                        tableToCsv(report.table!),
+                      )
+                  : undefined
+              }
+            />
 
-          <ResponseCard data={report} outputMode={outputMode} />
+            <ResponseCard data={report} outputMode={outputMode} compact />
+          </SectionBlock>
 
           <form
             className={styles.refine}
@@ -182,19 +195,22 @@ export function ReportsPanel() {
               void generate(refinePrompt);
             }}
           >
-            <input
-              type="text"
-              placeholder="Refine this report (e.g. focus on high-risk vendors only)"
-              aria-label="Refinement prompt"
-              value={refinePrompt}
-              onChange={(event) => setRefinePrompt(event.target.value)}
-              disabled={loading}
-            />
-            <button type="submit" disabled={loading || refinePrompt.trim() === ""}>
-              Refine
-            </button>
+            <span className={styles.refineLabel}>Refine output</span>
+            <div className={styles.refineRow}>
+              <input
+                type="text"
+                placeholder="Focus on high-risk vendors, overdue invoices, etc."
+                aria-label="Refinement prompt"
+                value={refinePrompt}
+                onChange={(event) => setRefinePrompt(event.target.value)}
+                disabled={loading}
+              />
+              <button type="submit" disabled={loading || refinePrompt.trim() === ""}>
+                Refine
+              </button>
+            </div>
           </form>
-        </>
+        </div>
       )}
 
       {!report && !loading && !error && (

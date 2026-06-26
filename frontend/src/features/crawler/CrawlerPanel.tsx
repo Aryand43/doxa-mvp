@@ -3,6 +3,7 @@ import { runCrawl } from "../../app/api";
 import { isForbiddenError } from "../../app/auth";
 import type { CrawlResponse, Metric } from "../../app/types";
 import type { ReviewDisposition } from "../../components/AlertReviewActions";
+import { SectionBlock } from "../../components/SectionBlock";
 import { Panel } from "../../components/Panel";
 import { MetricStrip } from "../../components/MetricStrip";
 import { AlertList } from "../../components/AlertList";
@@ -99,26 +100,39 @@ export function CrawlerPanel() {
         />
       )}
       {result && !loading && (
-        <>
-          <ScanProcessing phases={result.phases} activeIndex={result.phases.length} complete />
-          <MetricStrip metrics={statsToMetrics(result.scan_stats)} />
-          <p className={styles.digest}>{result.digest}</p>
-          <AlertList
-            alerts={alerts}
-            reviewable
-            dispositions={dispositions}
-            onReview={(alertId, disposition) =>
-              setDispositions((current) => ({ ...current, [alertId]: disposition }))
-            }
-          />
-          {alerts.length === 0 && (
-            <p className={styles.emptyAlerts}>
-              {showReviewed
-                ? "No alerts in this scan."
-                : "All alerts reviewed — enable “Show reviewed alerts” to see them."}
-            </p>
-          )}
-        </>
+        <div className={styles.outputStack}>
+          <SectionBlock
+            eyebrow="Pipeline"
+            title="Scan summary"
+            meta={`${result.scan_stats.alerts_found} alerts`}
+          >
+            <ScanProcessing phases={result.phases} activeIndex={result.phases.length} complete />
+            <MetricStrip metrics={statsToMetrics(result.scan_stats)} />
+            <p className={styles.digest}>{result.digest}</p>
+          </SectionBlock>
+
+          <SectionBlock
+            eyebrow="Review"
+            title="Alerts"
+            meta={`${alerts.length} visible`}
+          >
+            <AlertList
+              alerts={alerts}
+              reviewable
+              dispositions={dispositions}
+              onReview={(alertId, disposition) =>
+                setDispositions((current) => ({ ...current, [alertId]: disposition }))
+              }
+            />
+            {alerts.length === 0 && (
+              <p className={styles.emptyAlerts}>
+                {showReviewed
+                  ? "No alerts in this scan."
+                  : "All alerts reviewed — enable “Show reviewed alerts” to see them."}
+              </p>
+            )}
+          </SectionBlock>
+        </div>
       )}
     </Panel>
   );

@@ -81,8 +81,11 @@ export default function App() {
   if (!authChecked) {
     return (
       <div className={styles.boot}>
-        <span className={styles.mark} aria-hidden />
-        <p>Checking access...</p>
+        <div className={styles.bootCard}>
+          <span className={styles.mark} aria-hidden />
+          <div className={styles.bootPulse} aria-hidden />
+          <p>Verifying session access</p>
+        </div>
       </div>
     );
   }

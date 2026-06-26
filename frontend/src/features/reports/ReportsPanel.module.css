@@ -1,3 +1,24 @@
+.controlGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.controlLabel {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--rail);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
 .segmented {
   display: flex;
   flex-wrap: wrap;
@@ -34,11 +55,16 @@
   border-color: var(--accent);
 }
 
+.outputStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
 .history {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
-  margin-bottom: var(--space-3);
 }
 
 .historyItem {
@@ -63,14 +89,29 @@
 
 .refine {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  margin-top: var(--space-5);
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
   padding-top: var(--space-4);
   border-top: 1px solid var(--line);
 }
 
-.refine input {
+.refineLabel {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--rail);
+}
+
+.refineRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.refineRow input {
   flex: 1;
   min-width: 12rem;
 }

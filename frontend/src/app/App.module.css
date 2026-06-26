@@ -20,13 +20,57 @@
   min-height: 100%;
   display: grid;
   place-items: center;
-  align-content: center;
+  padding: var(--space-6);
+}
+
+.bootCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: var(--space-4);
+  padding: var(--space-7) var(--space-6);
+  min-width: min(22rem, 100%);
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-panel);
   color: var(--ink-3);
   font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  letter-spacing: var(--tracking-wide);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
+}
+
+.bootCard p {
+  margin: 0;
+}
+
+.bootPulse {
+  width: 2.75rem;
+  height: 3px;
+  border-radius: var(--radius-pill);
+  background: var(--line);
+  overflow: hidden;
+  position: relative;
+}
+
+.bootPulse::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 45%;
+  background: var(--accent);
+  border-radius: var(--radius-pill);
+  animation: bootIndeterminate 1.2s var(--ease-premium) infinite;
+}
+
+@keyframes bootIndeterminate {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(320%);
+  }
 }
 
 /* ---- Masthead ---- */
@@ -268,9 +312,19 @@
   font-size: var(--text-xs);
   color: var(--ink-3);
   line-height: 1.4;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height var(--duration-normal) var(--ease-out),
+    opacity var(--duration-normal) var(--ease-out),
+    margin-top var(--duration-normal) var(--ease-out);
 }
 
 .tabActive .tabHint {
+  max-height: 3rem;
+  opacity: 1;
+  margin-top: 2px;
   color: var(--ink-2);
 }
 
@@ -280,6 +334,9 @@
 }
 
 .tabDenied .tabHint {
+  max-height: 3rem;
+  opacity: 1;
+  margin-top: 2px;
   font-family: var(--font-mono);
   font-size: 0.625rem;
 }
