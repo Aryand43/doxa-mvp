@@ -1,14 +1,37 @@
 .toolbar {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.filter {
+  display: inline-flex;
+  align-items: center;
   gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--ink-2);
 }
 
 .digest {
   font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
   color: var(--ink-2);
-  padding: var(--space-3);
-  background: var(--surface-2);
+  padding: var(--space-4) var(--space-5);
+  background: var(--surface-inset);
   border: 1px solid var(--line);
-  border-left: 3px solid var(--accent);
+  border-left: var(--rail-width) solid var(--accent);
   border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-xs);
+}
+
+.emptyAlerts {
+  margin-top: var(--space-3);
+  padding: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+  text-align: center;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
 }

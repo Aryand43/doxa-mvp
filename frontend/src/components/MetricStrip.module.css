@@ -1,18 +1,19 @@
-/* ---- Ledger tape (masthead hero) ---- */
 .tape {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0;
+  padding: var(--space-2) 0;
 }
 
 .tapeItem {
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
-  padding: var(--space-1) var(--space-5);
+  padding: var(--space-2) var(--space-5);
   border-left: 1px solid var(--line);
 }
+
 .tapeItem:first-child {
   padding-left: 0;
   border-left: none;
@@ -26,16 +27,17 @@
   font-variant-numeric: tabular-nums;
   line-height: 1;
   color: var(--ink);
+  letter-spacing: -0.02em;
 }
 
 .tapeLabel {
-  font-size: var(--text-xs);
-  letter-spacing: var(--tracking-wide);
+  font-size: 0.625rem;
+  letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--ink-3);
+  color: var(--rail);
+  font-weight: 600;
 }
 
-/* ---- Inline metric cards ---- */
 .strip {
   margin: 0;
   display: flex;
@@ -46,12 +48,21 @@
 .metric {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  min-width: 96px;
-  padding: var(--space-2) var(--space-3);
-  background: var(--surface-2);
+  gap: 3px;
+  min-width: 6.5rem;
+  padding: var(--space-3);
+  background: var(--surface-raised);
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-xs);
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.metric:hover {
+  border-color: var(--line-accent);
+  box-shadow: var(--shadow-sm);
 }
 
 .value {
@@ -64,10 +75,11 @@
 }
 
 .label {
-  font-size: var(--text-xs);
-  letter-spacing: var(--tracking-wide);
+  font-size: 0.625rem;
+  letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--ink-3);
+  color: var(--rail);
+  font-weight: 600;
 }
 
 .hint {
@@ -80,6 +92,7 @@
   .tapeValue {
     font-size: var(--text-xl);
   }
+
   .tapeItem {
     padding-inline: var(--space-4);
   }

@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState, type FormEvent } from "react";
+import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
 import { runQuery } from "../../app/api";
+import { isForbiddenError } from "../../app/auth";
 import type { AIResponse } from "../../app/types";
 import { Panel } from "../../components/Panel";
 import { PromptChips } from "../../components/PromptChips";
@@ -24,26 +25,44 @@ const QUICK_PROMPTS = [
   "What can you help me with?",
 ];
 
+const THREAD_STORAGE_KEY = "doxa_assistant_thread";
+
 type ChatItem =
   | { id: string; kind: "user"; text: string }
   | { id: string; kind: "assistant"; response: AIResponse }
-  | { id: string; kind: "error"; text: string; retryPrompt: string };
+  | { id: string; kind: "error"; text: string; retryPrompt: string; forbidden?: boolean };
 
 function nextId() {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 }
 
+function loadThread(): ChatItem[] {
+  if (typeof window === "undefined") return [];
+  try {
+    const raw = window.sessionStorage.getItem(THREAD_STORAGE_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw) as ChatItem[];
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
 export function AssistantPanel() {
   const [input, setInput] = useState("");
-  const [messages, setMessages] = useState<ChatItem[]>([]);
+  const [messages, setMessages] = useState<ChatItem[]>(() => loadThread());
   const [loading, setLoading] = useState(false);
   const threadEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    window.sessionStorage.setItem(THREAD_STORAGE_KEY, JSON.stringify(messages));
+  }, [messages]);
 
   useEffect(() => {
     threadEndRef.current?.scrollIntoView?.({ behavior: "smooth", block: "end" });
   }, [messages, loading]);
 
-  async function ask(text: string) {
+  const ask = useCallback(async (text: string) => {
     const prompt = text.trim();
     if (!prompt || loading) return;
 
@@ -58,16 +77,27 @@ export function AssistantPanel() {
       const message = err instanceof Error ? err.message : "The assistant did not respond.";
       setMessages((current) => [
         ...current,
-        { id: nextId(), kind: "error", text: message, retryPrompt: prompt },
+        {
+          id: nextId(),
+          kind: "error",
+          text: message,
+          retryPrompt: prompt,
+          forbidden: isForbiddenError(err),
+        },
       ]);
     } finally {
       setLoading(false);
     }
-  }
+  }, [loading]);
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
     void ask(input);
+  }
+
+  function clearThread() {
+    setMessages([]);
+    window.sessionStorage.removeItem(THREAD_STORAGE_KEY);
   }
 
   const hasMessages = messages.length > 0 || loading;
@@ -77,7 +107,16 @@ export function AssistantPanel() {
       kicker="Ask"
       title="AI Assistant"
       description="Ask in plain language — approvals, spend, vendors, invoices, cash flow, contracts, or a general overview."
-      controls={<PromptChips prompts={QUICK_PROMPTS} onSelect={(p) => void ask(p)} disabled={loading} />}
+      controls={
+        <>
+          <PromptChips prompts={QUICK_PROMPTS} onSelect={(p) => void ask(p)} disabled={loading} />
+          {hasMessages && (
+            <button type="button" className="btn-secondary" onClick={clearThread} disabled={loading}>
+              Clear thread
+            </button>
+          )}
+        </>
+      }
       footer={
         <form className={styles.composer} onSubmit={onSubmit}>
           <input
@@ -113,7 +152,8 @@ export function AssistantPanel() {
             <ErrorMessage
               key={message.id}
               message={message.text}
-              onRetry={() => void ask(message.retryPrompt)}
+              forbidden={message.forbidden}
+              onRetry={message.forbidden ? undefined : () => void ask(message.retryPrompt)}
             />
           );
         })}

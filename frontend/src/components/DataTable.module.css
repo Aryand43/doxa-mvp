@@ -2,6 +2,8 @@
   overflow-x: auto;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow-xs);
 }
 
 .table {
@@ -13,24 +15,27 @@
 .table th {
   position: sticky;
   top: 0;
+  z-index: 1;
   text-align: left;
-  padding: var(--space-2) var(--space-3);
-  background: var(--surface-2);
-  color: var(--ink-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface-inset);
+  color: var(--rail);
+  font-family: var(--font-mono);
   font-weight: 600;
-  font-size: var(--text-xs);
-  letter-spacing: var(--tracking-wide);
+  font-size: 0.625rem;
+  letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--line-strong);
   white-space: nowrap;
 }
 
 .table td {
-  padding: var(--space-2) var(--space-3);
+  padding: var(--space-3) var(--space-4);
   border-bottom: 1px solid var(--line);
   color: var(--ink-2);
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
+  transition: background var(--duration-fast) var(--ease-out);
 }
 
 .table tbody tr:last-child td {
@@ -38,10 +43,11 @@
 }
 
 .table tbody tr:hover td {
-  background: var(--surface-2);
+  background: color-mix(in srgb, var(--accent-soft) 45%, transparent);
 }
 
 .num {
   text-align: right;
   font-family: var(--font-mono);
+  color: var(--ink);
 }

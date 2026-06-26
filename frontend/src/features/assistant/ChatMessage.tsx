@@ -1,7 +1,5 @@
 import type { AIResponse } from "../../app/types";
-import { MetricStrip } from "../../components/MetricStrip";
-import { DataTable } from "../../components/DataTable";
-import { AlertList } from "../../components/AlertList";
+import { AIResponseBody } from "../../components/AIResponseBody";
 import styles from "./ChatMessage.module.css";
 
 export function UserMessage({ text }: { text: string }) {
@@ -15,8 +13,6 @@ export function UserMessage({ text }: { text: string }) {
 }
 
 export function AssistantMessage({ data }: { data: AIResponse }) {
-  const confidencePct = Math.round(data.confidence * 100);
-
   return (
     <div className={styles.rowAssistant}>
       <div className={styles.avatar} aria-hidden>
@@ -26,68 +22,9 @@ export function AssistantMessage({ data }: { data: AIResponse }) {
         <div className={styles.assistantHead}>
           <span className={styles.assistantLabel}>Assistant</span>
           {data.title && <span className={styles.assistantTopic}>{data.title}</span>}
+          <span className={styles.groundedBadge}>Grounded</span>
         </div>
-
-        {data.narrative && <p className={styles.narrative}>{data.narrative}</p>}
-
-        {data.bullets.length > 0 && (
-          <ul className={styles.bullets}>
-            {data.bullets.map((bullet, index) => (
-              <li key={index}>{bullet}</li>
-            ))}
-          </ul>
-        )}
-
-        {data.metrics.length > 0 && (
-          <div className={styles.metrics}>
-            <MetricStrip metrics={data.metrics} />
-          </div>
-        )}
-
-        {data.table && (
-          <div className={styles.tableWrap}>
-            <DataTable table={data.table} />
-          </div>
-        )}
-
-        <AlertList alerts={data.alerts} />
-
-        {data.evidence.length > 0 && (
-          <details className={styles.evidence}>
-            <summary>Evidence · {data.evidence.length} records</summary>
-            <ul>
-              {data.evidence.map((item, index) => (
-                <li key={index}>
-                  <span className={styles.evidenceSource}>{item.source}</span>
-                  {item.doc_id && <span className={styles.evidenceId}>{item.doc_id}</span>}
-                  <p className={styles.evidenceSnippet}>{item.snippet}</p>
-                </li>
-              ))}
-            </ul>
-          </details>
-        )}
-
-        {data.actions.length > 0 && (
-          <div className={styles.actions}>
-            {data.actions.map((action, index) => (
-              <button
-                key={index}
-                type="button"
-                className={action.kind === "primary" ? undefined : "btn-secondary"}
-                title={action.hint ?? undefined}
-              >
-                {action.label}
-              </button>
-            ))}
-          </div>
-        )}
-
-        <footer className={styles.meta}>
-          {data.data_scope.length > 0 && (
-            <span className={styles.scope}>{data.data_scope.join(" · ")}</span>
-          )}
-          <span className={styles.confidence}>{confidencePct}% confidence</span>
-        </footer>
+        <AIResponseBody data={data} variant="chat" />
       </div>
     </div>
   );
@@ -96,9 +33,11 @@ export function AssistantMessage({ data }: { data: AIResponse }) {
 export function ErrorMessage({
   message,
   onRetry,
+  forbidden,
 }: {
   message: string;
   onRetry?: () => void;
+  forbidden?: boolean;
 }) {
   return (
     <div className={styles.rowAssistant}>
@@ -106,9 +45,11 @@ export function ErrorMessage({
         !
       </div>
       <div className={`${styles.assistantBubble} ${styles.errorBubble}`}>
-        <p className={styles.errorTitle}>Couldn&apos;t get an answer</p>
+        <p className={styles.errorTitle}>
+          {forbidden ? "Access denied" : "Couldn&apos;t get an answer"}
+        </p>
         <p className={styles.errorText}>{message}</p>
-        {onRetry && (
+        {onRetry && !forbidden && (
           <button type="button" className="btn-secondary" onClick={onRetry}>
             Try again
           </button>

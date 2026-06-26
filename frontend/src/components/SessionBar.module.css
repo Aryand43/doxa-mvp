@@ -1,0 +1,117 @@
+.bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  margin-left: calc(var(--rail-width) + var(--space-2));
+  background: var(--surface-inset);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-xs);
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: var(--space-4);
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.item,
+.itemWide {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+  padding-left: var(--space-3);
+  border-left: 1px solid var(--line);
+}
+
+.item:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+.itemWide {
+  grid-column: 1 / -1;
+  padding-left: 0;
+  border-left: none;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--line);
+}
+
+.item dt,
+.itemWide dt {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--rail);
+}
+
+.item dd,
+.itemWide dd {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.authorities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  white-space: normal;
+}
+
+.chip,
+.chipMuted {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-xs);
+  background: var(--surface-raised);
+  font-size: 0.625rem;
+  letter-spacing: 0.02em;
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out);
+}
+
+.chip {
+  color: var(--accent-ink);
+  border-color: color-mix(in srgb, var(--accent) 25%, var(--line));
+  background: var(--accent-soft);
+}
+
+.chipMuted {
+  color: var(--ink-3);
+  font-style: italic;
+}
+
+@media (max-width: 720px) {
+  .bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .item {
+    padding-left: 0;
+    border-left: none;
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--line);
+  }
+
+  .item:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+}

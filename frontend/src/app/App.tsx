@@ -1,8 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { clearAuthToken, fetchCurrentUser, fetchSummary, hasStoredAuthToken } from "./api";
 import type { AIResponse, AuthInfo } from "./types";
 import { useTheme } from "./useTheme";
+import {
+  accessibleFeatures,
+  canAccessFeature,
+  defaultFeature,
+  FEATURES,
+  type FeatureId,
+} from "./features";
 import { MetricStrip } from "../components/MetricStrip";
+import { SessionBar } from "../components/SessionBar";
+import { UnauthorizedPanel } from "../components/UnauthorizedPanel";
 import { AssistantPanel } from "../features/assistant/AssistantPanel";
 import { ReportsPanel } from "../features/reports/ReportsPanel";
 import { CrawlerPanel } from "../features/crawler/CrawlerPanel";
@@ -10,20 +19,17 @@ import { ApiInspector } from "./ApiInspector";
 import { LoginPage } from "./LoginPage";
 import styles from "./App.module.css";
 
-type FeatureTab = "assistant" | "reports" | "crawler";
-
-const FEATURE_TABS: { id: FeatureTab; label: string; hint: string }[] = [
-  { id: "assistant", label: "Assistant", hint: "Ask questions grounded in procurement data" },
-  { id: "reports", label: "Reports", hint: "Structured spend, vendor, and entity reports" },
-  { id: "crawler", label: "Crawler", hint: "Scan datasets for alerts and anomalies" },
-];
-
 export default function App() {
-  const [activeTab, setActiveTab] = useState<FeatureTab>("assistant");
+  const [activeTab, setActiveTab] = useState<FeatureId>("assistant");
   const [summary, setSummary] = useState<AIResponse | null>(null);
   const [user, setUser] = useState<AuthInfo | null>(null);
   const [authChecked, setAuthChecked] = useState(false);
   const { theme, toggleTheme } = useTheme();
+
+  const allowedFeatures = useMemo(
+    () => (user ? accessibleFeatures(user) : []),
+    [user],
+  );
 
   useEffect(() => {
     let active = true;
@@ -41,6 +47,16 @@ export default function App() {
       active = false;
     };
   }, []);
+
+  useEffect(() => {
+    if (!user) {
+      setSummary(null);
+      return;
+    }
+    setActiveTab((current) =>
+      canAccessFeature(user, current) ? current : defaultFeature(user),
+    );
+  }, [user]);
 
   useEffect(() => {
     if (!user) {
@@ -75,6 +91,8 @@ export default function App() {
     return <LoginPage onLogin={setUser} />;
   }
 
+  const activeFeature = FEATURES.find((feature) => feature.id === activeTab);
+
   return (
     <div className={styles.app}>
       <header className={styles.masthead}>
@@ -104,77 +122,81 @@ export default function App() {
           </button>
         </div>
 
-        <div className={styles.sessionBar}>
-          <div className={styles.sessionMeta}>
-            <span>{user.user_id}</span>
-            <span>{user.roles.join(", ") || "No role"}</span>
-            <span>{user.companies[0] ?? "No tenant"}</span>
-          </div>
-          <button type="button" className="btn-secondary" onClick={logout}>
-            Sign out
-          </button>
-        </div>
+        <SessionBar user={user} onLogout={logout} />
 
         <div className={styles.snapshot}>
           <span className={styles.snapshotKicker}>Live snapshot</span>
           {summary ? (
             <MetricStrip metrics={summary.metrics} variant="tape" />
           ) : (
-            <span className={styles.snapshotLoading}>Loading live snapshot…</span>
+            <span className={styles.snapshotLoading}>Live snapshot unavailable for this session</span>
           )}
         </div>
       </header>
 
       <nav className={styles.tabBar} aria-label="Product features">
-        {FEATURE_TABS.map((tab) => {
-          const selected = activeTab === tab.id;
+        {FEATURES.map((feature) => {
+          const allowed = allowedFeatures.some((item) => item.id === feature.id);
+          const selected = activeTab === feature.id;
           return (
             <button
-              key={tab.id}
+              key={feature.id}
               type="button"
               role="tab"
-              id={`tab-${tab.id}`}
+              id={`tab-${feature.id}`}
               aria-selected={selected}
-              aria-controls={`panel-${tab.id}`}
-              className={selected ? styles.tabActive : styles.tab}
-              onClick={() => setActiveTab(tab.id)}
+              aria-controls={`panel-${feature.id}`}
+              className={
+                selected ? styles.tabActive : allowed ? styles.tab : styles.tabDenied
+              }
+              disabled={!allowed}
+              onClick={() => allowed && setActiveTab(feature.id)}
+              title={allowed ? feature.hint : `Requires ${feature.authority}`}
             >
-              <span className={styles.tabLabel}>{tab.label}</span>
-              <span className={styles.tabHint}>{tab.hint}</span>
+              <span className={styles.tabLabel}>{feature.label}</span>
+              <span className={styles.tabHint}>
+                {allowed ? feature.hint : `Requires ${feature.authority}`}
+              </span>
             </button>
           );
         })}
       </nav>
 
       <main className={styles.tabContent}>
-        <div
-          role="tabpanel"
-          id="panel-assistant"
-          aria-labelledby="tab-assistant"
-          hidden={activeTab !== "assistant"}
-          className={styles.tabPanel}
-        >
-          <AssistantPanel />
-        </div>
-        <div
-          role="tabpanel"
-          id="panel-reports"
-          aria-labelledby="tab-reports"
-          hidden={activeTab !== "reports"}
-          className={styles.tabPanel}
-        >
-          <ReportsPanel />
-        </div>
-        <div
-          role="tabpanel"
-          id="panel-crawler"
-          aria-labelledby="tab-crawler"
-          hidden={activeTab !== "crawler"}
-          className={styles.tabPanel}
-        >
-          <CrawlerPanel />
-        </div>
+        {FEATURES.map((feature) => {
+          if (activeTab !== feature.id) return null;
+          const allowed = canAccessFeature(user, feature.id);
+          return (
+            <div
+              key={feature.id}
+              role="tabpanel"
+              id={`panel-${feature.id}`}
+              aria-labelledby={`tab-${feature.id}`}
+              className={styles.tabPanel}
+            >
+              {!allowed ? (
+                <UnauthorizedPanel
+                  featureLabel={feature.label}
+                  requiredAuthority={feature.authority}
+                />
+              ) : feature.id === "assistant" ? (
+                <AssistantPanel />
+              ) : feature.id === "reports" ? (
+                <ReportsPanel />
+              ) : (
+                <CrawlerPanel />
+              )}
+            </div>
+          );
+        })}
       </main>
+
+      {allowedFeatures.length === 0 && activeFeature && (
+        <p className={styles.noAccessBanner}>
+          No AI modules are enabled for this session. Sign in with a profile that includes at least
+          one module authority.
+        </p>
+      )}
 
       <ApiInspector />
     </div>

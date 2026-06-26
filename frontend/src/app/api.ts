@@ -13,6 +13,16 @@ import type {
 } from "./types";
 import { isApiDebugEnabled, recordApiCall, setBackendHealth } from "./apiDebug";
 
+export class ApiError extends Error {
+  readonly status: number;
+
+  constructor(message: string, status: number) {
+    super(message);
+    this.name = "ApiError";
+    this.status = status;
+  }
+}
+
 function apiRoot(): string {
   return (import.meta.env.VITE_API_BASE_URL ?? "").replace(/\/$/, "");
 }
@@ -137,7 +147,7 @@ async function request<TRes>(
         typeof (responseBody as { detail?: unknown }).detail === "string"
           ? (responseBody as { detail: string }).detail
           : `Request failed (${res.status} ${res.statusText})`;
-      throw new Error(detail);
+      throw new ApiError(detail, res.status);
     }
 
     return responseBody as TRes;
